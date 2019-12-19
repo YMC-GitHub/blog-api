@@ -13,6 +13,7 @@ const frontend = require('./frontend')
 const backendUser = require('../api/backend-user')
 
 // route for backend
+/*
 router.get('/backend', async ctx => {
     // get data and set the state for ctx
     ctx.state = {
@@ -23,6 +24,7 @@ router.get('/backend', async ctx => {
     await ctx.render('admin-add', {})
 })
 router.post('/backend', backendUser.insert)
+*/
 
 // route for api
 router.use('/api/backend', backend.routes(), backend.allowedMethods())

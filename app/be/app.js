@@ -11,8 +11,11 @@ const router = require('koa-router')()
 const views = require('koa-views')
 const convert = require('koa-convert')
 const json = require('koa-json')
-const bodyparser = require('koa-bodyparser')()
+const bodyparser = require('koa-body')({
+    multipart: true
+})
 const logger = require('koa-logger')
+const moment = require('moment')
 
 //include some data model files
 require('./server/models/admin')
@@ -32,15 +35,19 @@ app.use(convert(logger()))
 app.use(convert(require('koa-static')(path.join(__dirname, 'public'))))
 // for statci web serve in views path
 app.use(views(path.join(__dirname, 'views'), { extension: 'ejs' }))
+//use cunstom koa middleware return
+app.use(require('./server/middlewares/return'))
 app.use(async (ctx, next) => {
-    const start = new Date()
-    await next()
-    const ms = new Date() - start
-    // log the access histroy with console.log
-    console.log(`${ctx.method} ${ctx.url} - ${ms}ms`)
-    if (ctx.status === 404) {
-        const err = new Error('Not Found')
-        err.status = 404
+    try {
+        await next();
+        const start = new Date()
+        const ms = new Date() - start
+        const now = moment().format('YYYY-MM-DD HH:mm:ss')
+        // log the access histroy with console.log
+        console.log(`${now} - ${ctx.method} ${ctx.url} - ${ms}ms`)
+    } catch (err) {
+        // will only respond with JSON
+        ctx.status = err.statusCode || err.status || 500;
         ctx.body = {
             tag: 'error',
             status: err.status,
@@ -49,8 +56,6 @@ app.use(async (ctx, next) => {
         }
     }
 })
-//use cunstom koa middleware return
-app.use(require('./server/middlewares/return'))
 app.use(index.routes(), router.allowedMethods())
 //bind an error function to app
 app.on('error', function (err, ctx) {

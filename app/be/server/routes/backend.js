@@ -41,6 +41,8 @@ router.get('/category/recover', isAdmin, backendCategory.recover)
 // U-update category
 router.post('/category/modify', isAdmin, backendCategory.modify)
 // ------- admin -------
+// C-create category
+router.post('/admin/insert', backendUser.insert)
 // backend login
 router.post('/admin/login', backendUser.login)
 // R-get admin list

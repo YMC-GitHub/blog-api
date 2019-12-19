@@ -118,6 +118,45 @@ exports.insert = async ctx => {
                     timestamp: moment().format('X'),
                 })
                 await fs.writeFileSync('./admin.lock', username)
+                payload.message = ' create admin success: ' + username + ', password: ' + password
+                await ctx.success('success', payload.message)
+            }
+        } catch (err) {
+            payload.message = err.toString()
+            await ctx.error(payload.message)
+        }
+    }
+    //todos:return json
+    //so:
+    //add await ctx.error(payload.message) when err
+    //add await ctx.success(payload.message) when success
+    //await ctx.render('admin-add', payload)
+}
+/*
+exports.insert = async ctx => {
+    const { email, password, username } = ctx.request.body
+    const payload = {}
+    if (fsExistsSync('./admin.lock')) {
+        payload.message = 'please delete admin.lock first'
+    } else if (!username || !password || !email) {
+        payload.message = 'please fill on form first'
+    } else {
+        try {
+            const result = await Admin.findOneAsync({ username })
+            if (result) {
+                payload.message = 'the admin has been created'
+            } else {
+                // create data to database with data model Admin
+                await Admin.createAsync({
+                    username,
+                    password: md5(md5Pre + password),
+                    email,
+                    creat_date: moment().format('YYYY-MM-DD HH:mm:ss'),
+                    update_date: moment().format('YYYY-MM-DD HH:mm:ss'),
+                    is_delete: 0,
+                    timestamp: moment().format('X'),
+                })
+                await fs.writeFileSync('./admin.lock', username)
                 payload.message = ' crreate admin success: ' + username + ', password: ' + password
             }
         } catch (err) {
@@ -130,6 +169,7 @@ exports.insert = async ctx => {
     //add await ctx.success(payload.message) when success
     await ctx.render('admin-add', payload)
 }
+*/
 
 /**
  * U-update admin

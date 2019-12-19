@@ -1,0 +1,975 @@
+2019-12-22T21:04:16.012+0800 D INDEX    [TTLMonitor] deleted: 0
+system.sessions key: { lastUse: 1 } name: lsidTTLIndex
+tem.sessions", ordered: false, writeConcern: { w: "majority", wtimeout: 15000 }, $db: "config" } numYields:0 reslen:45 locks:{ Global: { acquireCount: { r: 1, w: 1 } }, Database: { acquireCount: { w: 1 } }, Collection: { acquireCount: { w: 1 } } } protocol:op_msg 0ms
+ } }, Database: { acquireCount: { w: 1 } }, Collection: { acquireCount: { w: 1 } } } 0ms
+: 1 } } } 1ms
+abase: { acquireCount: { w: 1 } }, Collection: { acquireCount: { w: 1 } } } 0ms
+ 0ms
+l:op_msg 527ms
+protocol:op_msg 677ms
+w: 1 } } } protocol:op_msg 449ms
+2019-12-22T21:08:36.860+0800 I CONTROL  [main] ***** SERVER RESTARTED *****
+2019-12-22T21:08:36.864+0800 I CONTROL  [main] Automatically disabling TLS 1.0, to force-enable TLS 1.0 specify --sslDisabledProtocols 'none'
+2019-12-22T21:08:36.926+0800 D NETWORK  [main] fd limit hard:1048576 soft:1048576 max conn: 838860
+2019-12-22T21:08:36.927+0800 I CONTROL  [initandlisten] MongoDB starting : pid=9 port=27017 dbpath=/data/db/mongo 64-bit host=a1805391b68a
+2019-12-22T21:08:36.928+0800 I CONTROL  [initandlisten] db version v4.0.5
+2019-12-22T21:08:36.928+0800 I CONTROL  [initandlisten] git version: 3739429dd92b92d1b0ab120911a23d50bf03c412
+2019-12-22T21:08:36.929+0800 I CONTROL  [initandlisten] OpenSSL version: OpenSSL 1.1.1b  26 Feb 2019
+2019-12-22T21:08:36.929+0800 I CONTROL  [initandlisten] allocator: system
+2019-12-22T21:08:36.929+0800 I CONTROL  [initandlisten] modules: none
+2019-12-22T21:08:36.929+0800 I CONTROL  [initandlisten] build environment:
+2019-12-22T21:08:36.929+0800 I CONTROL  [initandlisten]     distarch: x86_64
+2019-12-22T21:08:36.930+0800 I CONTROL  [initandlisten]     target_arch: x86_64
+2019-12-22T21:08:36.930+0800 I CONTROL  [initandlisten] options: { net: { port: 27017 }, storage: { dbPath: "/data/db/mongo" }, systemLog: { destination: "file", logAppend: true, path: "/data/log/mongod.log", verbosity: 1 } }
+2019-12-22T21:08:36.930+0800 D NETWORK  [initandlisten] fd limit hard:1048576 soft:1048576 max conn: 838860
+2019-12-22T21:08:36.931+0800 W STORAGE  [initandlisten] Detected unclean shutdown - /data/db/mongo/mongod.lock is not empty.
+2019-12-22T21:08:36.935+0800 I STORAGE  [initandlisten] Detected data files in /data/db/mongo created by the 'wiredTiger' storage engine, so setting the active storage engine to 'wiredTiger'.
+2019-12-22T21:08:36.935+0800 W STORAGE  [initandlisten] Recovering data from the last clean checkpoint.
+2019-12-22T21:08:36.951+0800 I STORAGE  [initandlisten] wiredtiger_open config: create,cache_size=1463M,session_max=20000,eviction=(threads_min=4,threads_max=4),config_base=false,statistics=(fast),log=(enabled=true,archive=true,path=journal,compressor=snappy),file_manager=(close_idle_time=100000),statistics_log=(wait=0),verbose=(recovery_progress),
+2019-12-22T21:08:58.727+0800 I STORAGE  [initandlisten] WiredTiger message [1577020138:727137][9:0x7f4bef1b3ca8], txn-recover: Main recovery loop: starting at 30/85632 to 31/256
+2019-12-22T21:08:58.734+0800 I STORAGE  [initandlisten] WiredTiger message [1577020138:734848][9:0x7f4bef1b3ca8], txn-recover: Recovering log 30 through 31
+2019-12-22T21:09:04.889+0800 I STORAGE  [initandlisten] WiredTiger message [1577020144:889140][9:0x7f4bef1b3ca8], txn-recover: Recovering log 31 through 31
+2019-12-22T21:09:10.874+0800 I STORAGE  [initandlisten] WiredTiger message [1577020150:874654][9:0x7f4bef1b3ca8], txn-recover: Set global recovery timestamp: 0
+2019-12-22T21:09:11.025+0800 I RECOVERY [initandlisten] WiredTiger recoveryTimestamp. Ts: Timestamp(0, 0)
+2019-12-22T21:09:11.038+0800 D COMMAND  [WTJournalFlusher] BackgroundJob starting: WTJournalFlusher
+2019-12-22T21:09:11.041+0800 D STORAGE  [WTJournalFlusher] starting WTJournalFlusher thread
+2019-12-22T21:09:11.038+0800 D COMMAND  [WTCheckpointThread] BackgroundJob starting: WTCheckpointThread
+2019-12-22T21:09:11.050+0800 D STORAGE  [WTCheckpointThread] starting WTCheckpointThread thread
+2019-12-22T21:09:11.642+0800 D STORAGE  [initandlisten] Slow WT transaction. Lifetime of SnapshotId 1 was 608ms
+2019-12-22T21:09:11.670+0800 D STORAGE  [initandlisten] flushing directory /data/db/mongo
+2019-12-22T21:09:11.672+0800 I CONTROL  [initandlisten] 
+2019-12-22T21:09:11.675+0800 I CONTROL  [initandlisten] ** WARNING: Access control is not enabled for the database.
+2019-12-22T21:09:11.676+0800 I CONTROL  [initandlisten] **          Read and write access to data and configuration is unrestricted.
+2019-12-22T21:09:11.676+0800 I CONTROL  [initandlisten] ** WARNING: You are running this process as the root user, which is not recommended.
+2019-12-22T21:09:11.677+0800 I CONTROL  [initandlisten] 
+2019-12-22T21:09:11.677+0800 I CONTROL  [initandlisten] ** WARNING: This server is bound to localhost.
+2019-12-22T21:09:11.677+0800 I CONTROL  [initandlisten] **          Remote systems will be unable to connect to this server. 
+2019-12-22T21:09:11.678+0800 I CONTROL  [initandlisten] **          Start the server with --bind_ip <address> to specify which IP 
+2019-12-22T21:09:11.678+0800 I CONTROL  [initandlisten] **          addresses it should serve responses from, or with --bind_ip_all to
+2019-12-22T21:09:11.678+0800 I CONTROL  [initandlisten] **          bind to all interfaces. If this behavior is desired, start the
+2019-12-22T21:09:11.678+0800 I CONTROL  [initandlisten] **          server with --bind_ip 127.0.0.1 to disable this warning.
+2019-12-22T21:09:11.680+0800 I CONTROL  [initandlisten] 
+2019-12-22T21:09:11.681+0800 I CONTROL  [initandlisten] 
+2019-12-22T21:09:11.681+0800 I CONTROL  [initandlisten] ** WARNING: /sys/kernel/mm/transparent_hugepage/enabled is 'always'.
+2019-12-22T21:09:11.682+0800 I CONTROL  [initandlisten] **        We suggest setting it to 'never'
+2019-12-22T21:09:11.682+0800 I CONTROL  [initandlisten] 
+2019-12-22T21:09:11.682+0800 I CONTROL  [initandlisten] ** WARNING: /sys/kernel/mm/transparent_hugepage/defrag is 'always'.
+2019-12-22T21:09:11.683+0800 I CONTROL  [initandlisten] **        We suggest setting it to 'never'
+2019-12-22T21:09:11.683+0800 I CONTROL  [initandlisten] 
+2019-12-22T21:09:12.921+0800 D STORAGE  [initandlisten] admin.system.users: clearing plan cache - collection info cache reset
+2019-12-22T21:09:12.952+0800 D STORAGE  [initandlisten] admin.system.version: clearing plan cache - collection info cache reset
+2019-12-22T21:09:12.953+0800 D -        [initandlisten] reloading view catalog for database admin
+2019-12-22T21:09:12.976+0800 D STORAGE  [initandlisten] config.system.sessions: clearing plan cache - collection info cache reset
+2019-12-22T21:09:12.976+0800 D -        [initandlisten] reloading view catalog for database config
+2019-12-22T21:09:13.005+0800 D STORAGE  [initandlisten] local.startup_log: clearing plan cache - collection info cache reset
+2019-12-22T21:09:13.005+0800 D -        [initandlisten] reloading view catalog for database local
+2019-12-22T21:09:13.006+0800 D STORAGE  [initandlisten]     Recovering database: admin
+2019-12-22T21:09:13.014+0800 D STORAGE  [initandlisten]     Recovering database: config
+2019-12-22T21:09:13.014+0800 D STORAGE  [initandlisten]     Recovering database: local
+2019-12-22T21:09:13.015+0800 D STORAGE  [initandlisten] done repairDatabases
+2019-12-22T21:09:13.015+0800 D STORAGE  [initandlisten] Slow WT transaction. Lifetime of SnapshotId 3 was 1328ms
+2019-12-22T21:09:13.024+0800 I COMMAND  [initandlisten] command admin.system.roles command: find { find: "system.roles", $db: "admin" } planSummary: EOF keysExamined:0 docsExamined:0 cursorExhausted:1 numYields:0 nreturned:0 reslen:107 locks:{ Global: { acquireCount: { r: 1 } }, Database: { acquireCount: { r: 1 } }, Collection: { acquireCount: { r: 1 } } } protocol:op_msg 0ms
+2019-12-22T21:09:13.036+0800 I FTDC     [initandlisten] Initializing full-time diagnostic data capture with directory '/data/db/mongo/diagnostic.data'
+2019-12-22T21:09:13.040+0800 D INDEX    [initandlisten] checking complete
+2019-12-22T21:09:13.043+0800 D EXECUTOR [freemon-0] starting thread in pool freemon
+2019-12-22T21:09:13.043+0800 I NETWORK  [initandlisten] waiting for connections on port 27017
+2019-12-22T21:09:13.049+0800 D COMMAND  [ClientCursorMonitor] BackgroundJob starting: ClientCursorMonitor
+2019-12-22T21:09:13.050+0800 D COMMAND  [PeriodicTaskRunner] BackgroundJob starting: PeriodicTaskRunner
+2019-12-22T21:09:13.052+0800 D COMMAND  [TTLMonitor] BackgroundJob starting: TTLMonitor
+2019-12-22T21:09:13.052+0800 I COMMAND  [LogicalSessionCacheRefresh] command config.system.sessions command: listIndexes { listIndexes: "system.sessions", cursor: {}, $db: "config" } numYields:0 reslen:324 locks:{ Global: { acquireCount: { r: 1 } }, Database: { acquireCount: { r: 1 } }, Collection: { acquireCount: { r: 1 } } } protocol:op_msg 0ms
+2019-12-22T21:09:14.035+0800 I FTDC     [ftdc] Unclean full-time diagnostic data capture shutdown detected, found interim file, some metrics may have been lost. OK
+2019-12-22T21:10:13.061+0800 D INDEX    [TTLMonitor] ns: config.system.sessions key: { lastUse: 1 } name: lsidTTLIndex
+2019-12-22T21:10:13.065+0800 D INDEX    [TTLMonitor] deleted: 0
+2019-12-22T21:11:13.066+0800 D INDEX    [TTLMonitor] ns: config.system.sessions key: { lastUse: 1 } name: lsidTTLIndex
+2019-12-22T21:11:13.067+0800 D INDEX    [TTLMonitor] deleted: 0
+2019-12-22T21:12:13.069+0800 D INDEX    [TTLMonitor] ns: config.system.sessions key: { lastUse: 1 } name: lsidTTLIndex
+2019-12-22T21:12:13.070+0800 D INDEX    [TTLMonitor] deleted: 0
+2019-12-22T21:12:41.623+0800 I NETWORK  [listener] connection accepted from 127.0.0.1:42798 #1 (1 connection now open)
+2019-12-22T21:12:41.624+0800 I NETWORK  [conn1] received client metadata from 127.0.0.1:42798 conn1: { application: { name: "MongoDB Shell" }, driver: { name: "MongoDB Internal Client", version: "4.0.5" }, os: { type: "Linux", name: "NAME="Alpine Linux"", architecture: "x86_64", version: "Kernel 3.10.0-1062.el7.x86_64" } }
+2019-12-22T21:12:41.625+0800 I COMMAND  [conn1] command admin.$cmd appName: "MongoDB Shell" command: isMaster { isMaster: 1, client: { application: { name: "MongoDB Shell" }, driver: { name: "MongoDB Internal Client", version: "4.0.5" }, os: { type: "Linux", name: "NAME="Alpine Linux"", architecture: "x86_64", version: "Kernel 3.10.0-1062.el7.x86_64" } }, $db: "admin" } numYields:0 reslen:239 locks:{} protocol:op_query 0ms
+2019-12-22T21:12:41.627+0800 I COMMAND  [conn1] command admin.$cmd appName: "MongoDB Shell" command: whatsmyuri { whatsmyuri: 1, $db: "admin" } numYields:0 reslen:63 locks:{} protocol:op_msg 0ms
+2019-12-22T21:12:41.633+0800 I COMMAND  [conn1] command admin.$cmd appName: "MongoDB Shell" command: buildInfo { buildinfo: 1.0, $db: "admin" } numYields:0 reslen:1199 locks:{} protocol:op_msg 0ms
+2019-12-22T21:12:41.640+0800 I COMMAND  [conn1] command admin.$cmd appName: "MongoDB Shell" command: getLog { getLog: "startupWarnings", lsid: { id: UUID("9be34ee9-1e4a-4161-83e4-bc325a0d4ea4") }, $db: "admin" } numYields:0 reslen:2143 locks:{} protocol:op_msg 0ms
+2019-12-22T21:12:41.643+0800 I COMMAND  [conn1] command admin.$cmd appName: "MongoDB Shell" command: getFreeMonitoringStatus { getFreeMonitoringStatus: 1.0, lsid: { id: UUID("9be34ee9-1e4a-4161-83e4-bc325a0d4ea4") }, $db: "admin" } numYields:0 reslen:59 locks:{} protocol:op_msg 0ms
+2019-12-22T21:12:41.645+0800 I COMMAND  [conn1] command meeting.$cmd appName: "MongoDB Shell" command: isMaster { isMaster: 1.0, forShell: 1.0, lsid: { id: UUID("9be34ee9-1e4a-4161-83e4-bc325a0d4ea4") }, $db: "meeting" } numYields:0 reslen:224 locks:{} protocol:op_msg 0ms
+2019-12-22T21:12:41.648+0800 I COMMAND  [conn1] command meeting.$cmd appName: "MongoDB Shell" command: buildInfo { buildInfo: 1.0, $db: "meeting" } numYields:0 reslen:1199 locks:{} protocol:op_msg 0ms
+2019-12-22T21:12:41.649+0800 I COMMAND  [conn1] command meeting.$cmd appName: "MongoDB Shell" command: isMaster { isMaster: 1.0, forShell: 1.0, $db: "meeting" } numYields:0 reslen:224 locks:{} protocol:op_msg 0ms
+2019-12-22T21:12:41.651+0800 D -        [conn1] User Assertion: NoReplicationEnabled: not running with --replSet src/mongo/db/repl/repl_set_get_status_cmd.cpp 56
+2019-12-22T21:12:42.227+0800 D COMMAND  [conn1] assertion while executing command 'replSetGetStatus' on database 'admin' with arguments '{ replSetGetStatus: 1.0, forShell: 1.0, $db: "admin" }': NoReplicationEnabled: not running with --replSet
+2019-12-22T21:12:42.228+0800 I COMMAND  [conn1] command admin.$cmd appName: "MongoDB Shell" command: replSetGetStatus { replSetGetStatus: 1.0, forShell: 1.0, $db: "admin" } numYields:0 ok:0 errMsg:"not running with --replSet" errName:NoReplicationEnabled errCode:76 reslen:122 locks:{} protocol:op_msg 577ms
+2019-12-22T21:12:48.201+0800 I COMMAND  [conn1] command admin.$cmd appName: "MongoDB Shell" command: isMaster { isMaster: 1.0, forShell: 1.0, $db: "admin" } numYields:0 reslen:224 locks:{} protocol:op_msg 0ms
+2019-12-22T21:12:48.791+0800 I COMMAND  [conn1] command admin.$cmd appName: "MongoDB Shell" command: getParameter { getParameter: "*", lsid: { id: UUID("9be34ee9-1e4a-4161-83e4-bc325a0d4ea4") }, $db: "admin" } numYields:0 reslen:6557 locks:{} protocol:op_msg 0ms
+2019-12-22T21:12:48.860+0800 I COMMAND  [conn1] command admin.$cmd appName: "MongoDB Shell" command: isMaster { isMaster: 1.0, forShell: 1.0, $db: "admin" } numYields:0 reslen:224 locks:{} protocol:op_msg 0ms
+2019-12-22T21:13:13.072+0800 D INDEX    [TTLMonitor] ns: config.system.sessions key: { lastUse: 1 } name: lsidTTLIndex
+2019-12-22T21:13:13.073+0800 D INDEX    [TTLMonitor] deleted: 0
+2019-12-22T21:13:57.222+0800 I COMMAND  [conn1] command admin.$cmd appName: "MongoDB Shell" command: isMaster { isMaster: 1.0, forShell: 1.0, $db: "admin" } numYields:0 reslen:224 locks:{} protocol:op_msg 0ms
+2019-12-22T21:14:02.766+0800 I COMMAND  [conn1] command admin.$cmd appName: "MongoDB Shell" command: endSessions { endSessions: [ { id: UUID("9be34ee9-1e4a-4161-83e4-bc325a0d4ea4") } ], $db: "admin" } numYields:0 reslen:38 locks:{} protocol:op_msg 0ms
+2019-12-22T21:14:02.768+0800 I NETWORK  [conn1] end connection 127.0.0.1:42798 (0 connections now open)
+2019-12-22T21:14:13.052+0800 I COMMAND  [LogicalSessionCacheRefresh] command config.system.sessions command: listIndexes { listIndexes: "system.sessions", cursor: {}, $db: "config" } numYields:0 reslen:324 locks:{ Global: { acquireCount: { r: 1 } }, Database: { acquireCount: { r: 1 } }, Collection: { acquireCount: { r: 1 } } } protocol:op_msg 0ms
+2019-12-22T21:14:13.055+0800 I WRITE    [LogicalSessionCacheRefresh] remove config.system.sessions command: { q: { _id: { id: UUID("9be34ee9-1e4a-4161-83e4-bc325a0d4ea4"), uid: BinData(0, E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855) } }, limit: 0 } planSummary: IDHACK keysExamined:0 docsExamined:0 ndeleted:0 numYields:0 locks:{ Global: { acquireCount: { r: 1, w: 1 } }, Database: { acquireCount: { w: 1 } }, Collection: { acquireCount: { w: 1 } } } 2ms
+2019-12-22T21:14:13.056+0800 I COMMAND  [LogicalSessionCacheRefresh] command config.$cmd command: delete { delete: "system.sessions", ordered: false, writeConcern: { w: "majority", wtimeout: 15000 }, $db: "config" } numYields:0 reslen:45 locks:{ Global: { acquireCount: { r: 1, w: 1 } }, Database: { acquireCount: { w: 1 } }, Collection: { acquireCount: { w: 1 } } } protocol:op_msg 3ms
+2019-12-22T21:14:13.074+0800 D INDEX    [TTLMonitor] ns: config.system.sessions key: { lastUse: 1 } name: lsidTTLIndex
+2019-12-22T21:14:13.075+0800 D INDEX    [TTLMonitor] deleted: 0
+2019-12-22T21:15:13.076+0800 D INDEX    [TTLMonitor] ns: config.system.sessions key: { lastUse: 1 } name: lsidTTLIndex
+2019-12-22T21:15:13.077+0800 D INDEX    [TTLMonitor] deleted: 0
+2019-12-22T21:16:13.078+0800 D INDEX    [TTLMonitor] ns: config.system.sessions key: { lastUse: 1 } name: lsidTTLIndex
+2019-12-22T21:16:13.079+0800 D INDEX    [TTLMonitor] deleted: 0
+2019-12-22T21:17:13.081+0800 D INDEX    [TTLMonitor] ns: config.system.sessions key: { lastUse: 1 } name: lsidTTLIndex
+2019-12-22T21:17:13.082+0800 D INDEX    [TTLMonitor] deleted: 0
+2019-12-22T21:18:13.086+0800 D INDEX    [TTLMonitor] ns: config.system.sessions key: { lastUse: 1 } name: lsidTTLIndex
+2019-12-22T21:18:13.089+0800 D INDEX    [TTLMonitor] deleted: 0
+2019-12-22T21:19:13.051+0800 I COMMAND  [LogicalSessionCacheRefresh] command config.system.sessions command: listIndexes { listIndexes: "system.sessions", cursor: {}, $db: "config" } numYields:0 reslen:324 locks:{ Global: { acquireCount: { r: 1 } }, Database: { acquireCount: { r: 1 } }, Collection: { acquireCount: { r: 1 } } } protocol:op_msg 0ms
+2019-12-22T21:19:13.091+0800 D INDEX    [TTLMonitor] ns: config.system.sessions key: { lastUse: 1 } name: lsidTTLIndex
+2019-12-22T21:19:13.092+0800 D INDEX    [TTLMonitor] deleted: 0
+2019-12-22T21:20:13.094+0800 D INDEX    [TTLMonitor] ns: config.system.sessions key: { lastUse: 1 } name: lsidTTLIndex
+2019-12-22T21:20:13.094+0800 D INDEX    [TTLMonitor] deleted: 0
+2019-12-22T21:21:13.098+0800 D INDEX    [TTLMonitor] ns: config.system.sessions key: { lastUse: 1 } name: lsidTTLIndex
+2019-12-22T21:21:13.098+0800 D INDEX    [TTLMonitor] deleted: 0
+2019-12-22T21:22:13.100+0800 D INDEX    [TTLMonitor] ns: config.system.sessions key: { lastUse: 1 } name: lsidTTLIndex
+2019-12-22T21:22:13.100+0800 D INDEX    [TTLMonitor] deleted: 0
+2019-12-22T21:23:13.103+0800 D INDEX    [TTLMonitor] ns: config.system.sessions key: { lastUse: 1 } name: lsidTTLIndex
+2019-12-22T21:23:13.107+0800 D INDEX    [TTLMonitor] deleted: 0
+2019-12-22T21:24:13.051+0800 I COMMAND  [LogicalSessionCacheRefresh] command config.system.sessions command: listIndexes { listIndexes: "system.sessions", cursor: {}, $db: "config" } numYields:0 reslen:324 locks:{ Global: { acquireCount: { r: 1 } }, Database: { acquireCount: { r: 1 } }, Collection: { acquireCount: { r: 1 } } } protocol:op_msg 0ms
+2019-12-22T21:24:13.108+0800 D INDEX    [TTLMonitor] ns: config.system.sessions key: { lastUse: 1 } name: lsidTTLIndex
+2019-12-22T21:24:13.110+0800 D INDEX    [TTLMonitor] deleted: 0
+2019-12-22T21:25:13.111+0800 D INDEX    [TTLMonitor] ns: config.system.sessions key: { lastUse: 1 } name: lsidTTLIndex
+2019-12-22T21:25:13.111+0800 D INDEX    [TTLMonitor] deleted: 0
+2019-12-22T21:26:13.119+0800 D INDEX    [TTLMonitor] ns: config.system.sessions key: { lastUse: 1 } name: lsidTTLIndex
+2019-12-22T21:26:13.121+0800 D INDEX    [TTLMonitor] deleted: 0
+2019-12-22T21:27:13.125+0800 D INDEX    [TTLMonitor] ns: config.system.sessions key: { lastUse: 1 } name: lsidTTLIndex
+2019-12-22T21:27:13.126+0800 D INDEX    [TTLMonitor] deleted: 0
+2019-12-22T21:28:13.128+0800 D INDEX    [TTLMonitor] ns: config.system.sessions key: { lastUse: 1 } name: lsidTTLIndex
+2019-12-22T21:28:13.128+0800 D INDEX    [TTLMonitor] deleted: 0
+2019-12-22T21:29:13.057+0800 I COMMAND  [LogicalSessionCacheRefresh] command config.system.sessions command: listIndexes { listIndexes: "system.sessions", cursor: {}, $db: "config" } numYields:0 reslen:324 locks:{ Global: { acquireCount: { r: 1 } }, Database: { acquireCount: { r: 1 } }, Collection: { acquireCount: { r: 1 } } } protocol:op_msg 0ms
+2019-12-22T21:29:13.131+0800 D INDEX    [TTLMonitor] ns: config.system.sessions key: { lastUse: 1 } name: lsidTTLIndex
+2019-12-22T21:29:13.132+0800 D INDEX    [TTLMonitor] deleted: 0
+2019-12-22T21:30:13.135+0800 D INDEX    [TTLMonitor] ns: config.system.sessions key: { lastUse: 1 } name: lsidTTLIndex
+2019-12-22T21:30:13.141+0800 D INDEX    [TTLMonitor] deleted: 0
+2019-12-22T21:31:13.155+0800 D INDEX    [TTLMonitor] ns: config.system.sessions key: { lastUse: 1 } name: lsidTTLIndex
+2019-12-22T21:31:13.156+0800 D INDEX    [TTLMonitor] deleted: 0
+2019-12-22T21:32:13.157+0800 D INDEX    [TTLMonitor] ns: config.system.sessions key: { lastUse: 1 } name: lsidTTLIndex
+2019-12-22T21:32:13.157+0800 D INDEX    [TTLMonitor] deleted: 0
+2019-12-22T21:33:13.162+0800 D INDEX    [TTLMonitor] ns: config.system.sessions key: { lastUse: 1 } name: lsidTTLIndex
+2019-12-22T21:33:13.162+0800 D INDEX    [TTLMonitor] deleted: 0
+2019-12-22T21:34:13.057+0800 I COMMAND  [LogicalSessionCacheRefresh] command config.system.sessions command: listIndexes { listIndexes: "system.sessions", cursor: {}, $db: "config" } numYields:0 reslen:324 locks:{ Global: { acquireCount: { r: 1 } }, Database: { acquireCount: { r: 1 } }, Collection: { acquireCount: { r: 1 } } } protocol:op_msg 0ms
+2019-12-22T21:34:13.164+0800 D INDEX    [TTLMonitor] ns: config.system.sessions key: { lastUse: 1 } name: lsidTTLIndex
+2019-12-22T21:34:13.167+0800 D INDEX    [TTLMonitor] deleted: 0
+2019-12-22T21:35:13.170+0800 D INDEX    [TTLMonitor] ns: config.system.sessions key: { lastUse: 1 } name: lsidTTLIndex
+2019-12-22T21:35:13.174+0800 D INDEX    [TTLMonitor] deleted: 0
+2019-12-22T21:36:13.176+0800 D INDEX    [TTLMonitor] ns: config.system.sessions key: { lastUse: 1 } name: lsidTTLIndex
+2019-12-22T21:36:13.177+0800 D INDEX    [TTLMonitor] deleted: 0
+2019-12-22T21:37:13.179+0800 D INDEX    [TTLMonitor] ns: config.system.sessions key: { lastUse: 1 } name: lsidTTLIndex
+2019-12-22T21:37:13.180+0800 D INDEX    [TTLMonitor] deleted: 0
+2019-12-22T21:38:13.185+0800 D INDEX    [TTLMonitor] ns: config.system.sessions key: { lastUse: 1 } name: lsidTTLIndex
+2019-12-22T21:38:13.197+0800 D INDEX    [TTLMonitor] deleted: 0
+2019-12-22T21:39:13.057+0800 I COMMAND  [LogicalSessionCacheRefresh] command config.system.sessions command: listIndexes { listIndexes: "system.sessions", cursor: {}, $db: "config" } numYields:0 reslen:324 locks:{ Global: { acquireCount: { r: 1 } }, Database: { acquireCount: { r: 1 } }, Collection: { acquireCount: { r: 1 } } } protocol:op_msg 0ms
+2019-12-22T21:39:13.199+0800 D INDEX    [TTLMonitor] ns: config.system.sessions key: { lastUse: 1 } name: lsidTTLIndex
+2019-12-22T21:39:13.200+0800 D INDEX    [TTLMonitor] deleted: 0
+2019-12-22T21:40:13.202+0800 D INDEX    [TTLMonitor] ns: config.system.sessions key: { lastUse: 1 } name: lsidTTLIndex
+2019-12-22T21:40:13.202+0800 D INDEX    [TTLMonitor] deleted: 0
+2019-12-22T21:42:02.724+0800 I CONTROL  [main] ***** SERVER RESTARTED *****
+2019-12-22T21:42:02.728+0800 I CONTROL  [main] Automatically disabling TLS 1.0, to force-enable TLS 1.0 specify --sslDisabledProtocols 'none'
+2019-12-22T21:42:02.818+0800 D NETWORK  [main] fd limit hard:1048576 soft:1048576 max conn: 838860
+2019-12-22T21:42:02.833+0800 I CONTROL  [initandlisten] MongoDB starting : pid=9 port=27017 dbpath=/data/db/mongo 64-bit host=a5b95422ee3c
+2019-12-22T21:42:02.837+0800 I CONTROL  [initandlisten] db version v4.0.5
+2019-12-22T21:42:02.837+0800 I CONTROL  [initandlisten] git version: 3739429dd92b92d1b0ab120911a23d50bf03c412
+2019-12-22T21:42:02.838+0800 I CONTROL  [initandlisten] OpenSSL version: OpenSSL 1.1.1b  26 Feb 2019
+2019-12-22T21:42:02.839+0800 I CONTROL  [initandlisten] allocator: system
+2019-12-22T21:42:02.839+0800 I CONTROL  [initandlisten] modules: none
+2019-12-22T21:42:02.839+0800 I CONTROL  [initandlisten] build environment:
+2019-12-22T21:42:02.840+0800 I CONTROL  [initandlisten]     distarch: x86_64
+2019-12-22T21:42:02.840+0800 I CONTROL  [initandlisten]     target_arch: x86_64
+2019-12-22T21:42:02.840+0800 I CONTROL  [initandlisten] options: { net: { port: 27017 }, storage: { dbPath: "/data/db/mongo" }, systemLog: { destination: "file", logAppend: true, path: "/data/log/mongod.log", verbosity: 1 } }
+2019-12-22T21:42:02.841+0800 D NETWORK  [initandlisten] fd limit hard:1048576 soft:1048576 max conn: 838860
+2019-12-22T21:42:02.844+0800 W STORAGE  [initandlisten] Detected unclean shutdown - /data/db/mongo/mongod.lock is not empty.
+2019-12-22T21:42:02.845+0800 I STORAGE  [initandlisten] Detected data files in /data/db/mongo created by the 'wiredTiger' storage engine, so setting the active storage engine to 'wiredTiger'.
+2019-12-22T21:42:02.845+0800 W STORAGE  [initandlisten] Recovering data from the last clean checkpoint.
+2019-12-22T21:42:02.850+0800 I STORAGE  [initandlisten] wiredtiger_open config: create,cache_size=1463M,session_max=20000,eviction=(threads_min=4,threads_max=4),config_base=false,statistics=(fast),log=(enabled=true,archive=true,path=journal,compressor=snappy),file_manager=(close_idle_time=100000),statistics_log=(wait=0),verbose=(recovery_progress),
+2019-12-22T21:42:13.210+0800 I STORAGE  [initandlisten] WiredTiger message [1577022133:210259][9:0x7fa7f147aca8], txn-recover: Main recovery loop: starting at 31/7552 to 32/256
+2019-12-22T21:42:13.212+0800 I STORAGE  [initandlisten] WiredTiger message [1577022133:212569][9:0x7fa7f147aca8], txn-recover: Recovering log 31 through 32
+2019-12-22T21:42:16.151+0800 I STORAGE  [initandlisten] WiredTiger message [1577022136:151487][9:0x7fa7f147aca8], txn-recover: Recovering log 32 through 32
+2019-12-22T21:42:19.033+0800 I STORAGE  [initandlisten] WiredTiger message [1577022139:33958][9:0x7fa7f147aca8], txn-recover: Set global recovery timestamp: 0
+2019-12-22T21:42:19.067+0800 I RECOVERY [initandlisten] WiredTiger recoveryTimestamp. Ts: Timestamp(0, 0)
+2019-12-22T21:42:19.068+0800 D COMMAND  [WTJournalFlusher] BackgroundJob starting: WTJournalFlusher
+2019-12-22T21:42:19.068+0800 D STORAGE  [WTJournalFlusher] starting WTJournalFlusher thread
+2019-12-22T21:42:19.072+0800 D COMMAND  [WTCheckpointThread] BackgroundJob starting: WTCheckpointThread
+2019-12-22T21:42:19.072+0800 D STORAGE  [WTCheckpointThread] starting WTCheckpointThread thread
+2019-12-22T21:42:19.367+0800 D STORAGE  [initandlisten] Slow WT transaction. Lifetime of SnapshotId 1 was 292ms
+2019-12-22T21:42:19.369+0800 D STORAGE  [initandlisten] flushing directory /data/db/mongo
+2019-12-22T21:42:19.369+0800 I CONTROL  [initandlisten] 
+2019-12-22T21:42:19.370+0800 I CONTROL  [initandlisten] ** WARNING: Access control is not enabled for the database.
+2019-12-22T21:42:19.370+0800 I CONTROL  [initandlisten] **          Read and write access to data and configuration is unrestricted.
+2019-12-22T21:42:19.370+0800 I CONTROL  [initandlisten] ** WARNING: You are running this process as the root user, which is not recommended.
+2019-12-22T21:42:19.371+0800 I CONTROL  [initandlisten] 
+2019-12-22T21:42:19.371+0800 I CONTROL  [initandlisten] ** WARNING: This server is bound to localhost.
+2019-12-22T21:42:19.371+0800 I CONTROL  [initandlisten] **          Remote systems will be unable to connect to this server. 
+2019-12-22T21:42:19.371+0800 I CONTROL  [initandlisten] **          Start the server with --bind_ip <address> to specify which IP 
+2019-12-22T21:42:19.372+0800 I CONTROL  [initandlisten] **          addresses it should serve responses from, or with --bind_ip_all to
+2019-12-22T21:42:19.375+0800 I CONTROL  [initandlisten] **          bind to all interfaces. If this behavior is desired, start the
+2019-12-22T21:42:19.376+0800 I CONTROL  [initandlisten] **          server with --bind_ip 127.0.0.1 to disable this warning.
+2019-12-22T21:42:19.377+0800 I CONTROL  [initandlisten] 
+2019-12-22T21:42:19.377+0800 I CONTROL  [initandlisten] 
+2019-12-22T21:42:19.380+0800 I CONTROL  [initandlisten] ** WARNING: /sys/kernel/mm/transparent_hugepage/enabled is 'always'.
+2019-12-22T21:42:19.380+0800 I CONTROL  [initandlisten] **        We suggest setting it to 'never'
+2019-12-22T21:42:19.381+0800 I CONTROL  [initandlisten] 
+2019-12-22T21:42:19.381+0800 I CONTROL  [initandlisten] ** WARNING: /sys/kernel/mm/transparent_hugepage/defrag is 'always'.
+2019-12-22T21:42:19.381+0800 I CONTROL  [initandlisten] **        We suggest setting it to 'never'
+2019-12-22T21:42:19.382+0800 I CONTROL  [initandlisten] 
+2019-12-22T21:42:19.603+0800 D STORAGE  [initandlisten] admin.system.users: clearing plan cache - collection info cache reset
+2019-12-22T21:42:19.615+0800 D STORAGE  [initandlisten] admin.system.version: clearing plan cache - collection info cache reset
+2019-12-22T21:42:19.616+0800 D -        [initandlisten] reloading view catalog for database admin
+2019-12-22T21:42:19.636+0800 D STORAGE  [initandlisten] config.system.sessions: clearing plan cache - collection info cache reset
+2019-12-22T21:42:19.636+0800 D -        [initandlisten] reloading view catalog for database config
+2019-12-22T21:42:19.652+0800 D STORAGE  [initandlisten] local.startup_log: clearing plan cache - collection info cache reset
+2019-12-22T21:42:19.652+0800 D -        [initandlisten] reloading view catalog for database local
+2019-12-22T21:42:19.654+0800 D STORAGE  [initandlisten]     Recovering database: admin
+2019-12-22T21:42:19.664+0800 D STORAGE  [initandlisten]     Recovering database: config
+2019-12-22T21:42:19.665+0800 D STORAGE  [initandlisten]     Recovering database: local
+2019-12-22T21:42:19.665+0800 D STORAGE  [initandlisten] done repairDatabases
+2019-12-22T21:42:19.665+0800 D STORAGE  [initandlisten] Slow WT transaction. Lifetime of SnapshotId 3 was 281ms
+2019-12-22T21:42:19.666+0800 I COMMAND  [initandlisten] command admin.system.roles command: find { find: "system.roles", $db: "admin" } planSummary: EOF keysExamined:0 docsExamined:0 cursorExhausted:1 numYields:0 nreturned:0 reslen:107 locks:{ Global: { acquireCount: { r: 1 } }, Database: { acquireCount: { r: 1 } }, Collection: { acquireCount: { r: 1 } } } protocol:op_msg 0ms
+2019-12-22T21:42:19.671+0800 I FTDC     [initandlisten] Initializing full-time diagnostic data capture with directory '/data/db/mongo/diagnostic.data'
+2019-12-22T21:42:19.677+0800 D EXECUTOR [freemon-0] starting thread in pool freemon
+2019-12-22T21:42:19.680+0800 D INDEX    [initandlisten] checking complete
+2019-12-22T21:42:19.681+0800 D COMMAND  [TTLMonitor] BackgroundJob starting: TTLMonitor
+2019-12-22T21:42:19.682+0800 I NETWORK  [initandlisten] waiting for connections on port 27017
+2019-12-22T21:42:19.682+0800 D COMMAND  [ClientCursorMonitor] BackgroundJob starting: ClientCursorMonitor
+2019-12-22T21:42:19.683+0800 D COMMAND  [PeriodicTaskRunner] BackgroundJob starting: PeriodicTaskRunner
+2019-12-22T21:42:19.684+0800 I COMMAND  [LogicalSessionCacheRefresh] command config.system.sessions command: listIndexes { listIndexes: "system.sessions", cursor: {}, $db: "config" } numYields:0 reslen:324 locks:{ Global: { acquireCount: { r: 1 } }, Database: { acquireCount: { r: 1 } }, Collection: { acquireCount: { r: 1 } } } protocol:op_msg 0ms
+2019-12-22T21:42:20.052+0800 I FTDC     [ftdc] Unclean full-time diagnostic data capture shutdown detected, found interim file, some metrics may have been lost. OK
+2019-12-22T21:43:19.682+0800 D INDEX    [TTLMonitor] ns: config.system.sessions key: { lastUse: 1 } name: lsidTTLIndex
+2019-12-22T21:43:19.686+0800 D INDEX    [TTLMonitor] deleted: 0
+2019-12-22T21:44:19.688+0800 D INDEX    [TTLMonitor] ns: config.system.sessions key: { lastUse: 1 } name: lsidTTLIndex
+2019-12-22T21:44:19.692+0800 D INDEX    [TTLMonitor] deleted: 0
+2019-12-22T21:45:19.695+0800 D INDEX    [TTLMonitor] ns: config.system.sessions key: { lastUse: 1 } name: lsidTTLIndex
+2019-12-22T21:45:19.696+0800 D INDEX    [TTLMonitor] deleted: 0
+2019-12-22T21:46:19.698+0800 D INDEX    [TTLMonitor] ns: config.system.sessions key: { lastUse: 1 } name: lsidTTLIndex
+2019-12-22T21:46:19.699+0800 D INDEX    [TTLMonitor] deleted: 0
+2019-12-22T21:47:19.684+0800 I COMMAND  [LogicalSessionCacheRefresh] command config.system.sessions command: listIndexes { listIndexes: "system.sessions", cursor: {}, $db: "config" } numYields:0 reslen:324 locks:{ Global: { acquireCount: { r: 1 } }, Database: { acquireCount: { r: 1 } }, Collection: { acquireCount: { r: 1 } } } protocol:op_msg 0ms
+2019-12-22T21:47:19.700+0800 D INDEX    [TTLMonitor] ns: config.system.sessions key: { lastUse: 1 } name: lsidTTLIndex
+2019-12-22T21:47:19.701+0800 D INDEX    [TTLMonitor] deleted: 0
+2019-12-22T21:48:19.702+0800 D INDEX    [TTLMonitor] ns: config.system.sessions key: { lastUse: 1 } name: lsidTTLIndex
+2019-12-22T21:48:19.704+0800 D INDEX    [TTLMonitor] deleted: 0
+2019-12-22T21:49:19.706+0800 D INDEX    [TTLMonitor] ns: config.system.sessions key: { lastUse: 1 } name: lsidTTLIndex
+2019-12-22T21:49:19.708+0800 D INDEX    [TTLMonitor] deleted: 0
+2019-12-22T21:50:19.710+0800 D INDEX    [TTLMonitor] ns: config.system.sessions key: { lastUse: 1 } name: lsidTTLIndex
+2019-12-22T21:50:19.710+0800 D INDEX    [TTLMonitor] deleted: 0
+2019-12-22T21:51:19.711+0800 D INDEX    [TTLMonitor] ns: config.system.sessions key: { lastUse: 1 } name: lsidTTLIndex
+2019-12-22T21:51:19.712+0800 D INDEX    [TTLMonitor] deleted: 0
+2019-12-22T21:52:19.684+0800 I COMMAND  [LogicalSessionCacheRefresh] command config.system.sessions command: listIndexes { listIndexes: "system.sessions", cursor: {}, $db: "config" } numYields:0 reslen:324 locks:{ Global: { acquireCount: { r: 1 } }, Database: { acquireCount: { r: 1 } }, Collection: { acquireCount: { r: 1 } } } protocol:op_msg 0ms
+2019-12-22T21:52:19.713+0800 D INDEX    [TTLMonitor] ns: config.system.sessions key: { lastUse: 1 } name: lsidTTLIndex
+2019-12-22T21:52:19.714+0800 D INDEX    [TTLMonitor] deleted: 0
+2019-12-22T21:53:19.716+0800 D INDEX    [TTLMonitor] ns: config.system.sessions key: { lastUse: 1 } name: lsidTTLIndex
+2019-12-22T21:53:19.717+0800 D INDEX    [TTLMonitor] deleted: 0
+2019-12-22T21:54:19.718+0800 D INDEX    [TTLMonitor] ns: config.system.sessions key: { lastUse: 1 } name: lsidTTLIndex
+2019-12-22T21:54:19.719+0800 D INDEX    [TTLMonitor] deleted: 0
+2019-12-22T21:55:19.721+0800 D INDEX    [TTLMonitor] ns: config.system.sessions key: { lastUse: 1 } name: lsidTTLIndex
+2019-12-22T21:55:19.723+0800 D INDEX    [TTLMonitor] deleted: 0
+2019-12-22T21:56:19.724+0800 D INDEX    [TTLMonitor] ns: config.system.sessions key: { lastUse: 1 } name: lsidTTLIndex
+2019-12-22T21:56:19.725+0800 D INDEX    [TTLMonitor] deleted: 0
+2019-12-22T21:57:19.684+0800 I COMMAND  [LogicalSessionCacheRefresh] command config.system.sessions command: listIndexes { listIndexes: "system.sessions", cursor: {}, $db: "config" } numYields:0 reslen:324 locks:{ Global: { acquireCount: { r: 1 } }, Database: { acquireCount: { r: 1 } }, Collection: { acquireCount: { r: 1 } } } protocol:op_msg 0ms
+2019-12-22T21:57:19.727+0800 D INDEX    [TTLMonitor] ns: config.system.sessions key: { lastUse: 1 } name: lsidTTLIndex
+2019-12-22T21:57:19.728+0800 D INDEX    [TTLMonitor] deleted: 0
+2019-12-22T21:58:19.735+0800 D INDEX    [TTLMonitor] ns: config.system.sessions key: { lastUse: 1 } name: lsidTTLIndex
+2019-12-22T21:58:19.737+0800 D INDEX    [TTLMonitor] deleted: 0
+2019-12-22T21:59:19.738+0800 D INDEX    [TTLMonitor] ns: config.system.sessions key: { lastUse: 1 } name: lsidTTLIndex
+2019-12-22T21:59:19.738+0800 D INDEX    [TTLMonitor] deleted: 0
+2019-12-22T22:00:16.222+0800 I CONTROL  [main] ***** SERVER RESTARTED *****
+2019-12-22T22:00:16.227+0800 I CONTROL  [main] Automatically disabling TLS 1.0, to force-enable TLS 1.0 specify --sslDisabledProtocols 'none'
+2019-12-22T22:00:16.330+0800 D NETWORK  [main] fd limit hard:1048576 soft:1048576 max conn: 838860
+2019-12-22T22:00:16.332+0800 I CONTROL  [initandlisten] MongoDB starting : pid=9 port=27017 dbpath=/data/db/mongo 64-bit host=62a276a345dd
+2019-12-22T22:00:16.332+0800 I CONTROL  [initandlisten] db version v4.0.5
+2019-12-22T22:00:16.333+0800 I CONTROL  [initandlisten] git version: 3739429dd92b92d1b0ab120911a23d50bf03c412
+2019-12-22T22:00:16.333+0800 I CONTROL  [initandlisten] OpenSSL version: OpenSSL 1.1.1b  26 Feb 2019
+2019-12-22T22:00:16.333+0800 I CONTROL  [initandlisten] allocator: system
+2019-12-22T22:00:16.334+0800 I CONTROL  [initandlisten] modules: none
+2019-12-22T22:00:16.334+0800 I CONTROL  [initandlisten] build environment:
+2019-12-22T22:00:16.334+0800 I CONTROL  [initandlisten]     distarch: x86_64
+2019-12-22T22:00:16.334+0800 I CONTROL  [initandlisten]     target_arch: x86_64
+2019-12-22T22:00:16.336+0800 I CONTROL  [initandlisten] options: { net: { bindIp: "0.0.0.0", port: 27017 }, storage: { dbPath: "/data/db/mongo" }, systemLog: { destination: "file", logAppend: true, path: "/data/log/mongod.log", verbosity: 1 } }
+2019-12-22T22:00:16.336+0800 D NETWORK  [initandlisten] fd limit hard:1048576 soft:1048576 max conn: 838860
+2019-12-22T22:00:16.342+0800 W STORAGE  [initandlisten] Detected unclean shutdown - /data/db/mongo/mongod.lock is not empty.
+2019-12-22T22:00:16.343+0800 I STORAGE  [initandlisten] Detected data files in /data/db/mongo created by the 'wiredTiger' storage engine, so setting the active storage engine to 'wiredTiger'.
+2019-12-22T22:00:16.346+0800 W STORAGE  [initandlisten] Recovering data from the last clean checkpoint.
+2019-12-22T22:00:16.348+0800 I STORAGE  [initandlisten] wiredtiger_open config: create,cache_size=1463M,session_max=20000,eviction=(threads_min=4,threads_max=4),config_base=false,statistics=(fast),log=(enabled=true,archive=true,path=journal,compressor=snappy),file_manager=(close_idle_time=100000),statistics_log=(wait=0),verbose=(recovery_progress),
+2019-12-22T22:00:31.078+0800 I STORAGE  [initandlisten] WiredTiger message [1577023231:78052][9:0x7fc8f1cf1ca8], txn-recover: Main recovery loop: starting at 32/5888 to 33/256
+2019-12-22T22:00:31.080+0800 I STORAGE  [initandlisten] WiredTiger message [1577023231:80487][9:0x7fc8f1cf1ca8], txn-recover: Recovering log 32 through 33
+2019-12-22T22:00:34.423+0800 I STORAGE  [initandlisten] WiredTiger message [1577023234:423506][9:0x7fc8f1cf1ca8], txn-recover: Recovering log 33 through 33
+2019-12-22T22:00:39.031+0800 I STORAGE  [initandlisten] WiredTiger message [1577023239:30971][9:0x7fc8f1cf1ca8], txn-recover: Set global recovery timestamp: 0
+2019-12-22T22:00:39.063+0800 I RECOVERY [initandlisten] WiredTiger recoveryTimestamp. Ts: Timestamp(0, 0)
+2019-12-22T22:00:39.075+0800 D COMMAND  [WTCheckpointThread] BackgroundJob starting: WTCheckpointThread
+2019-12-22T22:00:39.075+0800 D STORAGE  [WTCheckpointThread] starting WTCheckpointThread thread
+2019-12-22T22:00:39.076+0800 D COMMAND  [WTJournalFlusher] BackgroundJob starting: WTJournalFlusher
+2019-12-22T22:00:39.089+0800 D STORAGE  [WTJournalFlusher] starting WTJournalFlusher thread
+2019-12-22T22:00:39.323+0800 D STORAGE  [initandlisten] Slow WT transaction. Lifetime of SnapshotId 1 was 255ms
+2019-12-22T22:00:39.326+0800 D STORAGE  [initandlisten] flushing directory /data/db/mongo
+2019-12-22T22:00:39.327+0800 I CONTROL  [initandlisten] 
+2019-12-22T22:00:39.328+0800 I CONTROL  [initandlisten] ** WARNING: Access control is not enabled for the database.
+2019-12-22T22:00:39.329+0800 I CONTROL  [initandlisten] **          Read and write access to data and configuration is unrestricted.
+2019-12-22T22:00:39.329+0800 I CONTROL  [initandlisten] ** WARNING: You are running this process as the root user, which is not recommended.
+2019-12-22T22:00:39.330+0800 I CONTROL  [initandlisten] 
+2019-12-22T22:00:39.332+0800 I CONTROL  [initandlisten] 
+2019-12-22T22:00:39.332+0800 I CONTROL  [initandlisten] ** WARNING: /sys/kernel/mm/transparent_hugepage/enabled is 'always'.
+2019-12-22T22:00:39.333+0800 I CONTROL  [initandlisten] **        We suggest setting it to 'never'
+2019-12-22T22:00:39.334+0800 I CONTROL  [initandlisten] 
+2019-12-22T22:00:39.335+0800 I CONTROL  [initandlisten] ** WARNING: /sys/kernel/mm/transparent_hugepage/defrag is 'always'.
+2019-12-22T22:00:39.335+0800 I CONTROL  [initandlisten] **        We suggest setting it to 'never'
+2019-12-22T22:00:39.336+0800 I CONTROL  [initandlisten] 
+2019-12-22T22:00:39.485+0800 D STORAGE  [initandlisten] admin.system.users: clearing plan cache - collection info cache reset
+2019-12-22T22:00:39.494+0800 D STORAGE  [initandlisten] admin.system.version: clearing plan cache - collection info cache reset
+2019-12-22T22:00:39.494+0800 D -        [initandlisten] reloading view catalog for database admin
+2019-12-22T22:00:39.518+0800 D STORAGE  [initandlisten] config.system.sessions: clearing plan cache - collection info cache reset
+2019-12-22T22:00:39.519+0800 D -        [initandlisten] reloading view catalog for database config
+2019-12-22T22:00:39.529+0800 D STORAGE  [initandlisten] local.startup_log: clearing plan cache - collection info cache reset
+2019-12-22T22:00:39.530+0800 D -        [initandlisten] reloading view catalog for database local
+2019-12-22T22:00:39.532+0800 D STORAGE  [initandlisten]     Recovering database: admin
+2019-12-22T22:00:39.535+0800 D STORAGE  [initandlisten]     Recovering database: config
+2019-12-22T22:00:39.536+0800 D STORAGE  [initandlisten]     Recovering database: local
+2019-12-22T22:00:39.537+0800 D STORAGE  [initandlisten] done repairDatabases
+2019-12-22T22:00:39.537+0800 D STORAGE  [initandlisten] Slow WT transaction. Lifetime of SnapshotId 3 was 199ms
+2019-12-22T22:00:39.539+0800 I COMMAND  [initandlisten] command admin.system.roles command: find { find: "system.roles", $db: "admin" } planSummary: EOF keysExamined:0 docsExamined:0 cursorExhausted:1 numYields:0 nreturned:0 reslen:107 locks:{ Global: { acquireCount: { r: 1 } }, Database: { acquireCount: { r: 1 } }, Collection: { acquireCount: { r: 1 } } } protocol:op_msg 0ms
+2019-12-22T22:00:39.544+0800 I FTDC     [initandlisten] Initializing full-time diagnostic data capture with directory '/data/db/mongo/diagnostic.data'
+2019-12-22T22:00:39.547+0800 D EXECUTOR [freemon-0] starting thread in pool freemon
+2019-12-22T22:00:39.552+0800 D INDEX    [initandlisten] checking complete
+2019-12-22T22:00:39.554+0800 I NETWORK  [initandlisten] waiting for connections on port 27017
+2019-12-22T22:00:39.555+0800 I COMMAND  [LogicalSessionCacheRefresh] command config.system.sessions command: listIndexes { listIndexes: "system.sessions", cursor: {}, $db: "config" } numYields:0 reslen:324 locks:{ Global: { acquireCount: { r: 1 } }, Database: { acquireCount: { r: 1 } }, Collection: { acquireCount: { r: 1 } } } protocol:op_msg 0ms
+2019-12-22T22:00:39.558+0800 D COMMAND  [ClientCursorMonitor] BackgroundJob starting: ClientCursorMonitor
+2019-12-22T22:00:39.558+0800 D COMMAND  [TTLMonitor] BackgroundJob starting: TTLMonitor
+2019-12-22T22:00:39.558+0800 D COMMAND  [PeriodicTaskRunner] BackgroundJob starting: PeriodicTaskRunner
+2019-12-22T22:00:40.272+0800 I FTDC     [ftdc] Unclean full-time diagnostic data capture shutdown detected, found interim file, some metrics may have been lost. OK
+2019-12-22T22:00:48.748+0800 I NETWORK  [listener] connection accepted from 172.20.1.1:42268 #1 (1 connection now open)
+2019-12-22T22:00:49.328+0800 I NETWORK  [conn1] received client metadata from 172.20.1.1:42268 conn1: { driver: { name: "nodejs|Mongoose", version: "3.3.5|5.8.2" }, os: { type: "Linux", name: "linux", architecture: "x64", version: "3.10.0-1062.el7.x86_64" }, platform: "'Node.js v8.17.0, LE (unified)" }
+2019-12-22T22:00:49.329+0800 I COMMAND  [conn1] command admin.$cmd command: isMaster { ismaster: true, client: { driver: { name: "nodejs|Mongoose", version: "3.3.5|5.8.2" }, os: { type: "Linux", name: "linux", architecture: "x64", version: "3.10.0-1062.el7.x86_64" }, platform: "'Node.js v8.17.0, LE (unified)" }, compression: [], $db: "admin" } numYields:0 reslen:239 locks:{} protocol:op_query 0ms
+2019-12-22T22:00:59.469+0800 I COMMAND  [conn1] command admin.$cmd command: isMaster { ismaster: true, $db: "admin" } numYields:0 reslen:224 locks:{} protocol:op_msg 0ms
+2019-12-22T22:01:09.500+0800 I COMMAND  [conn1] command admin.$cmd command: isMaster { ismaster: true, $db: "admin" } numYields:0 reslen:224 locks:{} protocol:op_msg 0ms
+2019-12-22T22:01:19.511+0800 I COMMAND  [conn1] command admin.$cmd command: isMaster { ismaster: true, $db: "admin" } numYields:0 reslen:224 locks:{} protocol:op_msg 0ms
+2019-12-22T22:01:29.515+0800 I COMMAND  [conn1] command admin.$cmd command: isMaster { ismaster: true, $db: "admin" } numYields:0 reslen:224 locks:{} protocol:op_msg 0ms
+2019-12-22T22:01:39.520+0800 I COMMAND  [conn1] command admin.$cmd command: isMaster { ismaster: true, $db: "admin" } numYields:0 reslen:224 locks:{} protocol:op_msg 0ms
+2019-12-22T22:01:39.562+0800 D INDEX    [TTLMonitor] ns: config.system.sessions key: { lastUse: 1 } name: lsidTTLIndex
+2019-12-22T22:01:39.566+0800 D INDEX    [TTLMonitor] deleted: 0
+2019-12-22T22:01:49.526+0800 I COMMAND  [conn1] command admin.$cmd command: isMaster { ismaster: true, $db: "admin" } numYields:0 reslen:224 locks:{} protocol:op_msg 0ms
+2019-12-22T22:01:59.546+0800 I COMMAND  [conn1] command admin.$cmd command: isMaster { ismaster: true, $db: "admin" } numYields:0 reslen:224 locks:{} protocol:op_msg 0ms
+2019-12-22T22:02:09.572+0800 I COMMAND  [conn1] command admin.$cmd command: isMaster { ismaster: true, $db: "admin" } numYields:0 reslen:224 locks:{} protocol:op_msg 0ms
+2019-12-22T22:02:19.579+0800 I COMMAND  [conn1] command admin.$cmd command: isMaster { ismaster: true, $db: "admin" } numYields:0 reslen:224 locks:{} protocol:op_msg 0ms
+2019-12-22T22:02:29.588+0800 I COMMAND  [conn1] command admin.$cmd command: isMaster { ismaster: true, $db: "admin" } numYields:0 reslen:224 locks:{} protocol:op_msg 0ms
+2019-12-22T22:02:33.429+0800 I NETWORK  [listener] connection accepted from 172.20.1.2:56980 #2 (2 connections now open)
+2019-12-22T22:02:33.430+0800 I NETWORK  [conn2] received client metadata from 172.20.1.2:56980 conn2: { application: { name: "MongoDB Shell" }, driver: { name: "MongoDB Internal Client", version: "4.0.5" }, os: { type: "Linux", name: "NAME="Alpine Linux"", architecture: "x86_64", version: "Kernel 3.10.0-1062.el7.x86_64" } }
+2019-12-22T22:02:33.431+0800 I COMMAND  [conn2] command admin.$cmd appName: "MongoDB Shell" command: isMaster { isMaster: 1, client: { application: { name: "MongoDB Shell" }, driver: { name: "MongoDB Internal Client", version: "4.0.5" }, os: { type: "Linux", name: "NAME="Alpine Linux"", architecture: "x86_64", version: "Kernel 3.10.0-1062.el7.x86_64" } }, $db: "admin" } numYields:0 reslen:239 locks:{} protocol:op_query 0ms
+2019-12-22T22:02:33.438+0800 I COMMAND  [conn2] command admin.system.users appName: "MongoDB Shell" command: saslStart { saslStart: 1, mechanism: "SCRAM-SHA-1", payload: "xxx", $db: "meeting" } numYields:0 reslen:180 locks:{ Global: { acquireCount: { r: 1 } }, Database: { acquireCount: { r: 1 } }, Collection: { acquireCount: { r: 1 } } } protocol:op_msg 5ms
+2019-12-22T22:02:33.606+0800 I COMMAND  [conn2] command meeting.$cmd appName: "MongoDB Shell" command: saslContinue { saslContinue: 1, payload: BinData(0, 633D626977732C723D306E6E306356374C764651792B5A6F4D71544B765A3937794F4C6D596844693567566B512B464669617357487A377575647662646A7958526336536C76...), conversationId: 1, $db: "meeting" } numYields:0 reslen:109 locks:{} protocol:op_msg 0ms
+2019-12-22T22:02:33.609+0800 I ACCESS   [conn2] Successfully authenticated as principal ymc on meeting
+2019-12-22T22:02:33.609+0800 I COMMAND  [conn2] command admin.system.users appName: "MongoDB Shell" command: saslContinue { saslContinue: 1, payload: BinData(0, ), conversationId: 1, $db: "meeting" } numYields:0 reslen:79 locks:{ Global: { acquireCount: { r: 1 } }, Database: { acquireCount: { r: 1 } }, Collection: { acquireCount: { r: 1 } } } protocol:op_msg 2ms
+2019-12-22T22:02:33.610+0800 I COMMAND  [conn2] command admin.$cmd appName: "MongoDB Shell" command: whatsmyuri { whatsmyuri: 1, $db: "admin" } numYields:0 reslen:64 locks:{} protocol:op_msg 0ms
+2019-12-22T22:02:33.616+0800 I COMMAND  [conn2] command admin.$cmd appName: "MongoDB Shell" command: buildInfo { buildinfo: 1.0, $db: "admin" } numYields:0 reslen:1199 locks:{} protocol:op_msg 0ms
+2019-12-22T22:02:33.619+0800 I COMMAND  [conn2] command meeting.$cmd appName: "MongoDB Shell" command: isMaster { isMaster: 1.0, saslSupportedMechs: "meeting.ymc", lsid: { id: UUID("b0883ca0-c74c-4f8d-bb99-fb99f33cf029") }, $db: "meeting" } numYields:0 reslen:289 locks:{} protocol:op_msg 0ms
+2019-12-22T22:02:33.621+0800 I COMMAND  [conn2] command meeting.$cmd appName: "MongoDB Shell" command: saslStart { saslStart: 1, mechanism: "SCRAM-SHA-256", payload: "xxx", $db: "meeting" } numYields:0 reslen:196 locks:{} protocol:op_msg 0ms
+2019-12-22T22:02:33.921+0800 I COMMAND  [conn2] command meeting.$cmd appName: "MongoDB Shell" command: saslContinue { saslContinue: 1, payload: BinData(0, 633D626977732C723D32325277436A412F31587542546E754F633232784E4D69432B6E6967737651354E4E646E476F444B516A366865785646724C474C56446E655049433339...), conversationId: 1, $db: "meeting" } numYields:0 reslen:125 locks:{} protocol:op_msg 0ms
+2019-12-22T22:02:33.922+0800 I ACCESS   [conn2] Successfully authenticated as principal ymc on meeting
+2019-12-22T22:02:33.923+0800 I COMMAND  [conn2] command meeting.$cmd appName: "MongoDB Shell" command: saslContinue { saslContinue: 1, payload: BinData(0, ), conversationId: 1, $db: "meeting" } numYields:0 reslen:79 locks:{} protocol:op_msg 0ms
+2019-12-22T22:02:33.925+0800 I COMMAND  [conn2] command admin.$cmd appName: "MongoDB Shell" command: getLog { getLog: "startupWarnings", lsid: { id: UUID("b0883ca0-c74c-4f8d-bb99-fb99f33cf029") }, $db: "admin" } numYields:0 reslen:1279 locks:{} protocol:op_msg 0ms
+2019-12-22T22:02:33.927+0800 I COMMAND  [conn2] command admin.$cmd appName: "MongoDB Shell" command: getFreeMonitoringStatus { getFreeMonitoringStatus: 1.0, lsid: { id: UUID("b0883ca0-c74c-4f8d-bb99-fb99f33cf029") }, $db: "admin" } numYields:0 reslen:59 locks:{} protocol:op_msg 0ms
+2019-12-22T22:02:33.930+0800 I COMMAND  [conn2] command meeting.$cmd appName: "MongoDB Shell" command: isMaster { isMaster: 1.0, forShell: 1.0, lsid: { id: UUID("b0883ca0-c74c-4f8d-bb99-fb99f33cf029") }, $db: "meeting" } numYields:0 reslen:224 locks:{} protocol:op_msg 0ms
+2019-12-22T22:02:33.933+0800 I COMMAND  [conn2] command meeting.$cmd appName: "MongoDB Shell" command: buildInfo { buildInfo: 1.0, $db: "meeting" } numYields:0 reslen:1199 locks:{} protocol:op_msg 0ms
+2019-12-22T22:02:33.935+0800 I COMMAND  [conn2] command meeting.$cmd appName: "MongoDB Shell" command: isMaster { isMaster: 1.0, forShell: 1.0, $db: "meeting" } numYields:0 reslen:224 locks:{} protocol:op_msg 0ms
+2019-12-22T22:02:33.936+0800 D -        [conn2] User Assertion: NoReplicationEnabled: not running with --replSet src/mongo/db/repl/repl_set_get_status_cmd.cpp 56
+2019-12-22T22:02:34.540+0800 D COMMAND  [conn2] assertion while executing command 'replSetGetStatus' on database 'admin' with arguments '{ replSetGetStatus: 1.0, forShell: 1.0, $db: "admin" }': NoReplicationEnabled: not running with --replSet
+2019-12-22T22:02:34.542+0800 I COMMAND  [conn2] command admin.$cmd appName: "MongoDB Shell" command: replSetGetStatus { replSetGetStatus: 1.0, forShell: 1.0, $db: "admin" } numYields:0 ok:0 errMsg:"not running with --replSet" errName:NoReplicationEnabled errCode:76 reslen:122 locks:{} protocol:op_msg 605ms
+2019-12-22T22:02:39.569+0800 D INDEX    [TTLMonitor] ns: config.system.sessions key: { lastUse: 1 } name: lsidTTLIndex
+2019-12-22T22:02:39.570+0800 D INDEX    [TTLMonitor] deleted: 0
+2019-12-22T22:02:39.602+0800 I COMMAND  [conn1] command admin.$cmd command: isMaster { ismaster: true, $db: "admin" } numYields:0 reslen:224 locks:{} protocol:op_msg 0ms
+2019-12-22T22:02:44.410+0800 I COMMAND  [conn2] command admin.$cmd appName: "MongoDB Shell" command: listDatabases { listDatabases: 1.0, filter: {}, lsid: { id: UUID("b0883ca0-c74c-4f8d-bb99-fb99f33cf029") }, $db: "admin" } numYields:0 reslen:230 locks:{ Global: { acquireCount: { r: 8 } }, Database: { acquireCount: { r: 3 } } } protocol:op_msg 3ms
+2019-12-22T22:02:44.413+0800 I COMMAND  [conn2] command meeting.$cmd appName: "MongoDB Shell" command: isMaster { isMaster: 1.0, forShell: 1.0, $db: "meeting" } numYields:0 reslen:224 locks:{} protocol:op_msg 0ms
+2019-12-22T22:02:49.609+0800 I COMMAND  [conn1] command admin.$cmd command: isMaster { ismaster: true, $db: "admin" } numYields:0 reslen:224 locks:{} protocol:op_msg 0ms
+2019-12-22T22:02:50.027+0800 I COMMAND  [conn2] command meeting.$cmd appName: "MongoDB Shell" command: isMaster { isMaster: 1.0, forShell: 1.0, $db: "meeting" } numYields:0 reslen:224 locks:{} protocol:op_msg 0ms
+2019-12-22T22:02:58.778+0800 I COMMAND  [conn2] command admin.$cmd appName: "MongoDB Shell" command: endSessions { endSessions: [ { id: UUID("b0883ca0-c74c-4f8d-bb99-fb99f33cf029") } ], $db: "admin" } numYields:0 reslen:38 locks:{} protocol:op_msg 0ms
+2019-12-22T22:02:58.781+0800 I NETWORK  [conn2] end connection 172.20.1.2:56980 (1 connection now open)
+2019-12-22T22:02:59.624+0800 I COMMAND  [conn1] command admin.$cmd command: isMaster { ismaster: true, $db: "admin" } numYields:0 reslen:224 locks:{} protocol:op_msg 0ms
+2019-12-22T22:03:01.145+0800 I NETWORK  [listener] connection accepted from 172.20.1.1:42384 #3 (2 connections now open)
+2019-12-22T22:03:01.149+0800 I NETWORK  [conn3] received client metadata from 172.20.1.1:42384 conn3: { application: { name: "MongoDB Shell" }, driver: { name: "MongoDB Internal Client", version: "4.0.5" }, os: { type: "Linux", name: "NAME="Alpine Linux"", architecture: "x86_64", version: "Kernel 3.10.0-1062.el7.x86_64" } }
+2019-12-22T22:03:01.150+0800 I COMMAND  [conn3] command admin.$cmd appName: "MongoDB Shell" command: isMaster { isMaster: 1, client: { application: { name: "MongoDB Shell" }, driver: { name: "MongoDB Internal Client", version: "4.0.5" }, os: { type: "Linux", name: "NAME="Alpine Linux"", architecture: "x86_64", version: "Kernel 3.10.0-1062.el7.x86_64" } }, $db: "admin" } numYields:0 reslen:239 locks:{} protocol:op_query 0ms
+2019-12-22T22:03:01.154+0800 I COMMAND  [conn3] command admin.system.users appName: "MongoDB Shell" command: saslStart { saslStart: 1, mechanism: "SCRAM-SHA-1", payload: "xxx", $db: "meeting" } numYields:0 reslen:180 locks:{ Global: { acquireCount: { r: 1 } }, Database: { acquireCount: { r: 1 } }, Collection: { acquireCount: { r: 1 } } } protocol:op_msg 2ms
+2019-12-22T22:03:01.329+0800 I COMMAND  [conn3] command meeting.$cmd appName: "MongoDB Shell" command: saslContinue { saslContinue: 1, payload: BinData(0, 633D626977732C723D577A7A7566464C7A5871366F514F4C32385569536B3672682B2F7371376D494862322B36732B77332B5A4F5341364C654B6C66534A4E3235585A496852...), conversationId: 1, $db: "meeting" } numYields:0 reslen:109 locks:{} protocol:op_msg 0ms
+2019-12-22T22:03:01.332+0800 I ACCESS   [conn3] Successfully authenticated as principal ymc on meeting
+2019-12-22T22:03:01.333+0800 I COMMAND  [conn3] command admin.system.users appName: "MongoDB Shell" command: saslContinue { saslContinue: 1, payload: BinData(0, ), conversationId: 1, $db: "meeting" } numYields:0 reslen:79 locks:{ Global: { acquireCount: { r: 1 } }, Database: { acquireCount: { r: 1 } }, Collection: { acquireCount: { r: 1 } } } protocol:op_msg 2ms
+2019-12-22T22:03:01.334+0800 I COMMAND  [conn3] command admin.$cmd appName: "MongoDB Shell" command: whatsmyuri { whatsmyuri: 1, $db: "admin" } numYields:0 reslen:64 locks:{} protocol:op_msg 0ms
+2019-12-22T22:03:01.340+0800 I COMMAND  [conn3] command admin.$cmd appName: "MongoDB Shell" command: buildInfo { buildinfo: 1.0, $db: "admin" } numYields:0 reslen:1199 locks:{} protocol:op_msg 0ms
+2019-12-22T22:03:01.343+0800 I COMMAND  [conn3] command meeting.$cmd appName: "MongoDB Shell" command: isMaster { isMaster: 1.0, saslSupportedMechs: "meeting.ymc", lsid: { id: UUID("bb890d06-5a50-4382-ba7e-225c2033fa11") }, $db: "meeting" } numYields:0 reslen:289 locks:{} protocol:op_msg 0ms
+2019-12-22T22:03:01.346+0800 I COMMAND  [conn3] command meeting.$cmd appName: "MongoDB Shell" command: saslStart { saslStart: 1, mechanism: "SCRAM-SHA-256", payload: "xxx", $db: "meeting" } numYields:0 reslen:196 locks:{} protocol:op_msg 0ms
+2019-12-22T22:03:01.641+0800 I COMMAND  [conn3] command meeting.$cmd appName: "MongoDB Shell" command: saslContinue { saslContinue: 1, payload: BinData(0, 633D626977732C723D45684B6A34712F4B6D6F635444466B346F3945432F4E445577483361353143574A346E32365154626F5A7251673162576C71644A6474346D5A2B6E5772...), conversationId: 1, $db: "meeting" } numYields:0 reslen:125 locks:{} protocol:op_msg 0ms
+2019-12-22T22:03:01.642+0800 I ACCESS   [conn3] Successfully authenticated as principal ymc on meeting
+2019-12-22T22:03:01.643+0800 I COMMAND  [conn3] command meeting.$cmd appName: "MongoDB Shell" command: saslContinue { saslContinue: 1, payload: BinData(0, ), conversationId: 1, $db: "meeting" } numYields:0 reslen:79 locks:{} protocol:op_msg 0ms
+2019-12-22T22:03:01.645+0800 I COMMAND  [conn3] command admin.$cmd appName: "MongoDB Shell" command: getLog { getLog: "startupWarnings", lsid: { id: UUID("bb890d06-5a50-4382-ba7e-225c2033fa11") }, $db: "admin" } numYields:0 reslen:1279 locks:{} protocol:op_msg 0ms
+2019-12-22T22:03:01.649+0800 I COMMAND  [conn3] command admin.$cmd appName: "MongoDB Shell" command: getFreeMonitoringStatus { getFreeMonitoringStatus: 1.0, lsid: { id: UUID("bb890d06-5a50-4382-ba7e-225c2033fa11") }, $db: "admin" } numYields:0 reslen:59 locks:{} protocol:op_msg 0ms
+2019-12-22T22:03:01.652+0800 I COMMAND  [conn3] command meeting.$cmd appName: "MongoDB Shell" command: isMaster { isMaster: 1.0, forShell: 1.0, lsid: { id: UUID("bb890d06-5a50-4382-ba7e-225c2033fa11") }, $db: "meeting" } numYields:0 reslen:224 locks:{} protocol:op_msg 0ms
+2019-12-22T22:03:01.656+0800 I COMMAND  [conn3] command meeting.$cmd appName: "MongoDB Shell" command: buildInfo { buildInfo: 1.0, $db: "meeting" } numYields:0 reslen:1199 locks:{} protocol:op_msg 0ms
+2019-12-22T22:03:01.658+0800 I COMMAND  [conn3] command meeting.$cmd appName: "MongoDB Shell" command: isMaster { isMaster: 1.0, forShell: 1.0, $db: "meeting" } numYields:0 reslen:224 locks:{} protocol:op_msg 0ms
+2019-12-22T22:03:01.660+0800 D -        [conn3] User Assertion: NoReplicationEnabled: not running with --replSet src/mongo/db/repl/repl_set_get_status_cmd.cpp 56
+2019-12-22T22:03:01.660+0800 D COMMAND  [conn3] assertion while executing command 'replSetGetStatus' on database 'admin' with arguments '{ replSetGetStatus: 1.0, forShell: 1.0, $db: "admin" }': NoReplicationEnabled: not running with --replSet
+2019-12-22T22:03:01.661+0800 I COMMAND  [conn3] command admin.$cmd appName: "MongoDB Shell" command: replSetGetStatus { replSetGetStatus: 1.0, forShell: 1.0, $db: "admin" } numYields:0 ok:0 errMsg:"not running with --replSet" errName:NoReplicationEnabled errCode:76 reslen:122 locks:{} protocol:op_msg 1ms
+2019-12-22T22:03:09.641+0800 I COMMAND  [conn1] command admin.$cmd command: isMaster { ismaster: true, $db: "admin" } numYields:0 reslen:224 locks:{} protocol:op_msg 0ms
+2019-12-22T22:03:19.648+0800 I COMMAND  [conn1] command admin.$cmd command: isMaster { ismaster: true, $db: "admin" } numYields:0 reslen:224 locks:{} protocol:op_msg 0ms
+2019-12-22T22:03:29.661+0800 I COMMAND  [conn1] command admin.$cmd command: isMaster { ismaster: true, $db: "admin" } numYields:0 reslen:224 locks:{} protocol:op_msg 0ms
+2019-12-22T22:03:39.572+0800 D INDEX    [TTLMonitor] ns: config.system.sessions key: { lastUse: 1 } name: lsidTTLIndex
+2019-12-22T22:03:39.573+0800 D INDEX    [TTLMonitor] deleted: 0
+2019-12-22T22:03:39.686+0800 I COMMAND  [conn1] command admin.$cmd command: isMaster { ismaster: true, $db: "admin" } numYields:0 reslen:224 locks:{} protocol:op_msg 0ms
+2019-12-22T22:03:49.696+0800 I COMMAND  [conn1] command admin.$cmd command: isMaster { ismaster: true, $db: "admin" } numYields:0 reslen:224 locks:{} protocol:op_msg 0ms
+2019-12-22T22:03:59.711+0800 I COMMAND  [conn1] command admin.$cmd command: isMaster { ismaster: true, $db: "admin" } numYields:0 reslen:224 locks:{} protocol:op_msg 0ms
+2019-12-22T22:04:09.736+0800 I COMMAND  [conn1] command admin.$cmd command: isMaster { ismaster: true, $db: "admin" } numYields:0 reslen:224 locks:{} protocol:op_msg 0ms
+2019-12-22T22:04:10.109+0800 I COMMAND  [conn1] command ymc_blog.users command: find { find: "users", filter: { username: "yemiancheng" }, projection: {}, limit: 1, singleBatch: true, batchSize: 1, returnKey: false, showRecordId: false, lsid: { id: UUID("a97a6998-3af9-4c90-aed2-9e6c0880300f") }, $db: "ymc_blog" } planSummary: EOF keysExamined:0 docsExamined:0 cursorExhausted:1 numYields:0 nreturned:0 reslen:103 locks:{ Global: { acquireCount: { r: 2 } }, Database: { acquireCount: { r: 2 } }, Collection: { acquireCount: { r: 1 } } } protocol:op_msg 0ms
+2019-12-22T22:04:10.279+0800 D -        [conn1] reloading view catalog for database ymc_blog
+2019-12-22T22:04:10.281+0800 D STORAGE  [conn1] create collection ymc_blog.users {}
+2019-12-22T22:04:10.281+0800 I STORAGE  [conn1] createCollection: ymc_blog.users with generated UUID: 67f8f680-e6a4-4d6d-9b79-aaa47158780d
+2019-12-22T22:04:10.282+0800 D STORAGE  [conn1] stored meta data for ymc_blog.users @ RecordId(10)
+2019-12-22T22:04:10.317+0800 D STORAGE  [conn1] ymc_blog.users: clearing plan cache - collection info cache reset
+2019-12-22T22:04:10.318+0800 D STORAGE  [conn1] create uri: table:index-1-2549024572016471414 config: type=file,internal_page_max=16k,leaf_page_max=16k,checksum=on,prefix_compression=true,block_compressor=,,,,key_format=u,value_format=u,app_metadata=(formatVersion=8,infoObj={ "v" : 2, "key" : { "_id" : 1 }, "name" : "_id_", "ns" : "ymc_blog.users" }),log=(enabled=true)
+2019-12-22T22:04:10.348+0800 D STORAGE  [conn1] ymc_blog.users: clearing plan cache - collection info cache reset
+2019-12-22T22:04:10.352+0800 I COMMAND  [conn1] command ymc_blog.users command: insert { insert: "users", documents: [ { _id: ObjectId('5dff77daf7da59001b66995a'), username: "yemiancheng", password: "836b73f1a0ace8a8298bbae617b9be65", email: "hualei03042013@163.com", creat_date: "2019-12-22 22:04:10", update_date: "2019-12-22 22:04:10", is_delete: 0, timestamp: 1577023450, __v: 0 } ], ordered: true, lsid: { id: UUID("a97a6998-3af9-4c90-aed2-9e6c0880300f") }, $db: "ymc_blog" } ninserted:1 keysInserted:1 numYields:0 reslen:45 locks:{ Global: { acquireCount: { r: 3, w: 3 } }, Database: { acquireCount: { w: 2, W: 1 } }, Collection: { acquireCount: { w: 2 } } } protocol:op_msg 72ms
+2019-12-22T22:04:19.767+0800 I COMMAND  [conn1] command admin.$cmd command: isMaster { ismaster: true, $db: "admin" } numYields:0 reslen:224 locks:{} protocol:op_msg 0ms
+2019-12-22T22:04:29.938+0800 I COMMAND  [conn1] command admin.$cmd command: isMaster { ismaster: true, $db: "admin" } numYields:0 reslen:224 locks:{} protocol:op_msg 0ms
+2019-12-22T22:04:39.574+0800 D INDEX    [TTLMonitor] ns: config.system.sessions key: { lastUse: 1 } name: lsidTTLIndex
+2019-12-22T22:04:39.576+0800 D INDEX    [TTLMonitor] deleted: 0
+2019-12-22T22:04:39.939+0800 I COMMAND  [conn1] command admin.$cmd command: isMaster { ismaster: true, $db: "admin" } numYields:0 reslen:224 locks:{} protocol:op_msg 0ms
+2019-12-22T22:04:49.954+0800 I COMMAND  [conn1] command admin.$cmd command: isMaster { ismaster: true, $db: "admin" } numYields:0 reslen:224 locks:{} protocol:op_msg 0ms
+2019-12-22T22:04:59.961+0800 I COMMAND  [conn1] command admin.$cmd command: isMaster { ismaster: true, $db: "admin" } numYields:0 reslen:224 locks:{} protocol:op_msg 0ms
+2019-12-22T22:05:09.980+0800 I COMMAND  [conn1] command admin.$cmd command: isMaster { ismaster: true, $db: "admin" } numYields:0 reslen:224 locks:{} protocol:op_msg 0ms
+2019-12-22T22:05:19.988+0800 I COMMAND  [conn1] command admin.$cmd command: isMaster { ismaster: true, $db: "admin" } numYields:0 reslen:224 locks:{} protocol:op_msg 0ms
+2019-12-22T22:05:30.007+0800 I COMMAND  [conn1] command admin.$cmd command: isMaster { ismaster: true, $db: "admin" } numYields:0 reslen:224 locks:{} protocol:op_msg 0ms
+2019-12-22T22:05:39.556+0800 I COMMAND  [LogicalSessionCacheRefresh] command config.system.sessions command: listIndexes { listIndexes: "system.sessions", cursor: {}, $db: "config" } numYields:0 reslen:324 locks:{ Global: { acquireCount: { r: 1 } }, Database: { acquireCount: { r: 1 } }, Collection: { acquireCount: { r: 1 } } } protocol:op_msg 1ms
+2019-12-22T22:05:39.565+0800 I WRITE    [LogicalSessionCacheRefresh] update config.system.sessions command: { q: { _id: { id: UUID("bb890d06-5a50-4382-ba7e-225c2033fa11"), uid: BinData(0, E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855) } }, u: { $currentDate: { lastUse: true } }, multi: false, upsert: true } planSummary: IDHACK keysExamined:0 docsExamined:0 nMatched:0 nModified:0 upsert:1 keysInserted:2 numYields:0 locks:{ Global: { acquireCount: { r: 1, w: 1 } }, Database: { acquireCount: { w: 1 } }, Collection: { acquireCount: { w: 1 } } } 7ms
+2019-12-22T22:05:39.567+0800 I WRITE    [LogicalSessionCacheRefresh] update config.system.sessions command: { q: { _id: { id: UUID("a97a6998-3af9-4c90-aed2-9e6c0880300f"), uid: BinData(0, E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855) } }, u: { $currentDate: { lastUse: true } }, multi: false, upsert: true } planSummary: IDHACK keysExamined:0 docsExamined:0 nMatched:0 nModified:0 upsert:1 keysInserted:2 numYields:0 locks:{ Global: { acquireCount: { r: 1, w: 1 } }, Database: { acquireCount: { w: 1 } }, Collection: { acquireCount: { w: 1 } } } 0ms
+2019-12-22T22:05:39.568+0800 I COMMAND  [LogicalSessionCacheRefresh] command config.$cmd command: update { update: "system.sessions", ordered: false, allowImplicitCollectionCreation: false, writeConcern: { w: "majority", wtimeout: 15000 }, $db: "config" } numYields:0 reslen:267 locks:{ Global: { acquireCount: { r: 2, w: 2 } }, Database: { acquireCount: { w: 2 } }, Collection: { acquireCount: { w: 2 } } } protocol:op_msg 10ms
+2019-12-22T22:05:39.571+0800 I WRITE    [LogicalSessionCacheRefresh] remove config.system.sessions command: { q: { _id: { id: UUID("b0883ca0-c74c-4f8d-bb99-fb99f33cf029"), uid: BinData(0, E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855) } }, limit: 0 } planSummary: IDHACK keysExamined:0 docsExamined:0 ndeleted:0 numYields:0 locks:{ Global: { acquireCount: { r: 1, w: 1 } }, Database: { acquireCount: { w: 1 } }, Collection: { acquireCount: { w: 1 } } } 0ms
+2019-12-22T22:05:39.573+0800 I COMMAND  [LogicalSessionCacheRefresh] command config.$cmd command: delete { delete: "system.sessions", ordered: false, writeConcern: { w: "majority", wtimeout: 15000 }, $db: "config" } numYields:0 reslen:45 locks:{ Global: { acquireCount: { r: 1, w: 1 } }, Database: { acquireCount: { w: 1 } }, Collection: { acquireCount: { w: 1 } } } protocol:op_msg 2ms
+2019-12-22T22:05:39.578+0800 D INDEX    [TTLMonitor] ns: config.system.sessions key: { lastUse: 1 } name: lsidTTLIndex
+2019-12-22T22:05:39.580+0800 D INDEX    [TTLMonitor] deleted: 0
+2019-12-22T22:05:40.020+0800 I COMMAND  [conn1] command admin.$cmd command: isMaster { ismaster: true, $db: "admin" } numYields:0 reslen:224 locks:{} protocol:op_msg 0ms
+2019-12-22T22:05:50.021+0800 I COMMAND  [conn1] command admin.$cmd command: isMaster { ismaster: true, $db: "admin" } numYields:0 reslen:224 locks:{} protocol:op_msg 0ms
+2019-12-22T22:06:00.037+0800 I COMMAND  [conn1] command admin.$cmd command: isMaster { ismaster: true, $db: "admin" } numYields:0 reslen:224 locks:{} protocol:op_msg 0ms
+2019-12-22T22:06:10.042+0800 I COMMAND  [conn1] command admin.$cmd command: isMaster { ismaster: true, $db: "admin" } numYields:0 reslen:224 locks:{} protocol:op_msg 0ms
+2019-12-22T22:06:20.058+0800 I COMMAND  [conn1] command admin.$cmd command: isMaster { ismaster: true, $db: "admin" } numYields:0 reslen:224 locks:{} protocol:op_msg 0ms
+2019-12-22T22:06:30.072+0800 I COMMAND  [conn1] command admin.$cmd command: isMaster { ismaster: true, $db: "admin" } numYields:0 reslen:224 locks:{} protocol:op_msg 0ms
+2019-12-22T22:06:39.583+0800 D INDEX    [TTLMonitor] ns: config.system.sessions key: { lastUse: 1 } name: lsidTTLIndex
+2019-12-22T22:06:39.584+0800 D INDEX    [TTLMonitor] deleted: 0
+2019-12-22T22:06:40.081+0800 I COMMAND  [conn1] command admin.$cmd command: isMaster { ismaster: true, $db: "admin" } numYields:0 reslen:224 locks:{} protocol:op_msg 0ms
+2019-12-22T22:06:50.086+0800 I COMMAND  [conn1] command admin.$cmd command: isMaster { ismaster: true, $db: "admin" } numYields:0 reslen:224 locks:{} protocol:op_msg 0ms
+2019-12-22T22:06:51.696+0800 I COMMAND  [conn1] command ymc_blog.users command: find { find: "users", filter: { username: "yemiancheng", password: "836b73f1a0ace8a8298bbae617b9be65", is_delete: 0 }, projection: {}, limit: 1, singleBatch: true, batchSize: 1, returnKey: false, showRecordId: false, lsid: { id: UUID("a97a6998-3af9-4c90-aed2-9e6c0880300f") }, $db: "ymc_blog" } planSummary: COLLSCAN keysExamined:0 docsExamined:1 cursorExhausted:1 numYields:0 nreturned:1 reslen:347 locks:{ Global: { acquireCount: { r: 1 } }, Database: { acquireCount: { r: 1 } }, Collection: { acquireCount: { r: 1 } } } protocol:op_msg 0ms
+2019-12-22T22:07:00.097+0800 I COMMAND  [conn1] command admin.$cmd command: isMaster { ismaster: true, $db: "admin" } numYields:0 reslen:224 locks:{} protocol:op_msg 0ms
+2019-12-22T22:07:10.111+0800 I COMMAND  [conn1] command admin.$cmd command: isMaster { ismaster: true, $db: "admin" } numYields:0 reslen:224 locks:{} protocol:op_msg 0ms
+2019-12-22T22:07:20.114+0800 I COMMAND  [conn1] command admin.$cmd command: isMaster { ismaster: true, $db: "admin" } numYields:0 reslen:224 locks:{} protocol:op_msg 0ms
+2019-12-22T22:07:30.191+0800 I COMMAND  [conn1] command admin.$cmd command: isMaster { ismaster: true, $db: "admin" } numYields:0 reslen:224 locks:{} protocol:op_msg 0ms
+2019-12-22T22:07:39.586+0800 D INDEX    [TTLMonitor] ns: config.system.sessions key: { lastUse: 1 } name: lsidTTLIndex
+2019-12-22T22:07:39.587+0800 D INDEX    [TTLMonitor] deleted: 0
+2019-12-22T22:07:40.250+0800 I COMMAND  [conn1] command admin.$cmd command: isMaster { ismaster: true, $db: "admin" } numYields:0 reslen:224 locks:{} protocol:op_msg 0ms
+2019-12-22T22:07:50.254+0800 I COMMAND  [conn1] command admin.$cmd command: isMaster { ismaster: true, $db: "admin" } numYields:0 reslen:224 locks:{} protocol:op_msg 0ms
+2019-12-22T22:08:00.268+0800 I COMMAND  [conn1] command admin.$cmd command: isMaster { ismaster: true, $db: "admin" } numYields:0 reslen:224 locks:{} protocol:op_msg 0ms
+2019-12-22T22:08:10.281+0800 I COMMAND  [conn1] command admin.$cmd command: isMaster { ismaster: true, $db: "admin" } numYields:0 reslen:224 locks:{} protocol:op_msg 0ms
+2019-12-22T22:08:20.295+0800 I COMMAND  [conn1] command admin.$cmd command: isMaster { ismaster: true, $db: "admin" } numYields:0 reslen:224 locks:{} protocol:op_msg 0ms
+2019-12-22T22:08:30.303+0800 I COMMAND  [conn1] command admin.$cmd command: isMaster { ismaster: true, $db: "admin" } numYields:0 reslen:224 locks:{} protocol:op_msg 0ms
+2019-12-22T22:08:39.590+0800 D INDEX    [TTLMonitor] ns: config.system.sessions key: { lastUse: 1 } name: lsidTTLIndex
+2019-12-22T22:08:39.591+0800 D INDEX    [TTLMonitor] deleted: 0
+2019-12-22T22:08:40.318+0800 I COMMAND  [conn1] command admin.$cmd command: isMaster { ismaster: true, $db: "admin" } numYields:0 reslen:224 locks:{} protocol:op_msg 0ms
+2019-12-22T22:08:50.326+0800 I COMMAND  [conn1] command admin.$cmd command: isMaster { ismaster: true, $db: "admin" } numYields:0 reslen:224 locks:{} protocol:op_msg 0ms
+2019-12-22T22:09:00.338+0800 I COMMAND  [conn1] command admin.$cmd command: isMaster { ismaster: true, $db: "admin" } numYields:0 reslen:224 locks:{} protocol:op_msg 0ms
+2019-12-22T22:09:10.356+0800 I COMMAND  [conn1] command admin.$cmd command: isMaster { ismaster: true, $db: "admin" } numYields:0 reslen:224 locks:{} protocol:op_msg 0ms
+2019-12-22T22:09:20.365+0800 I COMMAND  [conn1] command admin.$cmd command: isMaster { ismaster: true, $db: "admin" } numYields:0 reslen:224 locks:{} protocol:op_msg 0ms
+2019-12-22T22:09:30.377+0800 I COMMAND  [conn1] command admin.$cmd command: isMaster { ismaster: true, $db: "admin" } numYields:0 reslen:224 locks:{} protocol:op_msg 0ms
+2019-12-22T22:09:39.616+0800 D INDEX    [TTLMonitor] ns: config.system.sessions key: { lastUse: 1 } name: lsidTTLIndex
+2019-12-22T22:09:39.618+0800 D INDEX    [TTLMonitor] deleted: 0
+2019-12-22T22:09:40.389+0800 I COMMAND  [conn1] command admin.$cmd command: isMaster { ismaster: true, $db: "admin" } numYields:0 reslen:224 locks:{} protocol:op_msg 0ms
+2019-12-22T22:09:50.393+0800 I COMMAND  [conn1] command admin.$cmd command: isMaster { ismaster: true, $db: "admin" } numYields:0 reslen:224 locks:{} protocol:op_msg 0ms
+2019-12-22T22:10:00.408+0800 I COMMAND  [conn1] command admin.$cmd command: isMaster { ismaster: true, $db: "admin" } numYields:0 reslen:224 locks:{} protocol:op_msg 0ms
+2019-12-22T22:10:10.416+0800 I COMMAND  [conn1] command admin.$cmd command: isMaster { ismaster: true, $db: "admin" } numYields:0 reslen:224 locks:{} protocol:op_msg 0ms
+2019-12-22T22:10:20.425+0800 I COMMAND  [conn1] command admin.$cmd command: isMaster { ismaster: true, $db: "admin" } numYields:0 reslen:224 locks:{} protocol:op_msg 0ms
+2019-12-22T22:10:30.445+0800 I COMMAND  [conn1] command admin.$cmd command: isMaster { ismaster: true, $db: "admin" } numYields:0 reslen:224 locks:{} protocol:op_msg 0ms
+2019-12-22T22:10:39.555+0800 I COMMAND  [LogicalSessionCacheRefresh] command config.system.sessions command: listIndexes { listIndexes: "system.sessions", cursor: {}, $db: "config" } numYields:0 reslen:324 locks:{ Global: { acquireCount: { r: 1 } }, Database: { acquireCount: { r: 1 } }, Collection: { acquireCount: { r: 1 } } } protocol:op_msg 0ms
+2019-12-22T22:10:39.557+0800 I WRITE    [LogicalSessionCacheRefresh] update config.system.sessions command: { q: { _id: { id: UUID("a97a6998-3af9-4c90-aed2-9e6c0880300f"), uid: BinData(0, E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855) } }, u: { $currentDate: { lastUse: true } }, multi: false, upsert: true } planSummary: IDHACK keysExamined:1 docsExamined:1 nMatched:1 nModified:1 keysInserted:1 keysDeleted:1 numYields:0 locks:{ Global: { acquireCount: { r: 1, w: 1 } }, Database: { acquireCount: { w: 1 } }, Collection: { acquireCount: { w: 1 } } } 0ms
+2019-12-22T22:10:39.557+0800 I COMMAND  [LogicalSessionCacheRefresh] command config.$cmd command: update { update: "system.sessions", ordered: false, allowImplicitCollectionCreation: false, writeConcern: { w: "majority", wtimeout: 15000 }, $db: "config" } numYields:0 reslen:60 locks:{ Global: { acquireCount: { r: 1, w: 1 } }, Database: { acquireCount: { w: 1 } }, Collection: { acquireCount: { w: 1 } } } protocol:op_msg 1ms
+2019-12-22T22:10:39.620+0800 D INDEX    [TTLMonitor] ns: config.system.sessions key: { lastUse: 1 } name: lsidTTLIndex
+2019-12-22T22:10:39.623+0800 D INDEX    [TTLMonitor] deleted: 0
+2019-12-22T22:10:40.484+0800 I COMMAND  [conn1] command admin.$cmd command: isMaster { ismaster: true, $db: "admin" } numYields:0 reslen:224 locks:{} protocol:op_msg 0ms
+2019-12-22T22:10:50.491+0800 I COMMAND  [conn1] command admin.$cmd command: isMaster { ismaster: true, $db: "admin" } numYields:0 reslen:224 locks:{} protocol:op_msg 0ms
+2019-12-22T22:11:00.499+0800 I COMMAND  [conn1] command admin.$cmd command: isMaster { ismaster: true, $db: "admin" } numYields:0 reslen:224 locks:{} protocol:op_msg 0ms
+2019-12-22T22:11:10.509+0800 I COMMAND  [conn1] command admin.$cmd command: isMaster { ismaster: true, $db: "admin" } numYields:0 reslen:224 locks:{} protocol:op_msg 0ms
+2019-12-22T22:11:20.515+0800 I COMMAND  [conn1] command admin.$cmd command: isMaster { ismaster: true, $db: "admin" } numYields:0 reslen:224 locks:{} protocol:op_msg 0ms
+2019-12-22T22:11:30.528+0800 I COMMAND  [conn1] command admin.$cmd command: isMaster { ismaster: true, $db: "admin" } numYields:0 reslen:224 locks:{} protocol:op_msg 0ms
+2019-12-22T22:11:39.625+0800 D INDEX    [TTLMonitor] ns: config.system.sessions key: { lastUse: 1 } name: lsidTTLIndex
+2019-12-22T22:11:39.625+0800 D INDEX    [TTLMonitor] deleted: 0
+2019-12-22T22:11:40.707+0800 I COMMAND  [conn1] command admin.$cmd command: isMaster { ismaster: true, $db: "admin" } numYields:0 reslen:224 locks:{} protocol:op_msg 0ms
+2019-12-22T22:11:50.713+0800 I COMMAND  [conn1] command admin.$cmd command: isMaster { ismaster: true, $db: "admin" } numYields:0 reslen:224 locks:{} protocol:op_msg 0ms
+2019-12-22T22:12:00.727+0800 I COMMAND  [conn1] command admin.$cmd command: isMaster { ismaster: true, $db: "admin" } numYields:0 reslen:224 locks:{} protocol:op_msg 0ms
+2019-12-22T22:12:10.734+0800 I COMMAND  [conn1] command admin.$cmd command: isMaster { ismaster: true, $db: "admin" } numYields:0 reslen:224 locks:{} protocol:op_msg 0ms
+2019-12-22T22:12:19.928+0800 I COMMAND  [conn1] command ymc_blog.users command: find { find: "users", filter: { _id: ObjectId('5dff77daf7da59001b66995a'), is_delete: 0 }, projection: {}, limit: 1, singleBatch: true, batchSize: 1, returnKey: false, showRecordId: false, lsid: { id: UUID("a97a6998-3af9-4c90-aed2-9e6c0880300f") }, $db: "ymc_blog" } planSummary: IXSCAN { _id: 1 } keysExamined:1 docsExamined:1 cursorExhausted:1 numYields:0 nreturned:1 reslen:347 locks:{ Global: { acquireCount: { r: 1 } }, Database: { acquireCount: { r: 1 } }, Collection: { acquireCount: { r: 1 } } } protocol:op_msg 0ms
+2019-12-22T22:12:20.744+0800 I COMMAND  [conn1] command admin.$cmd command: isMaster { ismaster: true, $db: "admin" } numYields:0 reslen:224 locks:{} protocol:op_msg 0ms
+2019-12-22T22:12:30.758+0800 I COMMAND  [conn1] command admin.$cmd command: isMaster { ismaster: true, $db: "admin" } numYields:0 reslen:224 locks:{} protocol:op_msg 0ms
+2019-12-22T22:12:39.629+0800 D INDEX    [TTLMonitor] ns: config.system.sessions key: { lastUse: 1 } name: lsidTTLIndex
+2019-12-22T22:12:39.630+0800 D INDEX    [TTLMonitor] deleted: 0
+2019-12-22T22:12:40.765+0800 I COMMAND  [conn1] command admin.$cmd command: isMaster { ismaster: true, $db: "admin" } numYields:0 reslen:224 locks:{} protocol:op_msg 0ms
+2019-12-22T22:12:50.775+0800 I COMMAND  [conn1] command admin.$cmd command: isMaster { ismaster: true, $db: "admin" } numYields:0 reslen:224 locks:{} protocol:op_msg 0ms
+2019-12-22T22:13:00.779+0800 I COMMAND  [conn1] command admin.$cmd command: isMaster { ismaster: true, $db: "admin" } numYields:0 reslen:224 locks:{} protocol:op_msg 0ms
+2019-12-22T22:13:10.792+0800 I COMMAND  [conn1] command admin.$cmd command: isMaster { ismaster: true, $db: "admin" } numYields:0 reslen:224 locks:{} protocol:op_msg 0ms
+2019-12-22T22:13:20.799+0800 I COMMAND  [conn1] command admin.$cmd command: isMaster { ismaster: true, $db: "admin" } numYields:0 reslen:224 locks:{} protocol:op_msg 0ms
+2019-12-22T22:13:30.826+0800 I COMMAND  [conn1] command admin.$cmd command: isMaster { ismaster: true, $db: "admin" } numYields:0 reslen:224 locks:{} protocol:op_msg 0ms
+2019-12-22T22:13:39.632+0800 D INDEX    [TTLMonitor] ns: config.system.sessions key: { lastUse: 1 } name: lsidTTLIndex
+2019-12-22T22:13:39.632+0800 D INDEX    [TTLMonitor] deleted: 0
+2019-12-22T22:13:40.839+0800 I COMMAND  [conn1] command admin.$cmd command: isMaster { ismaster: true, $db: "admin" } numYields:0 reslen:224 locks:{} protocol:op_msg 0ms
+2019-12-22T22:13:50.847+0800 I COMMAND  [conn1] command admin.$cmd command: isMaster { ismaster: true, $db: "admin" } numYields:0 reslen:224 locks:{} protocol:op_msg 0ms
+2019-12-22T22:14:00.858+0800 I COMMAND  [conn1] command admin.$cmd command: isMaster { ismaster: true, $db: "admin" } numYields:0 reslen:224 locks:{} protocol:op_msg 0ms
+2019-12-22T22:14:10.870+0800 I COMMAND  [conn1] command admin.$cmd command: isMaster { ismaster: true, $db: "admin" } numYields:0 reslen:224 locks:{} protocol:op_msg 0ms
+2019-12-22T22:14:20.875+0800 I COMMAND  [conn1] command admin.$cmd command: isMaster { ismaster: true, $db: "admin" } numYields:0 reslen:224 locks:{} protocol:op_msg 0ms
+2019-12-22T22:14:30.885+0800 I COMMAND  [conn1] command admin.$cmd command: isMaster { ismaster: true, $db: "admin" } numYields:0 reslen:224 locks:{} protocol:op_msg 0ms
+2019-12-22T22:14:39.635+0800 D INDEX    [TTLMonitor] ns: config.system.sessions key: { lastUse: 1 } name: lsidTTLIndex
+2019-12-22T22:14:39.635+0800 D INDEX    [TTLMonitor] deleted: 0
+2019-12-22T22:14:40.896+0800 I COMMAND  [conn1] command admin.$cmd command: isMaster { ismaster: true, $db: "admin" } numYields:0 reslen:224 locks:{} protocol:op_msg 0ms
+2019-12-22T22:14:50.910+0800 I COMMAND  [conn1] command admin.$cmd command: isMaster { ismaster: true, $db: "admin" } numYields:0 reslen:224 locks:{} protocol:op_msg 0ms
+2019-12-22T22:15:00.934+0800 I COMMAND  [conn1] command admin.$cmd command: isMaster { ismaster: true, $db: "admin" } numYields:0 reslen:224 locks:{} protocol:op_msg 0ms
+2019-12-22T22:15:10.949+0800 I COMMAND  [conn1] command admin.$cmd command: isMaster { ismaster: true, $db: "admin" } numYields:0 reslen:224 locks:{} protocol:op_msg 0ms
+2019-12-22T22:15:20.957+0800 I COMMAND  [conn1] command admin.$cmd command: isMaster { ismaster: true, $db: "admin" } numYields:0 reslen:224 locks:{} protocol:op_msg 0ms
+2019-12-22T22:15:30.977+0800 I COMMAND  [conn1] command admin.$cmd command: isMaster { ismaster: true, $db: "admin" } numYields:0 reslen:224 locks:{} protocol:op_msg 0ms
+2019-12-22T22:15:39.554+0800 I COMMAND  [LogicalSessionCacheRefresh] command config.system.sessions command: listIndexes { listIndexes: "system.sessions", cursor: {}, $db: "config" } numYields:0 reslen:324 locks:{ Global: { acquireCount: { r: 1 } }, Database: { acquireCount: { r: 1 } }, Collection: { acquireCount: { r: 1 } } } protocol:op_msg 0ms
+2019-12-22T22:15:39.555+0800 I WRITE    [LogicalSessionCacheRefresh] update config.system.sessions command: { q: { _id: { id: UUID("a97a6998-3af9-4c90-aed2-9e6c0880300f"), uid: BinData(0, E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855) } }, u: { $currentDate: { lastUse: true } }, multi: false, upsert: true } planSummary: IDHACK keysExamined:1 docsExamined:1 nMatched:1 nModified:1 keysInserted:1 keysDeleted:1 numYields:0 locks:{ Global: { acquireCount: { r: 1, w: 1 } }, Database: { acquireCount: { w: 1 } }, Collection: { acquireCount: { w: 1 } } } 0ms
+2019-12-22T22:15:39.556+0800 I COMMAND  [LogicalSessionCacheRefresh] command config.$cmd command: update { update: "system.sessions", ordered: false, allowImplicitCollectionCreation: false, writeConcern: { w: "majority", wtimeout: 15000 }, $db: "config" } numYields:0 reslen:60 locks:{ Global: { acquireCount: { r: 1, w: 1 } }, Database: { acquireCount: { w: 1 } }, Collection: { acquireCount: { w: 1 } } } protocol:op_msg 0ms
+2019-12-22T22:15:39.636+0800 D INDEX    [TTLMonitor] ns: config.system.sessions key: { lastUse: 1 } name: lsidTTLIndex
+2019-12-22T22:15:39.637+0800 D INDEX    [TTLMonitor] deleted: 0
+2019-12-22T22:15:40.987+0800 I COMMAND  [conn1] command admin.$cmd command: isMaster { ismaster: true, $db: "admin" } numYields:0 reslen:224 locks:{} protocol:op_msg 0ms
+2019-12-22T22:15:50.995+0800 I COMMAND  [conn1] command admin.$cmd command: isMaster { ismaster: true, $db: "admin" } numYields:0 reslen:224 locks:{} protocol:op_msg 0ms
+2019-12-22T22:16:01.010+0800 I COMMAND  [conn1] command admin.$cmd command: isMaster { ismaster: true, $db: "admin" } numYields:0 reslen:224 locks:{} protocol:op_msg 0ms
+2019-12-22T22:16:11.030+0800 I COMMAND  [conn1] command admin.$cmd command: isMaster { ismaster: true, $db: "admin" } numYields:0 reslen:224 locks:{} protocol:op_msg 0ms
+2019-12-22T22:16:21.046+0800 I COMMAND  [conn1] command admin.$cmd command: isMaster { ismaster: true, $db: "admin" } numYields:0 reslen:224 locks:{} protocol:op_msg 0ms
+2019-12-22T22:16:31.060+0800 I COMMAND  [conn1] command admin.$cmd command: isMaster { ismaster: true, $db: "admin" } numYields:0 reslen:224 locks:{} protocol:op_msg 0ms
+2019-12-22T22:16:39.644+0800 D INDEX    [TTLMonitor] ns: config.system.sessions key: { lastUse: 1 } name: lsidTTLIndex
+2019-12-22T22:16:39.645+0800 D INDEX    [TTLMonitor] deleted: 0
+2019-12-22T22:16:41.069+0800 I COMMAND  [conn1] command admin.$cmd command: isMaster { ismaster: true, $db: "admin" } numYields:0 reslen:224 locks:{} protocol:op_msg 0ms
+2019-12-22T22:16:51.074+0800 I COMMAND  [conn1] command admin.$cmd command: isMaster { ismaster: true, $db: "admin" } numYields:0 reslen:224 locks:{} protocol:op_msg 0ms
+2019-12-22T22:17:01.094+0800 I COMMAND  [conn1] command admin.$cmd command: isMaster { ismaster: true, $db: "admin" } numYields:0 reslen:224 locks:{} protocol:op_msg 0ms
+2019-12-22T22:17:11.112+0800 I COMMAND  [conn1] command admin.$cmd command: isMaster { ismaster: true, $db: "admin" } numYields:0 reslen:224 locks:{} protocol:op_msg 0ms
+2019-12-22T22:17:21.122+0800 I COMMAND  [conn1] command admin.$cmd command: isMaster { ismaster: true, $db: "admin" } numYields:0 reslen:224 locks:{} protocol:op_msg 0ms
+2019-12-22T22:17:24.638+0800 I WRITE    [conn1] update ymc_blog.users command: { q: { _id: ObjectId('5dff77daf7da59001b66995a') }, u: { $set: { email: "hualei03042013@126.com", username: "yemiancheng", update_date: "2019-12-22 22:17:24" } }, multi: false, upsert: false } planSummary: IDHACK keysExamined:1 docsExamined:1 nMatched:1 nModified:1 numYields:0 locks:{ Global: { acquireCount: { r: 1, w: 1 } }, Database: { acquireCount: { w: 1 } }, Collection: { acquireCount: { w: 1 } } } 0ms
+2019-12-22T22:17:24.639+0800 I COMMAND  [conn1] command ymc_blog.$cmd command: update { update: "users", updates: [ { q: { _id: ObjectId('5dff77daf7da59001b66995a') }, u: { $set: { email: "hualei03042013@126.com", username: "yemiancheng", update_date: "2019-12-22 22:17:24" } }, upsert: false, multi: false } ], ordered: true, lsid: { id: UUID("a97a6998-3af9-4c90-aed2-9e6c0880300f") }, $db: "ymc_blog" } numYields:0 reslen:60 locks:{ Global: { acquireCount: { r: 1, w: 1 } }, Database: { acquireCount: { w: 1 } }, Collection: { acquireCount: { w: 1 } } } protocol:op_msg 0ms
+2019-12-22T22:17:31.132+0800 I COMMAND  [conn1] command admin.$cmd command: isMaster { ismaster: true, $db: "admin" } numYields:0 reslen:224 locks:{} protocol:op_msg 0ms
+2019-12-22T22:17:39.647+0800 D INDEX    [TTLMonitor] ns: config.system.sessions key: { lastUse: 1 } name: lsidTTLIndex
+2019-12-22T22:17:39.648+0800 D INDEX    [TTLMonitor] deleted: 0
+2019-12-22T22:17:41.152+0800 I COMMAND  [conn1] command admin.$cmd command: isMaster { ismaster: true, $db: "admin" } numYields:0 reslen:224 locks:{} protocol:op_msg 0ms
+2019-12-22T22:17:51.158+0800 I COMMAND  [conn1] command admin.$cmd command: isMaster { ismaster: true, $db: "admin" } numYields:0 reslen:224 locks:{} protocol:op_msg 0ms
+2019-12-22T22:18:01.168+0800 I COMMAND  [conn1] command admin.$cmd command: isMaster { ismaster: true, $db: "admin" } numYields:0 reslen:224 locks:{} protocol:op_msg 0ms
+2019-12-22T22:18:11.177+0800 I COMMAND  [conn1] command admin.$cmd command: isMaster { ismaster: true, $db: "admin" } numYields:0 reslen:224 locks:{} protocol:op_msg 0ms
+2019-12-22T22:18:21.183+0800 I COMMAND  [conn1] command admin.$cmd command: isMaster { ismaster: true, $db: "admin" } numYields:0 reslen:224 locks:{} protocol:op_msg 0ms
+2019-12-22T22:18:31.186+0800 I COMMAND  [conn1] command admin.$cmd command: isMaster { ismaster: true, $db: "admin" } numYields:0 reslen:224 locks:{} protocol:op_msg 0ms
+2019-12-22T22:18:39.649+0800 D INDEX    [TTLMonitor] ns: config.system.sessions key: { lastUse: 1 } name: lsidTTLIndex
+2019-12-22T22:18:39.650+0800 D INDEX    [TTLMonitor] deleted: 0
+2019-12-22T22:18:41.197+0800 I COMMAND  [conn1] command admin.$cmd command: isMaster { ismaster: true, $db: "admin" } numYields:0 reslen:224 locks:{} protocol:op_msg 0ms
+2019-12-22T22:18:51.201+0800 I COMMAND  [conn1] command admin.$cmd command: isMaster { ismaster: true, $db: "admin" } numYields:0 reslen:224 locks:{} protocol:op_msg 0ms
+2019-12-22T22:19:01.211+0800 I COMMAND  [conn1] command admin.$cmd command: isMaster { ismaster: true, $db: "admin" } numYields:0 reslen:224 locks:{} protocol:op_msg 0ms
+2019-12-22T22:19:11.220+0800 I COMMAND  [conn1] command admin.$cmd command: isMaster { ismaster: true, $db: "admin" } numYields:0 reslen:224 locks:{} protocol:op_msg 0ms
+2019-12-22T22:19:21.227+0800 I COMMAND  [conn1] command admin.$cmd command: isMaster { ismaster: true, $db: "admin" } numYields:0 reslen:224 locks:{} protocol:op_msg 0ms
+2019-12-22T22:19:31.239+0800 I COMMAND  [conn1] command admin.$cmd command: isMaster { ismaster: true, $db: "admin" } numYields:0 reslen:224 locks:{} protocol:op_msg 0ms
+2019-12-22T22:19:39.653+0800 D INDEX    [TTLMonitor] ns: config.system.sessions key: { lastUse: 1 } name: lsidTTLIndex
+2019-12-22T22:19:39.654+0800 D INDEX    [TTLMonitor] deleted: 0
+2019-12-22T22:19:41.250+0800 I COMMAND  [conn1] command admin.$cmd command: isMaster { ismaster: true, $db: "admin" } numYields:0 reslen:224 locks:{} protocol:op_msg 0ms
+2019-12-22T22:19:51.256+0800 I COMMAND  [conn1] command admin.$cmd command: isMaster { ismaster: true, $db: "admin" } numYields:0 reslen:224 locks:{} protocol:op_msg 0ms
+2019-12-22T22:20:01.273+0800 I COMMAND  [conn1] command admin.$cmd command: isMaster { ismaster: true, $db: "admin" } numYields:0 reslen:224 locks:{} protocol:op_msg 0ms
+2019-12-22T22:20:11.282+0800 I COMMAND  [conn1] command admin.$cmd command: isMaster { ismaster: true, $db: "admin" } numYields:0 reslen:224 locks:{} protocol:op_msg 0ms
+2019-12-22T22:20:21.288+0800 I COMMAND  [conn1] command admin.$cmd command: isMaster { ismaster: true, $db: "admin" } numYields:0 reslen:224 locks:{} protocol:op_msg 0ms
+2019-12-22T22:20:31.294+0800 I COMMAND  [conn1] command admin.$cmd command: isMaster { ismaster: true, $db: "admin" } numYields:0 reslen:224 locks:{} protocol:op_msg 0ms
+2019-12-22T22:20:39.555+0800 I COMMAND  [LogicalSessionCacheRefresh] command config.system.sessions command: listIndexes { listIndexes: "system.sessions", cursor: {}, $db: "config" } numYields:0 reslen:324 locks:{ Global: { acquireCount: { r: 1 } }, Database: { acquireCount: { r: 1 } }, Collection: { acquireCount: { r: 1 } } } protocol:op_msg 0ms
+2019-12-22T22:20:39.557+0800 I WRITE    [LogicalSessionCacheRefresh] update config.system.sessions command: { q: { _id: { id: UUID("a97a6998-3af9-4c90-aed2-9e6c0880300f"), uid: BinData(0, E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855) } }, u: { $currentDate: { lastUse: true } }, multi: false, upsert: true } planSummary: IDHACK keysExamined:1 docsExamined:1 nMatched:1 nModified:1 keysInserted:1 keysDeleted:1 numYields:0 locks:{ Global: { acquireCount: { r: 1, w: 1 } }, Database: { acquireCount: { w: 1 } }, Collection: { acquireCount: { w: 1 } } } 0ms
+2019-12-22T22:20:39.558+0800 I COMMAND  [LogicalSessionCacheRefresh] command config.$cmd command: update { update: "system.sessions", ordered: false, allowImplicitCollectionCreation: false, writeConcern: { w: "majority", wtimeout: 15000 }, $db: "config" } numYields:0 reslen:60 locks:{ Global: { acquireCount: { r: 1, w: 1 } }, Database: { acquireCount: { w: 1 } }, Collection: { acquireCount: { w: 1 } } } protocol:op_msg 2ms
+2019-12-22T22:20:39.656+0800 D INDEX    [TTLMonitor] ns: config.system.sessions key: { lastUse: 1 } name: lsidTTLIndex
+2019-12-22T22:20:39.657+0800 D INDEX    [TTLMonitor] deleted: 0
+2019-12-22T22:20:41.310+0800 I COMMAND  [conn1] command admin.$cmd command: isMaster { ismaster: true, $db: "admin" } numYields:0 reslen:224 locks:{} protocol:op_msg 0ms
+2019-12-22T22:20:51.316+0800 I COMMAND  [conn1] command admin.$cmd command: isMaster { ismaster: true, $db: "admin" } numYields:0 reslen:224 locks:{} protocol:op_msg 0ms
+2019-12-22T22:21:01.330+0800 I COMMAND  [conn1] command admin.$cmd command: isMaster { ismaster: true, $db: "admin" } numYields:0 reslen:224 locks:{} protocol:op_msg 0ms
+2019-12-22T22:21:11.345+0800 I COMMAND  [conn1] command admin.$cmd command: isMaster { ismaster: true, $db: "admin" } numYields:0 reslen:224 locks:{} protocol:op_msg 0ms
+2019-12-22T22:21:21.351+0800 I COMMAND  [conn1] command admin.$cmd command: isMaster { ismaster: true, $db: "admin" } numYields:0 reslen:224 locks:{} protocol:op_msg 0ms
+2019-12-22T22:21:31.358+0800 I COMMAND  [conn1] command admin.$cmd command: isMaster { ismaster: true, $db: "admin" } numYields:0 reslen:224 locks:{} protocol:op_msg 0ms
+2019-12-22T22:21:39.658+0800 D INDEX    [TTLMonitor] ns: config.system.sessions key: { lastUse: 1 } name: lsidTTLIndex
+2019-12-22T22:21:39.659+0800 D INDEX    [TTLMonitor] deleted: 0
+2019-12-22T22:21:41.370+0800 I COMMAND  [conn1] command admin.$cmd command: isMaster { ismaster: true, $db: "admin" } numYields:0 reslen:224 locks:{} protocol:op_msg 0ms
+2019-12-22T22:21:51.373+0800 I COMMAND  [conn1] command admin.$cmd command: isMaster { ismaster: true, $db: "admin" } numYields:0 reslen:224 locks:{} protocol:op_msg 0ms
+2019-12-22T22:22:01.381+0800 I COMMAND  [conn1] command admin.$cmd command: isMaster { ismaster: true, $db: "admin" } numYields:0 reslen:224 locks:{} protocol:op_msg 0ms
+2019-12-22T22:22:03.514+0800 I COMMAND  [conn1] command ymc_blog.articles command: count { count: "articles", query: { is_delete: 0 }, lsid: { id: UUID("a97a6998-3af9-4c90-aed2-9e6c0880300f") }, $db: "ymc_blog" } planSummary: EOF keysExamined:0 docsExamined:0 numYields:0 reslen:45 locks:{ Global: { acquireCount: { r: 1 } }, Database: { acquireCount: { r: 1 } }, Collection: { acquireCount: { r: 1 } } } protocol:op_msg 0ms
+2019-12-22T22:22:03.517+0800 I NETWORK  [listener] connection accepted from 172.20.1.1:43340 #4 (3 connections now open)
+2019-12-22T22:22:03.570+0800 I NETWORK  [conn4] received client metadata from 172.20.1.1:43340 conn4: { driver: { name: "nodejs|Mongoose", version: "3.3.5|5.8.2" }, os: { type: "Linux", name: "linux", architecture: "x64", version: "3.10.0-1062.el7.x86_64" }, platform: "'Node.js v8.17.0, LE (unified)" }
+2019-12-22T22:22:03.580+0800 I COMMAND  [conn4] command admin.$cmd command: isMaster { ismaster: true, client: { driver: { name: "nodejs|Mongoose", version: "3.3.5|5.8.2" }, os: { type: "Linux", name: "linux", architecture: "x64", version: "3.10.0-1062.el7.x86_64" }, platform: "'Node.js v8.17.0, LE (unified)" }, compression: [], $db: "admin" } numYields:0 reslen:239 locks:{} protocol:op_query 9ms
+2019-12-22T22:22:03.586+0800 I COMMAND  [conn1] command ymc_blog.articles command: find { find: "articles", filter: { is_delete: 0 }, sort: { update_date: -1 }, projection: {}, limit: 10, returnKey: false, showRecordId: false, lsid: { id: UUID("bb88dc5f-6e6f-43f7-9277-3ffe9df45781") }, $db: "ymc_blog" } planSummary: EOF keysExamined:0 docsExamined:0 cursorExhausted:1 numYields:0 nreturned:0 reslen:106 locks:{ Global: { acquireCount: { r: 1 } }, Database: { acquireCount: { r: 1 } }, Collection: { acquireCount: { r: 1 } } } protocol:op_msg 0ms
+2019-12-22T22:22:11.391+0800 I COMMAND  [conn1] command admin.$cmd command: isMaster { ismaster: true, $db: "admin" } numYields:0 reslen:224 locks:{} protocol:op_msg 0ms
+2019-12-22T22:22:21.401+0800 I COMMAND  [conn4] command admin.$cmd command: isMaster { ismaster: true, $db: "admin" } numYields:0 reslen:224 locks:{} protocol:op_msg 0ms
+2019-12-22T22:22:31.410+0800 I COMMAND  [conn1] command admin.$cmd command: isMaster { ismaster: true, $db: "admin" } numYields:0 reslen:224 locks:{} protocol:op_msg 0ms
+2019-12-22T22:22:39.661+0800 D INDEX    [TTLMonitor] ns: config.system.sessions key: { lastUse: 1 } name: lsidTTLIndex
+2019-12-22T22:22:39.662+0800 D INDEX    [TTLMonitor] deleted: 0
+2019-12-22T22:22:41.423+0800 I COMMAND  [conn4] command admin.$cmd command: isMaster { ismaster: true, $db: "admin" } numYields:0 reslen:224 locks:{} protocol:op_msg 0ms
+2019-12-22T22:22:51.438+0800 I COMMAND  [conn1] command admin.$cmd command: isMaster { ismaster: true, $db: "admin" } numYields:0 reslen:224 locks:{} protocol:op_msg 0ms
+2019-12-22T22:23:01.446+0800 I COMMAND  [conn4] command admin.$cmd command: isMaster { ismaster: true, $db: "admin" } numYields:0 reslen:224 locks:{} protocol:op_msg 0ms
+2019-12-22T22:23:11.455+0800 I COMMAND  [conn1] command admin.$cmd command: isMaster { ismaster: true, $db: "admin" } numYields:0 reslen:224 locks:{} protocol:op_msg 0ms
+2019-12-22T22:23:21.460+0800 I COMMAND  [conn4] command admin.$cmd command: isMaster { ismaster: true, $db: "admin" } numYields:0 reslen:224 locks:{} protocol:op_msg 0ms
+2019-12-22T22:23:31.469+0800 I COMMAND  [conn1] command admin.$cmd command: isMaster { ismaster: true, $db: "admin" } numYields:0 reslen:224 locks:{} protocol:op_msg 0ms
+2019-12-22T22:23:39.664+0800 D INDEX    [TTLMonitor] ns: config.system.sessions key: { lastUse: 1 } name: lsidTTLIndex
+2019-12-22T22:23:39.664+0800 D INDEX    [TTLMonitor] deleted: 0
+2019-12-22T22:23:41.483+0800 I COMMAND  [conn4] command admin.$cmd command: isMaster { ismaster: true, $db: "admin" } numYields:0 reslen:224 locks:{} protocol:op_msg 0ms
+2019-12-22T22:23:51.492+0800 I COMMAND  [conn1] command admin.$cmd command: isMaster { ismaster: true, $db: "admin" } numYields:0 reslen:224 locks:{} protocol:op_msg 0ms
+2019-12-22T22:24:01.508+0800 I COMMAND  [conn4] command admin.$cmd command: isMaster { ismaster: true, $db: "admin" } numYields:0 reslen:224 locks:{} protocol:op_msg 0ms
+2019-12-22T22:24:11.518+0800 I COMMAND  [conn1] command admin.$cmd command: isMaster { ismaster: true, $db: "admin" } numYields:0 reslen:224 locks:{} protocol:op_msg 0ms
+2019-12-22T22:24:21.530+0800 I COMMAND  [conn4] command admin.$cmd command: isMaster { ismaster: true, $db: "admin" } numYields:0 reslen:224 locks:{} protocol:op_msg 0ms
+2019-12-22T22:24:31.536+0800 I COMMAND  [conn1] command admin.$cmd command: isMaster { ismaster: true, $db: "admin" } numYields:0 reslen:224 locks:{} protocol:op_msg 0ms
+2019-12-22T22:24:39.666+0800 D INDEX    [TTLMonitor] ns: config.system.sessions key: { lastUse: 1 } name: lsidTTLIndex
+2019-12-22T22:24:39.668+0800 D INDEX    [TTLMonitor] deleted: 0
+2019-12-22T22:24:41.548+0800 I COMMAND  [conn4] command admin.$cmd command: isMaster { ismaster: true, $db: "admin" } numYields:0 reslen:224 locks:{} protocol:op_msg 0ms
+2019-12-22T22:24:51.556+0800 I COMMAND  [conn1] command admin.$cmd command: isMaster { ismaster: true, $db: "admin" } numYields:0 reslen:224 locks:{} protocol:op_msg 0ms
+2019-12-22T22:25:01.588+0800 I COMMAND  [conn4] command admin.$cmd command: isMaster { ismaster: true, $db: "admin" } numYields:0 reslen:224 locks:{} protocol:op_msg 0ms
+2019-12-22T22:25:11.627+0800 I COMMAND  [conn1] command admin.$cmd command: isMaster { ismaster: true, $db: "admin" } numYields:0 reslen:224 locks:{} protocol:op_msg 0ms
+2019-12-22T22:25:21.633+0800 I COMMAND  [conn4] command admin.$cmd command: isMaster { ismaster: true, $db: "admin" } numYields:0 reslen:224 locks:{} protocol:op_msg 0ms
+2019-12-22T22:25:31.650+0800 I COMMAND  [conn1] command admin.$cmd command: isMaster { ismaster: true, $db: "admin" } numYields:0 reslen:224 locks:{} protocol:op_msg 0ms
+2019-12-22T22:25:39.556+0800 I COMMAND  [LogicalSessionCacheRefresh] command config.system.sessions command: listIndexes { listIndexes: "system.sessions", cursor: {}, $db: "config" } numYields:0 reslen:324 locks:{ Global: { acquireCount: { r: 1 } }, Database: { acquireCount: { r: 1 } }, Collection: { acquireCount: { r: 1 } } } protocol:op_msg 1ms
+2019-12-22T22:25:39.559+0800 I WRITE    [LogicalSessionCacheRefresh] update config.system.sessions command: { q: { _id: { id: UUID("a97a6998-3af9-4c90-aed2-9e6c0880300f"), uid: BinData(0, E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855) } }, u: { $currentDate: { lastUse: true } }, multi: false, upsert: true } planSummary: IDHACK keysExamined:1 docsExamined:1 nMatched:1 nModified:1 keysInserted:1 keysDeleted:1 numYields:0 locks:{ Global: { acquireCount: { r: 1, w: 1 } }, Database: { acquireCount: { w: 1 } }, Collection: { acquireCount: { w: 1 } } } 1ms
+2019-12-22T22:25:39.561+0800 I WRITE    [LogicalSessionCacheRefresh] update config.system.sessions command: { q: { _id: { id: UUID("bb88dc5f-6e6f-43f7-9277-3ffe9df45781"), uid: BinData(0, E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855) } }, u: { $currentDate: { lastUse: true } }, multi: false, upsert: true } planSummary: IDHACK keysExamined:0 docsExamined:0 nMatched:0 nModified:0 upsert:1 keysInserted:2 numYields:0 locks:{ Global: { acquireCount: { r: 1, w: 1 } }, Database: { acquireCount: { w: 1 } }, Collection: { acquireCount: { w: 1 } } } 0ms
+2019-12-22T22:25:39.562+0800 I COMMAND  [LogicalSessionCacheRefresh] command config.$cmd command: update { update: "system.sessions", ordered: false, allowImplicitCollectionCreation: false, writeConcern: { w: "majority", wtimeout: 15000 }, $db: "config" } numYields:0 reslen:171 locks:{ Global: { acquireCount: { r: 2, w: 2 } }, Database: { acquireCount: { w: 2 } }, Collection: { acquireCount: { w: 2 } } } protocol:op_msg 4ms
+2019-12-22T22:25:39.671+0800 D INDEX    [TTLMonitor] ns: config.system.sessions key: { lastUse: 1 } name: lsidTTLIndex
+2019-12-22T22:25:39.671+0800 D INDEX    [TTLMonitor] deleted: 0
+2019-12-22T22:25:41.673+0800 I COMMAND  [conn4] command admin.$cmd command: isMaster { ismaster: true, $db: "admin" } numYields:0 reslen:224 locks:{} protocol:op_msg 0ms
+2019-12-22T22:25:51.689+0800 I COMMAND  [conn1] command admin.$cmd command: isMaster { ismaster: true, $db: "admin" } numYields:0 reslen:224 locks:{} protocol:op_msg 0ms
+2019-12-22T22:26:00.189+0800 I COMMAND  [conn4] command ymc_blog.admins command: find { find: "admins", filter: { username: "yemiancheng", password: "836b73f1a0ace8a8298bbae617b9be65", is_delete: 0 }, projection: {}, limit: 1, singleBatch: true, batchSize: 1, returnKey: false, showRecordId: false, lsid: { id: UUID("bb88dc5f-6e6f-43f7-9277-3ffe9df45781") }, $db: "ymc_blog" } planSummary: EOF keysExamined:0 docsExamined:0 cursorExhausted:1 numYields:0 nreturned:0 reslen:104 locks:{ Global: { acquireCount: { r: 1 } }, Database: { acquireCount: { r: 1 } }, Collection: { acquireCount: { r: 1 } } } protocol:op_msg 0ms
+2019-12-22T22:26:01.697+0800 I COMMAND  [conn4] command admin.$cmd command: isMaster { ismaster: true, $db: "admin" } numYields:0 reslen:224 locks:{} protocol:op_msg 0ms
+2019-12-22T22:26:11.705+0800 I COMMAND  [conn1] command admin.$cmd command: isMaster { ismaster: true, $db: "admin" } numYields:0 reslen:224 locks:{} protocol:op_msg 0ms
+2019-12-22T22:26:21.710+0800 I COMMAND  [conn4] command admin.$cmd command: isMaster { ismaster: true, $db: "admin" } numYields:0 reslen:224 locks:{} protocol:op_msg 0ms
+2019-12-22T22:26:31.731+0800 I COMMAND  [conn1] command admin.$cmd command: isMaster { ismaster: true, $db: "admin" } numYields:0 reslen:224 locks:{} protocol:op_msg 0ms
+2019-12-22T22:26:39.674+0800 D INDEX    [TTLMonitor] ns: config.system.sessions key: { lastUse: 1 } name: lsidTTLIndex
+2019-12-22T22:26:39.675+0800 D INDEX    [TTLMonitor] deleted: 0
+2019-12-22T22:26:41.742+0800 I COMMAND  [conn4] command admin.$cmd command: isMaster { ismaster: true, $db: "admin" } numYields:0 reslen:224 locks:{} protocol:op_msg 0ms
+2019-12-22T22:26:44.523+0800 I COMMAND  [conn1] command ymc_blog.admins command: find { find: "admins", filter: { username: "yemiancheng" }, projection: {}, limit: 1, singleBatch: true, batchSize: 1, returnKey: false, showRecordId: false, lsid: { id: UUID("bb88dc5f-6e6f-43f7-9277-3ffe9df45781") }, $db: "ymc_blog" } planSummary: EOF keysExamined:0 docsExamined:0 cursorExhausted:1 numYields:0 nreturned:0 reslen:104 locks:{ Global: { acquireCount: { r: 1 } }, Database: { acquireCount: { r: 1 } }, Collection: { acquireCount: { r: 1 } } } protocol:op_msg 0ms
+2019-12-22T22:26:44.571+0800 D STORAGE  [conn4] create collection ymc_blog.admins {}
+2019-12-22T22:26:44.572+0800 I STORAGE  [conn4] createCollection: ymc_blog.admins with generated UUID: af8ca889-e6af-4934-894f-7addb0136d7f
+2019-12-22T22:26:44.572+0800 D STORAGE  [conn4] stored meta data for ymc_blog.admins @ RecordId(11)
+2019-12-22T22:26:44.618+0800 D STORAGE  [conn4] ymc_blog.admins: clearing plan cache - collection info cache reset
+2019-12-22T22:26:44.619+0800 D STORAGE  [conn4] create uri: table:index-3-2549024572016471414 config: type=file,internal_page_max=16k,leaf_page_max=16k,checksum=on,prefix_compression=true,block_compressor=,,,,key_format=u,value_format=u,app_metadata=(formatVersion=8,infoObj={ "v" : 2, "key" : { "_id" : 1 }, "name" : "_id_", "ns" : "ymc_blog.admins" }),log=(enabled=true)
+2019-12-22T22:26:44.637+0800 D STORAGE  [conn4] ymc_blog.admins: clearing plan cache - collection info cache reset
+2019-12-22T22:26:44.641+0800 I COMMAND  [conn4] command ymc_blog.admins command: insert { insert: "admins", documents: [ { _id: ObjectId('5dff7d24f7da59001b66995b'), username: "yemiancheng", password: "836b73f1a0ace8a8298bbae617b9be65", email: "hualei03042013@163.com", creat_date: "2019-12-22 22:26:44", update_date: "2019-12-22 22:26:44", is_delete: 0, timestamp: 1577024804, __v: 0 } ], ordered: true, lsid: { id: UUID("bb88dc5f-6e6f-43f7-9277-3ffe9df45781") }, $db: "ymc_blog" } ninserted:1 keysInserted:1 numYields:0 reslen:45 locks:{ Global: { acquireCount: { r: 3, w: 3 } }, Database: { acquireCount: { w: 2, W: 1 } }, Collection: { acquireCount: { w: 2 } } } protocol:op_msg 69ms
+2019-12-22T22:26:51.750+0800 I COMMAND  [conn1] command admin.$cmd command: isMaster { ismaster: true, $db: "admin" } numYields:0 reslen:224 locks:{} protocol:op_msg 0ms
+2019-12-22T22:27:01.766+0800 I COMMAND  [conn4] command admin.$cmd command: isMaster { ismaster: true, $db: "admin" } numYields:0 reslen:224 locks:{} protocol:op_msg 0ms
+2019-12-22T22:27:11.783+0800 I COMMAND  [conn1] command admin.$cmd command: isMaster { ismaster: true, $db: "admin" } numYields:0 reslen:224 locks:{} protocol:op_msg 0ms
+2019-12-22T22:27:21.787+0800 I COMMAND  [conn4] command admin.$cmd command: isMaster { ismaster: true, $db: "admin" } numYields:0 reslen:224 locks:{} protocol:op_msg 0ms
+2019-12-22T22:27:31.802+0800 I COMMAND  [conn1] command admin.$cmd command: isMaster { ismaster: true, $db: "admin" } numYields:0 reslen:224 locks:{} protocol:op_msg 0ms
+2019-12-22T22:27:39.679+0800 D INDEX    [TTLMonitor] ns: config.system.sessions key: { lastUse: 1 } name: lsidTTLIndex
+2019-12-22T22:27:39.680+0800 D INDEX    [TTLMonitor] deleted: 0
+2019-12-22T22:27:41.813+0800 I COMMAND  [conn4] command admin.$cmd command: isMaster { ismaster: true, $db: "admin" } numYields:0 reslen:224 locks:{} protocol:op_msg 0ms
+2019-12-22T22:27:51.822+0800 I COMMAND  [conn1] command admin.$cmd command: isMaster { ismaster: true, $db: "admin" } numYields:0 reslen:224 locks:{} protocol:op_msg 0ms
+2019-12-22T22:27:56.863+0800 I COMMAND  [conn1] command ymc_blog.admins command: find { find: "admins", filter: { username: "yemiancheng", password: "836b73f1a0ace8a8298bbae617b9be65", is_delete: 0 }, projection: {}, limit: 1, singleBatch: true, batchSize: 1, returnKey: false, showRecordId: false, lsid: { id: UUID("bb88dc5f-6e6f-43f7-9277-3ffe9df45781") }, $db: "ymc_blog" } planSummary: COLLSCAN keysExamined:0 docsExamined:1 cursorExhausted:1 numYields:0 nreturned:1 reslen:348 locks:{ Global: { acquireCount: { r: 1 } }, Database: { acquireCount: { r: 1 } }, Collection: { acquireCount: { r: 1 } } } protocol:op_msg 0ms
+2019-12-22T22:28:01.827+0800 I COMMAND  [conn4] command admin.$cmd command: isMaster { ismaster: true, $db: "admin" } numYields:0 reslen:224 locks:{} protocol:op_msg 0ms
+2019-12-22T22:28:11.833+0800 I COMMAND  [conn1] command admin.$cmd command: isMaster { ismaster: true, $db: "admin" } numYields:0 reslen:224 locks:{} protocol:op_msg 0ms
+2019-12-22T22:28:21.836+0800 I COMMAND  [conn4] command admin.$cmd command: isMaster { ismaster: true, $db: "admin" } numYields:0 reslen:224 locks:{} protocol:op_msg 0ms
+2019-12-22T22:28:31.844+0800 I COMMAND  [conn1] command admin.$cmd command: isMaster { ismaster: true, $db: "admin" } numYields:0 reslen:224 locks:{} protocol:op_msg 0ms
+2019-12-22T22:28:39.682+0800 D INDEX    [TTLMonitor] ns: config.system.sessions key: { lastUse: 1 } name: lsidTTLIndex
+2019-12-22T22:28:39.683+0800 D INDEX    [TTLMonitor] deleted: 0
+2019-12-22T22:28:41.861+0800 I COMMAND  [conn4] command admin.$cmd command: isMaster { ismaster: true, $db: "admin" } numYields:0 reslen:224 locks:{} protocol:op_msg 0ms
+2019-12-22T22:28:51.873+0800 I COMMAND  [conn1] command admin.$cmd command: isMaster { ismaster: true, $db: "admin" } numYields:0 reslen:224 locks:{} protocol:op_msg 0ms
+2019-12-22T22:28:52.320+0800 I COMMAND  [conn4] command ymc_blog.admins command: count { count: "admins", query: {}, lsid: { id: UUID("bb88dc5f-6e6f-43f7-9277-3ffe9df45781") }, $db: "ymc_blog" } planSummary: COUNT keysExamined:0 docsExamined:0 numYields:0 reslen:45 locks:{ Global: { acquireCount: { r: 1 } }, Database: { acquireCount: { r: 1 } }, Collection: { acquireCount: { r: 1 } } } protocol:op_msg 0ms
+2019-12-22T22:28:52.321+0800 I COMMAND  [conn1] command ymc_blog.admins command: find { find: "admins", filter: {}, sort: { _id: -1 }, projection: {}, limit: 10, returnKey: false, showRecordId: false, lsid: { id: UUID("a97a6998-3af9-4c90-aed2-9e6c0880300f") }, $db: "ymc_blog" } planSummary: IXSCAN { _id: 1 } keysExamined:1 docsExamined:1 cursorExhausted:1 numYields:0 nreturned:1 reslen:348 locks:{ Global: { acquireCount: { r: 1 } }, Database: { acquireCount: { r: 1 } }, Collection: { acquireCount: { r: 1 } } } protocol:op_msg 0ms
+2019-12-22T22:29:01.878+0800 I COMMAND  [conn4] command admin.$cmd command: isMaster { ismaster: true, $db: "admin" } numYields:0 reslen:224 locks:{} protocol:op_msg 0ms
+2019-12-22T22:29:11.891+0800 I COMMAND  [conn1] command admin.$cmd command: isMaster { ismaster: true, $db: "admin" } numYields:0 reslen:224 locks:{} protocol:op_msg 0ms
+2019-12-22T22:29:21.897+0800 I COMMAND  [conn4] command admin.$cmd command: isMaster { ismaster: true, $db: "admin" } numYields:0 reslen:224 locks:{} protocol:op_msg 0ms
+2019-12-22T22:29:31.910+0800 I COMMAND  [conn1] command admin.$cmd command: isMaster { ismaster: true, $db: "admin" } numYields:0 reslen:224 locks:{} protocol:op_msg 0ms
+2019-12-22T22:29:39.684+0800 D INDEX    [TTLMonitor] ns: config.system.sessions key: { lastUse: 1 } name: lsidTTLIndex
+2019-12-22T22:29:39.685+0800 D INDEX    [TTLMonitor] deleted: 0
+2019-12-22T22:29:41.926+0800 I COMMAND  [conn4] command admin.$cmd command: isMaster { ismaster: true, $db: "admin" } numYields:0 reslen:224 locks:{} protocol:op_msg 0ms
+2019-12-22T22:29:51.932+0800 I COMMAND  [conn1] command admin.$cmd command: isMaster { ismaster: true, $db: "admin" } numYields:0 reslen:224 locks:{} protocol:op_msg 0ms
+2019-12-22T22:30:01.937+0800 I COMMAND  [conn4] command admin.$cmd command: isMaster { ismaster: true, $db: "admin" } numYields:0 reslen:224 locks:{} protocol:op_msg 0ms
+2019-12-22T22:30:11.955+0800 I COMMAND  [conn1] command admin.$cmd command: isMaster { ismaster: true, $db: "admin" } numYields:0 reslen:224 locks:{} protocol:op_msg 0ms
+2019-12-22T22:30:21.960+0800 I COMMAND  [conn4] command admin.$cmd command: isMaster { ismaster: true, $db: "admin" } numYields:0 reslen:224 locks:{} protocol:op_msg 0ms
+2019-12-22T22:30:31.973+0800 I COMMAND  [conn1] command admin.$cmd command: isMaster { ismaster: true, $db: "admin" } numYields:0 reslen:224 locks:{} protocol:op_msg 0ms
+2019-12-22T22:30:39.561+0800 I COMMAND  [LogicalSessionCacheRefresh] command config.system.sessions command: listIndexes { listIndexes: "system.sessions", cursor: {}, $db: "config" } numYields:0 reslen:324 locks:{ Global: { acquireCount: { r: 1 } }, Database: { acquireCount: { r: 1 } }, Collection: { acquireCount: { r: 1 } } } protocol:op_msg 0ms
+2019-12-22T22:30:39.562+0800 I WRITE    [LogicalSessionCacheRefresh] update config.system.sessions command: { q: { _id: { id: UUID("bb88dc5f-6e6f-43f7-9277-3ffe9df45781"), uid: BinData(0, E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855) } }, u: { $currentDate: { lastUse: true } }, multi: false, upsert: true } planSummary: IDHACK keysExamined:1 docsExamined:1 nMatched:1 nModified:1 keysInserted:1 keysDeleted:1 numYields:0 locks:{ Global: { acquireCount: { r: 1, w: 1 } }, Database: { acquireCount: { w: 1 } }, Collection: { acquireCount: { w: 1 } } } 0ms
+2019-12-22T22:30:39.563+0800 I WRITE    [LogicalSessionCacheRefresh] update config.system.sessions command: { q: { _id: { id: UUID("a97a6998-3af9-4c90-aed2-9e6c0880300f"), uid: BinData(0, E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855) } }, u: { $currentDate: { lastUse: true } }, multi: false, upsert: true } planSummary: IDHACK keysExamined:1 docsExamined:1 nMatched:1 nModified:1 keysInserted:1 keysDeleted:1 numYields:0 locks:{ Global: { acquireCount: { r: 1, w: 1 } }, Database: { acquireCount: { w: 1 } }, Collection: { acquireCount: { w: 1 } } } 0ms
+2019-12-22T22:30:39.576+0800 I COMMAND  [LogicalSessionCacheRefresh] command config.$cmd command: update { update: "system.sessions", ordered: false, allowImplicitCollectionCreation: false, writeConcern: { w: "majority", wtimeout: 15000 }, $db: "config" } numYields:0 reslen:60 locks:{ Global: { acquireCount: { r: 2, w: 2 } }, Database: { acquireCount: { w: 2 } }, Collection: { acquireCount: { w: 2 } } } protocol:op_msg 13ms
+2019-12-22T22:30:39.686+0800 D INDEX    [TTLMonitor] ns: config.system.sessions key: { lastUse: 1 } name: lsidTTLIndex
+2019-12-22T22:30:39.689+0800 D INDEX    [TTLMonitor] deleted: 0
+2019-12-22T22:30:41.996+0800 I COMMAND  [conn4] command admin.$cmd command: isMaster { ismaster: true, $db: "admin" } numYields:0 reslen:224 locks:{} protocol:op_msg 0ms
+2019-12-22T22:30:52.006+0800 I COMMAND  [conn1] command admin.$cmd command: isMaster { ismaster: true, $db: "admin" } numYields:0 reslen:224 locks:{} protocol:op_msg 0ms
+2019-12-22T22:31:02.021+0800 I COMMAND  [conn4] command admin.$cmd command: isMaster { ismaster: true, $db: "admin" } numYields:0 reslen:224 locks:{} protocol:op_msg 0ms
+2019-12-22T22:31:12.037+0800 I COMMAND  [conn1] command admin.$cmd command: isMaster { ismaster: true, $db: "admin" } numYields:0 reslen:224 locks:{} protocol:op_msg 0ms
+2019-12-22T22:31:22.042+0800 I COMMAND  [conn4] command admin.$cmd command: isMaster { ismaster: true, $db: "admin" } numYields:0 reslen:224 locks:{} protocol:op_msg 0ms
+2019-12-22T22:31:32.056+0800 I COMMAND  [conn1] command admin.$cmd command: isMaster { ismaster: true, $db: "admin" } numYields:0 reslen:224 locks:{} protocol:op_msg 0ms
+2019-12-22T22:31:39.699+0800 D INDEX    [TTLMonitor] ns: config.system.sessions key: { lastUse: 1 } name: lsidTTLIndex
+2019-12-22T22:31:39.699+0800 D INDEX    [TTLMonitor] deleted: 0
+2019-12-22T22:31:42.071+0800 I COMMAND  [conn4] command admin.$cmd command: isMaster { ismaster: true, $db: "admin" } numYields:0 reslen:224 locks:{} protocol:op_msg 0ms
+2019-12-22T22:31:51.363+0800 I COMMAND  [conn4] command ymc_blog.categories command: find { find: "categories", filter: {}, sort: { cate_order: -1 }, projection: {}, returnKey: false, showRecordId: false, lsid: { id: UUID("a97a6998-3af9-4c90-aed2-9e6c0880300f") }, $db: "ymc_blog" } planSummary: EOF keysExamined:0 docsExamined:0 cursorExhausted:1 numYields:0 nreturned:0 reslen:108 locks:{ Global: { acquireCount: { r: 1 } }, Database: { acquireCount: { r: 1 } }, Collection: { acquireCount: { r: 1 } } } protocol:op_msg 0ms
+2019-12-22T22:31:52.083+0800 I COMMAND  [conn1] command admin.$cmd command: isMaster { ismaster: true, $db: "admin" } numYields:0 reslen:224 locks:{} protocol:op_msg 0ms
+2019-12-22T22:32:02.205+0800 I COMMAND  [conn4] command admin.$cmd command: isMaster { ismaster: true, $db: "admin" } numYields:0 reslen:224 locks:{} protocol:op_msg 0ms
+2019-12-22T22:32:12.231+0800 I COMMAND  [conn1] command admin.$cmd command: isMaster { ismaster: true, $db: "admin" } numYields:0 reslen:224 locks:{} protocol:op_msg 0ms
+2019-12-22T22:32:22.235+0800 I COMMAND  [conn4] command admin.$cmd command: isMaster { ismaster: true, $db: "admin" } numYields:0 reslen:224 locks:{} protocol:op_msg 0ms
+2019-12-22T22:32:32.250+0800 I COMMAND  [conn1] command admin.$cmd command: isMaster { ismaster: true, $db: "admin" } numYields:0 reslen:224 locks:{} protocol:op_msg 0ms
+2019-12-22T22:32:39.701+0800 D INDEX    [TTLMonitor] ns: config.system.sessions key: { lastUse: 1 } name: lsidTTLIndex
+2019-12-22T22:32:39.701+0800 D INDEX    [TTLMonitor] deleted: 0
+2019-12-22T22:32:42.257+0800 I COMMAND  [conn4] command admin.$cmd command: isMaster { ismaster: true, $db: "admin" } numYields:0 reslen:224 locks:{} protocol:op_msg 0ms
+2019-12-22T22:32:52.263+0800 I COMMAND  [conn1] command admin.$cmd command: isMaster { ismaster: true, $db: "admin" } numYields:0 reslen:224 locks:{} protocol:op_msg 0ms
+2019-12-22T22:33:02.275+0800 I COMMAND  [conn4] command admin.$cmd command: isMaster { ismaster: true, $db: "admin" } numYields:0 reslen:224 locks:{} protocol:op_msg 0ms
+2019-12-22T22:33:12.294+0800 I COMMAND  [conn1] command admin.$cmd command: isMaster { ismaster: true, $db: "admin" } numYields:0 reslen:224 locks:{} protocol:op_msg 0ms
+2019-12-22T22:33:22.300+0800 I COMMAND  [conn4] command admin.$cmd command: isMaster { ismaster: true, $db: "admin" } numYields:0 reslen:224 locks:{} protocol:op_msg 0ms
+2019-12-22T22:33:32.321+0800 I COMMAND  [conn1] command admin.$cmd command: isMaster { ismaster: true, $db: "admin" } numYields:0 reslen:224 locks:{} protocol:op_msg 0ms
+2019-12-22T22:33:35.623+0800 D STORAGE  [conn1] create collection ymc_blog.categories {}
+2019-12-22T22:33:35.624+0800 I STORAGE  [conn1] createCollection: ymc_blog.categories with generated UUID: 0e3970ee-9006-4675-8e6e-1ed9581620bc
+2019-12-22T22:33:35.624+0800 D STORAGE  [conn1] stored meta data for ymc_blog.categories @ RecordId(12)
+2019-12-22T22:33:35.734+0800 D STORAGE  [conn1] ymc_blog.categories: clearing plan cache - collection info cache reset
+2019-12-22T22:33:35.735+0800 D STORAGE  [conn1] create uri: table:index-5-2549024572016471414 config: type=file,internal_page_max=16k,leaf_page_max=16k,checksum=on,prefix_compression=true,block_compressor=,,,,key_format=u,value_format=u,app_metadata=(formatVersion=8,infoObj={ "v" : 2, "key" : { "_id" : 1 }, "name" : "_id_", "ns" : "ymc_blog.categories" }),log=(enabled=true)
+2019-12-22T22:33:35.758+0800 D STORAGE  [conn1] ymc_blog.categories: clearing plan cache - collection info cache reset
+2019-12-22T22:33:35.759+0800 D STORAGE  [conn1] Slow WT transaction. Lifetime of SnapshotId 2970 was 135ms
+2019-12-22T22:33:35.784+0800 I COMMAND  [conn1] command ymc_blog.categories command: insert { insert: "categories", documents: [ { _id: ObjectId('5dff7ebff7da59001b66995c'), cate_name: "dev", cate_order: "1000", creat_date: "2019-12-22 22:33:35", update_date: "2019-12-22 22:33:35", is_delete: 0, timestamp: 1577025215, __v: 0 } ], ordered: true, lsid: { id: UUID("a97a6998-3af9-4c90-aed2-9e6c0880300f") }, $db: "ymc_blog" } ninserted:1 keysInserted:1 numYields:0 reslen:45 locks:{ Global: { acquireCount: { r: 3, w: 3 } }, Database: { acquireCount: { w: 2, W: 1 } }, Collection: { acquireCount: { w: 2 } } } protocol:op_msg 139ms
+2019-12-22T22:33:39.703+0800 D INDEX    [TTLMonitor] ns: config.system.sessions key: { lastUse: 1 } name: lsidTTLIndex
+2019-12-22T22:33:39.703+0800 D INDEX    [TTLMonitor] deleted: 0
+2019-12-22T22:33:42.330+0800 I COMMAND  [conn4] command admin.$cmd command: isMaster { ismaster: true, $db: "admin" } numYields:0 reslen:224 locks:{} protocol:op_msg 0ms
+2019-12-22T22:33:45.267+0800 I COMMAND  [conn4] command ymc_blog.categories command: insert { insert: "categories", documents: [ { _id: ObjectId('5dff7ec9f7da59001b66995d'), cate_name: "pro", cate_order: "1000", creat_date: "2019-12-22 22:33:45", update_date: "2019-12-22 22:33:45", is_delete: 0, timestamp: 1577025225, __v: 0 } ], ordered: true, lsid: { id: UUID("a97a6998-3af9-4c90-aed2-9e6c0880300f") }, $db: "ymc_blog" } ninserted:1 keysInserted:1 numYields:0 reslen:45 locks:{ Global: { acquireCount: { r: 1, w: 1 } }, Database: { acquireCount: { w: 1 } }, Collection: { acquireCount: { w: 1 } } } protocol:op_msg 0ms
+2019-12-22T22:33:52.338+0800 I COMMAND  [conn1] command admin.$cmd command: isMaster { ismaster: true, $db: "admin" } numYields:0 reslen:224 locks:{} protocol:op_msg 0ms
+2019-12-22T22:33:52.532+0800 I COMMAND  [conn1] command ymc_blog.categories command: insert { insert: "categories", documents: [ { _id: ObjectId('5dff7ed0f7da59001b66995e'), cate_name: "tes", cate_order: "1000", creat_date: "2019-12-22 22:33:52", update_date: "2019-12-22 22:33:52", is_delete: 0, timestamp: 1577025232, __v: 0 } ], ordered: true, lsid: { id: UUID("a97a6998-3af9-4c90-aed2-9e6c0880300f") }, $db: "ymc_blog" } ninserted:1 keysInserted:1 numYields:0 reslen:45 locks:{ Global: { acquireCount: { r: 1, w: 1 } }, Database: { acquireCount: { w: 1 } }, Collection: { acquireCount: { w: 1 } } } protocol:op_msg 0ms
+2019-12-22T22:34:00.369+0800 I COMMAND  [conn4] command ymc_blog.categories command: find { find: "categories", filter: {}, sort: { cate_order: -1 }, projection: {}, returnKey: false, showRecordId: false, lsid: { id: UUID("a97a6998-3af9-4c90-aed2-9e6c0880300f") }, $db: "ymc_blog" } planSummary: COLLSCAN keysExamined:0 docsExamined:3 hasSortStage:1 cursorExhausted:1 numYields:0 nreturned:3 reslen:639 locks:{ Global: { acquireCount: { r: 1 } }, Database: { acquireCount: { r: 1 } }, Collection: { acquireCount: { r: 1 } } } protocol:op_msg 0ms
+2019-12-22T22:34:02.345+0800 I COMMAND  [conn4] command admin.$cmd command: isMaster { ismaster: true, $db: "admin" } numYields:0 reslen:224 locks:{} protocol:op_msg 0ms
+2019-12-22T22:34:12.392+0800 I COMMAND  [conn1] command admin.$cmd command: isMaster { ismaster: true, $db: "admin" } numYields:0 reslen:224 locks:{} protocol:op_msg 0ms
+2019-12-22T22:34:22.400+0800 I COMMAND  [conn4] command admin.$cmd command: isMaster { ismaster: true, $db: "admin" } numYields:0 reslen:224 locks:{} protocol:op_msg 0ms
+2019-12-22T22:34:32.415+0800 I COMMAND  [conn1] command admin.$cmd command: isMaster { ismaster: true, $db: "admin" } numYields:0 reslen:224 locks:{} protocol:op_msg 0ms
+2019-12-22T22:34:39.705+0800 D INDEX    [TTLMonitor] ns: config.system.sessions key: { lastUse: 1 } name: lsidTTLIndex
+2019-12-22T22:34:39.706+0800 D INDEX    [TTLMonitor] deleted: 0
+2019-12-22T22:34:42.424+0800 I COMMAND  [conn4] command admin.$cmd command: isMaster { ismaster: true, $db: "admin" } numYields:0 reslen:224 locks:{} protocol:op_msg 0ms
+2019-12-22T22:34:52.435+0800 I COMMAND  [conn1] command admin.$cmd command: isMaster { ismaster: true, $db: "admin" } numYields:0 reslen:224 locks:{} protocol:op_msg 0ms
+2019-12-22T22:35:02.441+0800 I COMMAND  [conn4] command admin.$cmd command: isMaster { ismaster: true, $db: "admin" } numYields:0 reslen:224 locks:{} protocol:op_msg 0ms
+2019-12-22T22:35:12.455+0800 I COMMAND  [conn1] command admin.$cmd command: isMaster { ismaster: true, $db: "admin" } numYields:0 reslen:224 locks:{} protocol:op_msg 0ms
+2019-12-22T22:35:22.463+0800 I COMMAND  [conn4] command admin.$cmd command: isMaster { ismaster: true, $db: "admin" } numYields:0 reslen:224 locks:{} protocol:op_msg 0ms
+2019-12-22T22:35:32.479+0800 I COMMAND  [conn1] command admin.$cmd command: isMaster { ismaster: true, $db: "admin" } numYields:0 reslen:224 locks:{} protocol:op_msg 0ms
+2019-12-22T22:35:39.561+0800 I COMMAND  [LogicalSessionCacheRefresh] command config.system.sessions command: listIndexes { listIndexes: "system.sessions", cursor: {}, $db: "config" } numYields:0 reslen:324 locks:{ Global: { acquireCount: { r: 1 } }, Database: { acquireCount: { r: 1 } }, Collection: { acquireCount: { r: 1 } } } protocol:op_msg 0ms
+2019-12-22T22:35:39.562+0800 I WRITE    [LogicalSessionCacheRefresh] update config.system.sessions command: { q: { _id: { id: UUID("a97a6998-3af9-4c90-aed2-9e6c0880300f"), uid: BinData(0, E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855) } }, u: { $currentDate: { lastUse: true } }, multi: false, upsert: true } planSummary: IDHACK keysExamined:1 docsExamined:1 nMatched:1 nModified:1 keysInserted:1 keysDeleted:1 numYields:0 locks:{ Global: { acquireCount: { r: 1, w: 1 } }, Database: { acquireCount: { w: 1 } }, Collection: { acquireCount: { w: 1 } } } 0ms
+2019-12-22T22:35:39.563+0800 I COMMAND  [LogicalSessionCacheRefresh] command config.$cmd command: update { update: "system.sessions", ordered: false, allowImplicitCollectionCreation: false, writeConcern: { w: "majority", wtimeout: 15000 }, $db: "config" } numYields:0 reslen:60 locks:{ Global: { acquireCount: { r: 1, w: 1 } }, Database: { acquireCount: { w: 1 } }, Collection: { acquireCount: { w: 1 } } } protocol:op_msg 1ms
+2019-12-22T22:35:39.709+0800 D INDEX    [TTLMonitor] ns: config.system.sessions key: { lastUse: 1 } name: lsidTTLIndex
+2019-12-22T22:35:39.710+0800 D INDEX    [TTLMonitor] deleted: 1
+2019-12-22T22:35:42.486+0800 I COMMAND  [conn4] command admin.$cmd command: isMaster { ismaster: true, $db: "admin" } numYields:0 reslen:224 locks:{} protocol:op_msg 0ms
+2019-12-22T22:35:52.490+0800 I COMMAND  [conn1] command admin.$cmd command: isMaster { ismaster: true, $db: "admin" } numYields:0 reslen:224 locks:{} protocol:op_msg 0ms
+2019-12-22T22:36:02.504+0800 I COMMAND  [conn4] command admin.$cmd command: isMaster { ismaster: true, $db: "admin" } numYields:0 reslen:224 locks:{} protocol:op_msg 0ms
+2019-12-22T22:36:12.522+0800 I COMMAND  [conn1] command admin.$cmd command: isMaster { ismaster: true, $db: "admin" } numYields:0 reslen:224 locks:{} protocol:op_msg 0ms
+2019-12-22T22:36:15.935+0800 I COMMAND  [conn1] command ymc_blog.articles command: count { count: "articles", query: {}, lsid: { id: UUID("a97a6998-3af9-4c90-aed2-9e6c0880300f") }, $db: "ymc_blog" } planSummary: EOF keysExamined:0 docsExamined:0 numYields:0 reslen:45 locks:{ Global: { acquireCount: { r: 1 } }, Database: { acquireCount: { r: 1 } }, Collection: { acquireCount: { r: 1 } } } protocol:op_msg 0ms
+2019-12-22T22:36:15.936+0800 I COMMAND  [conn4] command ymc_blog.articles command: find { find: "articles", filter: {}, sort: { update_date: -1 }, projection: {}, limit: 10, returnKey: false, showRecordId: false, lsid: { id: UUID("bb88dc5f-6e6f-43f7-9277-3ffe9df45781") }, $db: "ymc_blog" } planSummary: EOF keysExamined:0 docsExamined:0 cursorExhausted:1 numYields:0 nreturned:0 reslen:106 locks:{ Global: { acquireCount: { r: 1 } }, Database: { acquireCount: { r: 1 } }, Collection: { acquireCount: { r: 1 } } } protocol:op_msg 0ms
+2019-12-22T22:36:22.527+0800 I COMMAND  [conn4] command admin.$cmd command: isMaster { ismaster: true, $db: "admin" } numYields:0 reslen:224 locks:{} protocol:op_msg 0ms
+2019-12-22T22:36:32.539+0800 I COMMAND  [conn1] command admin.$cmd command: isMaster { ismaster: true, $db: "admin" } numYields:0 reslen:224 locks:{} protocol:op_msg 0ms
+2019-12-22T22:36:39.712+0800 D INDEX    [TTLMonitor] ns: config.system.sessions key: { lastUse: 1 } name: lsidTTLIndex
+2019-12-22T22:36:39.713+0800 D INDEX    [TTLMonitor] deleted: 0
+2019-12-22T22:36:42.557+0800 I COMMAND  [conn4] command admin.$cmd command: isMaster { ismaster: true, $db: "admin" } numYields:0 reslen:224 locks:{} protocol:op_msg 0ms
+2019-12-22T22:36:52.567+0800 I COMMAND  [conn1] command admin.$cmd command: isMaster { ismaster: true, $db: "admin" } numYields:0 reslen:224 locks:{} protocol:op_msg 0ms
+2019-12-22T22:37:02.582+0800 I COMMAND  [conn4] command admin.$cmd command: isMaster { ismaster: true, $db: "admin" } numYields:0 reslen:224 locks:{} protocol:op_msg 0ms
+2019-12-22T22:37:12.670+0800 I COMMAND  [conn1] command admin.$cmd command: isMaster { ismaster: true, $db: "admin" } numYields:0 reslen:224 locks:{} protocol:op_msg 0ms
+2019-12-22T22:37:22.690+0800 I COMMAND  [conn4] command admin.$cmd command: isMaster { ismaster: true, $db: "admin" } numYields:0 reslen:224 locks:{} protocol:op_msg 0ms
+2019-12-22T22:37:32.702+0800 I COMMAND  [conn1] command admin.$cmd command: isMaster { ismaster: true, $db: "admin" } numYields:0 reslen:224 locks:{} protocol:op_msg 0ms
+2019-12-22T22:37:39.715+0800 D INDEX    [TTLMonitor] ns: config.system.sessions key: { lastUse: 1 } name: lsidTTLIndex
+2019-12-22T22:37:39.716+0800 D INDEX    [TTLMonitor] deleted: 0
+2019-12-22T22:37:42.851+0800 I COMMAND  [conn4] command admin.$cmd command: isMaster { ismaster: true, $db: "admin" } numYields:0 reslen:224 locks:{} protocol:op_msg 0ms
+2019-12-22T22:37:52.856+0800 I COMMAND  [conn1] command admin.$cmd command: isMaster { ismaster: true, $db: "admin" } numYields:0 reslen:224 locks:{} protocol:op_msg 0ms
+2019-12-22T22:38:00.474+0800 I COMMAND  [conn3] command admin.$cmd appName: "MongoDB Shell" command: endSessions { endSessions: [ { id: UUID("bb890d06-5a50-4382-ba7e-225c2033fa11") } ], $db: "admin" } numYields:0 reslen:38 locks:{} protocol:op_msg 0ms
+2019-12-22T22:38:00.480+0800 I NETWORK  [conn3] end connection 172.20.1.1:42384 (2 connections now open)
+2019-12-22T22:38:02.866+0800 I COMMAND  [conn4] command admin.$cmd command: isMaster { ismaster: true, $db: "admin" } numYields:0 reslen:224 locks:{} protocol:op_msg 0ms
+2019-12-22T22:38:12.877+0800 I COMMAND  [conn1] command admin.$cmd command: isMaster { ismaster: true, $db: "admin" } numYields:0 reslen:224 locks:{} protocol:op_msg 0ms
+2019-12-22T22:38:22.881+0800 I COMMAND  [conn4] command admin.$cmd command: isMaster { ismaster: true, $db: "admin" } numYields:0 reslen:224 locks:{} protocol:op_msg 0ms
+2019-12-22T22:38:27.810+0800 I NETWORK  [conn4] end connection 172.20.1.1:43340 (1 connection now open)
+2019-12-22T22:38:27.811+0800 I NETWORK  [conn1] end connection 172.20.1.1:42268 (0 connections now open)
+2019-12-22T22:38:39.718+0800 D INDEX    [TTLMonitor] ns: config.system.sessions key: { lastUse: 1 } name: lsidTTLIndex
+2019-12-22T22:38:39.722+0800 D INDEX    [TTLMonitor] deleted: 0
+2019-12-22T22:38:45.529+0800 I NETWORK  [listener] connection accepted from 172.20.1.3:35274 #5 (1 connection now open)
+2019-12-22T22:38:45.565+0800 I NETWORK  [conn5] received client metadata from 172.20.1.3:35274 conn5: { driver: { name: "nodejs|Mongoose", version: "3.3.5|5.8.2" }, os: { type: "Linux", name: "linux", architecture: "x64", version: "3.10.0-1062.el7.x86_64" }, platform: "'Node.js v8.17.0, LE (unified)" }
+2019-12-22T22:38:45.565+0800 I COMMAND  [conn5] command admin.$cmd command: isMaster { ismaster: true, client: { driver: { name: "nodejs|Mongoose", version: "3.3.5|5.8.2" }, os: { type: "Linux", name: "linux", architecture: "x64", version: "3.10.0-1062.el7.x86_64" }, platform: "'Node.js v8.17.0, LE (unified)" }, compression: [], $db: "admin" } numYields:0 reslen:239 locks:{} protocol:op_query 0ms
+2019-12-22T22:38:55.604+0800 I COMMAND  [conn5] command admin.$cmd command: isMaster { ismaster: true, $db: "admin" } numYields:0 reslen:224 locks:{} protocol:op_msg 0ms
+2019-12-22T22:39:05.619+0800 I COMMAND  [conn5] command admin.$cmd command: isMaster { ismaster: true, $db: "admin" } numYields:0 reslen:224 locks:{} protocol:op_msg 0ms
+2019-12-22T22:39:15.626+0800 I COMMAND  [conn5] command admin.$cmd command: isMaster { ismaster: true, $db: "admin" } numYields:0 reslen:224 locks:{} protocol:op_msg 0ms
+2019-12-22T22:39:25.722+0800 I COMMAND  [conn5] command admin.$cmd command: isMaster { ismaster: true, $db: "admin" } numYields:0 reslen:224 locks:{} protocol:op_msg 0ms
+2019-12-22T22:39:27.063+0800 I COMMAND  [conn5] command ymc_blog.admins command: count { count: "admins", query: {}, lsid: { id: UUID("66049663-48c7-4393-80b7-3cac77a5b942") }, $db: "ymc_blog" } planSummary: COUNT keysExamined:0 docsExamined:0 numYields:0 reslen:45 locks:{ Global: { acquireCount: { r: 1 } }, Database: { acquireCount: { r: 1 } }, Collection: { acquireCount: { r: 1 } } } protocol:op_msg 0ms
+2019-12-22T22:39:27.069+0800 I NETWORK  [listener] connection accepted from 172.20.1.3:35308 #6 (2 connections now open)
+2019-12-22T22:39:27.079+0800 I NETWORK  [conn6] received client metadata from 172.20.1.3:35308 conn6: { driver: { name: "nodejs|Mongoose", version: "3.3.5|5.8.2" }, os: { type: "Linux", name: "linux", architecture: "x64", version: "3.10.0-1062.el7.x86_64" }, platform: "'Node.js v8.17.0, LE (unified)" }
+2019-12-22T22:39:27.080+0800 I COMMAND  [conn6] command admin.$cmd command: isMaster { ismaster: true, client: { driver: { name: "nodejs|Mongoose", version: "3.3.5|5.8.2" }, os: { type: "Linux", name: "linux", architecture: "x64", version: "3.10.0-1062.el7.x86_64" }, platform: "'Node.js v8.17.0, LE (unified)" }, compression: [], $db: "admin" } numYields:0 reslen:239 locks:{} protocol:op_query 0ms
+2019-12-22T22:39:27.086+0800 I COMMAND  [conn5] command ymc_blog.admins command: find { find: "admins", filter: {}, sort: { _id: -1 }, projection: {}, limit: 10, returnKey: false, showRecordId: false, lsid: { id: UUID("ce5b9027-30bc-4784-955b-b1911d7b940f") }, $db: "ymc_blog" } planSummary: IXSCAN { _id: 1 } keysExamined:1 docsExamined:1 cursorExhausted:1 numYields:0 nreturned:1 reslen:348 locks:{ Global: { acquireCount: { r: 1 } }, Database: { acquireCount: { r: 1 } }, Collection: { acquireCount: { r: 1 } } } protocol:op_msg 0ms
+2019-12-22T22:39:35.733+0800 I COMMAND  [conn5] command admin.$cmd command: isMaster { ismaster: true, $db: "admin" } numYields:0 reslen:224 locks:{} protocol:op_msg 0ms
+2019-12-22T22:39:39.723+0800 D INDEX    [TTLMonitor] ns: config.system.sessions key: { lastUse: 1 } name: lsidTTLIndex
+2019-12-22T22:39:39.724+0800 D INDEX    [TTLMonitor] deleted: 0
+2019-12-22T22:39:45.742+0800 I COMMAND  [conn6] command admin.$cmd command: isMaster { ismaster: true, $db: "admin" } numYields:0 reslen:224 locks:{} protocol:op_msg 0ms
+2019-12-22T22:39:55.786+0800 I COMMAND  [conn5] command admin.$cmd command: isMaster { ismaster: true, $db: "admin" } numYields:0 reslen:224 locks:{} protocol:op_msg 0ms
+2019-12-22T22:40:05.804+0800 I COMMAND  [conn6] command admin.$cmd command: isMaster { ismaster: true, $db: "admin" } numYields:0 reslen:224 locks:{} protocol:op_msg 0ms
+2019-12-22T22:40:15.812+0800 I COMMAND  [conn5] command admin.$cmd command: isMaster { ismaster: true, $db: "admin" } numYields:0 reslen:224 locks:{} protocol:op_msg 0ms
+2019-12-22T22:40:25.832+0800 I COMMAND  [conn6] command admin.$cmd command: isMaster { ismaster: true, $db: "admin" } numYields:0 reslen:224 locks:{} protocol:op_msg 0ms
+2019-12-22T22:40:35.846+0800 I COMMAND  [conn5] command admin.$cmd command: isMaster { ismaster: true, $db: "admin" } numYields:0 reslen:224 locks:{} protocol:op_msg 0ms
+2019-12-22T22:40:39.560+0800 I COMMAND  [LogicalSessionCacheRefresh] command config.system.sessions command: listIndexes { listIndexes: "system.sessions", cursor: {}, $db: "config" } numYields:0 reslen:324 locks:{ Global: { acquireCount: { r: 1 } }, Database: { acquireCount: { r: 1 } }, Collection: { acquireCount: { r: 1 } } } protocol:op_msg 0ms
+2019-12-22T22:40:39.561+0800 I WRITE    [LogicalSessionCacheRefresh] update config.system.sessions command: { q: { _id: { id: UUID("66049663-48c7-4393-80b7-3cac77a5b942"), uid: BinData(0, E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855) } }, u: { $currentDate: { lastUse: true } }, multi: false, upsert: true } planSummary: IDHACK keysExamined:0 docsExamined:0 nMatched:0 nModified:0 upsert:1 keysInserted:2 numYields:0 locks:{ Global: { acquireCount: { r: 1, w: 1 } }, Database: { acquireCount: { w: 1 } }, Collection: { acquireCount: { w: 1 } } } 0ms
+2019-12-22T22:40:39.562+0800 I WRITE    [LogicalSessionCacheRefresh] update config.system.sessions command: { q: { _id: { id: UUID("bb88dc5f-6e6f-43f7-9277-3ffe9df45781"), uid: BinData(0, E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855) } }, u: { $currentDate: { lastUse: true } }, multi: false, upsert: true } planSummary: IDHACK keysExamined:1 docsExamined:1 nMatched:1 nModified:1 keysInserted:1 keysDeleted:1 numYields:0 locks:{ Global: { acquireCount: { r: 1, w: 1 } }, Database: { acquireCount: { w: 1 } }, Collection: { acquireCount: { w: 1 } } } 0ms
+2019-12-22T22:40:39.564+0800 I WRITE    [LogicalSessionCacheRefresh] update config.system.sessions command: { q: { _id: { id: UUID("a97a6998-3af9-4c90-aed2-9e6c0880300f"), uid: BinData(0, E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855) } }, u: { $currentDate: { lastUse: true } }, multi: false, upsert: true } planSummary: IDHACK keysExamined:1 docsExamined:1 nMatched:1 nModified:1 keysInserted:1 keysDeleted:1 numYields:0 locks:{ Global: { acquireCount: { r: 1, w: 1 } }, Database: { acquireCount: { w: 1 } }, Collection: { acquireCount: { w: 1 } } } 0ms
+2019-12-22T22:40:39.564+0800 I WRITE    [LogicalSessionCacheRefresh] update config.system.sessions command: { q: { _id: { id: UUID("ce5b9027-30bc-4784-955b-b1911d7b940f"), uid: BinData(0, E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855) } }, u: { $currentDate: { lastUse: true } }, multi: false, upsert: true } planSummary: IDHACK keysExamined:0 docsExamined:0 nMatched:0 nModified:0 upsert:1 keysInserted:2 numYields:0 locks:{ Global: { acquireCount: { r: 1, w: 1 } }, Database: { acquireCount: { w: 1 } }, Collection: { acquireCount: { w: 1 } } } 0ms
+2019-12-22T22:40:39.565+0800 I COMMAND  [LogicalSessionCacheRefresh] command config.$cmd command: update { update: "system.sessions", ordered: false, allowImplicitCollectionCreation: false, writeConcern: { w: "majority", wtimeout: 15000 }, $db: "config" } numYields:0 reslen:267 locks:{ Global: { acquireCount: { r: 4, w: 4 } }, Database: { acquireCount: { w: 4 } }, Collection: { acquireCount: { w: 4 } } } protocol:op_msg 3ms
+2019-12-22T22:40:39.566+0800 I WRITE    [LogicalSessionCacheRefresh] remove config.system.sessions command: { q: { _id: { id: UUID("bb890d06-5a50-4382-ba7e-225c2033fa11"), uid: BinData(0, E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855) } }, limit: 0 } planSummary: IDHACK keysExamined:0 docsExamined:0 ndeleted:0 numYields:0 locks:{ Global: { acquireCount: { r: 1, w: 1 } }, Database: { acquireCount: { w: 1 } }, Collection: { acquireCount: { w: 1 } } } 0ms
+2019-12-22T22:40:39.567+0800 I COMMAND  [LogicalSessionCacheRefresh] command config.$cmd command: delete { delete: "system.sessions", ordered: false, writeConcern: { w: "majority", wtimeout: 15000 }, $db: "config" } numYields:0 reslen:45 locks:{ Global: { acquireCount: { r: 1, w: 1 } }, Database: { acquireCount: { w: 1 } }, Collection: { acquireCount: { w: 1 } } } protocol:op_msg 1ms
+2019-12-22T22:40:39.725+0800 D INDEX    [TTLMonitor] ns: config.system.sessions key: { lastUse: 1 } name: lsidTTLIndex
+2019-12-22T22:40:39.726+0800 D INDEX    [TTLMonitor] deleted: 0
+2019-12-22T22:40:45.852+0800 I COMMAND  [conn6] command admin.$cmd command: isMaster { ismaster: true, $db: "admin" } numYields:0 reslen:224 locks:{} protocol:op_msg 0ms
+2019-12-22T22:40:55.859+0800 I COMMAND  [conn5] command admin.$cmd command: isMaster { ismaster: true, $db: "admin" } numYields:0 reslen:224 locks:{} protocol:op_msg 0ms
+2019-12-22T22:41:05.873+0800 I COMMAND  [conn6] command admin.$cmd command: isMaster { ismaster: true, $db: "admin" } numYields:0 reslen:224 locks:{} protocol:op_msg 0ms
+2019-12-22T22:41:15.880+0800 I COMMAND  [conn5] command admin.$cmd command: isMaster { ismaster: true, $db: "admin" } numYields:0 reslen:224 locks:{} protocol:op_msg 0ms
+2019-12-22T22:41:25.887+0800 I COMMAND  [conn6] command admin.$cmd command: isMaster { ismaster: true, $db: "admin" } numYields:0 reslen:224 locks:{} protocol:op_msg 0ms
+2019-12-22T22:41:35.902+0800 I COMMAND  [conn5] command admin.$cmd command: isMaster { ismaster: true, $db: "admin" } numYields:0 reslen:224 locks:{} protocol:op_msg 0ms
+2019-12-22T22:41:39.727+0800 D INDEX    [TTLMonitor] ns: config.system.sessions key: { lastUse: 1 } name: lsidTTLIndex
+2019-12-22T22:41:39.729+0800 D INDEX    [TTLMonitor] deleted: 0
+2019-12-22T22:41:45.959+0800 I COMMAND  [conn6] command admin.$cmd command: isMaster { ismaster: true, $db: "admin" } numYields:0 reslen:224 locks:{} protocol:op_msg 0ms
+2019-12-22T22:41:55.972+0800 I COMMAND  [conn5] command admin.$cmd command: isMaster { ismaster: true, $db: "admin" } numYields:0 reslen:224 locks:{} protocol:op_msg 0ms
+2019-12-22T22:42:05.988+0800 I COMMAND  [conn6] command admin.$cmd command: isMaster { ismaster: true, $db: "admin" } numYields:0 reslen:224 locks:{} protocol:op_msg 0ms
+2019-12-22T22:42:15.995+0800 I COMMAND  [conn5] command admin.$cmd command: isMaster { ismaster: true, $db: "admin" } numYields:0 reslen:224 locks:{} protocol:op_msg 0ms
+2019-12-22T22:42:26.010+0800 I COMMAND  [conn6] command admin.$cmd command: isMaster { ismaster: true, $db: "admin" } numYields:0 reslen:224 locks:{} protocol:op_msg 0ms
+2019-12-22T22:42:36.024+0800 I COMMAND  [conn5] command admin.$cmd command: isMaster { ismaster: true, $db: "admin" } numYields:0 reslen:224 locks:{} protocol:op_msg 0ms
+2019-12-22T22:42:39.730+0800 D INDEX    [TTLMonitor] ns: config.system.sessions key: { lastUse: 1 } name: lsidTTLIndex
+2019-12-22T22:42:39.731+0800 D INDEX    [TTLMonitor] deleted: 0
+2019-12-22T22:42:46.078+0800 I COMMAND  [conn6] command admin.$cmd command: isMaster { ismaster: true, $db: "admin" } numYields:0 reslen:224 locks:{} protocol:op_msg 0ms
+2019-12-22T22:42:56.132+0800 I COMMAND  [conn5] command admin.$cmd command: isMaster { ismaster: true, $db: "admin" } numYields:0 reslen:224 locks:{} protocol:op_msg 0ms
+2019-12-22T22:43:06.163+0800 I COMMAND  [conn6] command admin.$cmd command: isMaster { ismaster: true, $db: "admin" } numYields:0 reslen:224 locks:{} protocol:op_msg 0ms
+2019-12-22T22:43:16.223+0800 I COMMAND  [conn5] command admin.$cmd command: isMaster { ismaster: true, $db: "admin" } numYields:0 reslen:224 locks:{} protocol:op_msg 0ms
+2019-12-22T22:43:26.246+0800 I COMMAND  [conn6] command admin.$cmd command: isMaster { ismaster: true, $db: "admin" } numYields:0 reslen:224 locks:{} protocol:op_msg 0ms
+2019-12-22T22:43:36.299+0800 I COMMAND  [conn5] command admin.$cmd command: isMaster { ismaster: true, $db: "admin" } numYields:0 reslen:224 locks:{} protocol:op_msg 0ms
+2019-12-22T22:43:39.732+0800 D INDEX    [TTLMonitor] ns: config.system.sessions key: { lastUse: 1 } name: lsidTTLIndex
+2019-12-22T22:43:39.734+0800 D INDEX    [TTLMonitor] deleted: 0
+2019-12-22T22:43:46.306+0800 I COMMAND  [conn6] command admin.$cmd command: isMaster { ismaster: true, $db: "admin" } numYields:0 reslen:224 locks:{} protocol:op_msg 0ms
+2019-12-22T22:43:56.324+0800 I COMMAND  [conn5] command admin.$cmd command: isMaster { ismaster: true, $db: "admin" } numYields:0 reslen:224 locks:{} protocol:op_msg 0ms
+2019-12-22T22:44:06.341+0800 I COMMAND  [conn6] command admin.$cmd command: isMaster { ismaster: true, $db: "admin" } numYields:0 reslen:224 locks:{} protocol:op_msg 0ms
+2019-12-22T22:44:16.346+0800 I COMMAND  [conn5] command admin.$cmd command: isMaster { ismaster: true, $db: "admin" } numYields:0 reslen:224 locks:{} protocol:op_msg 0ms
+2019-12-22T22:44:26.360+0800 I COMMAND  [conn6] command admin.$cmd command: isMaster { ismaster: true, $db: "admin" } numYields:0 reslen:224 locks:{} protocol:op_msg 0ms
+2019-12-22T22:44:36.375+0800 I COMMAND  [conn5] command admin.$cmd command: isMaster { ismaster: true, $db: "admin" } numYields:0 reslen:224 locks:{} protocol:op_msg 0ms
+2019-12-22T22:44:39.736+0800 D INDEX    [TTLMonitor] ns: config.system.sessions key: { lastUse: 1 } name: lsidTTLIndex
+2019-12-22T22:44:39.738+0800 D INDEX    [TTLMonitor] deleted: 0
+2019-12-22T22:44:46.378+0800 I COMMAND  [conn6] command admin.$cmd command: isMaster { ismaster: true, $db: "admin" } numYields:0 reslen:224 locks:{} protocol:op_msg 0ms
+2019-12-22T22:44:56.387+0800 I COMMAND  [conn5] command admin.$cmd command: isMaster { ismaster: true, $db: "admin" } numYields:0 reslen:224 locks:{} protocol:op_msg 0ms
+2019-12-22T22:45:06.411+0800 I COMMAND  [conn6] command admin.$cmd command: isMaster { ismaster: true, $db: "admin" } numYields:0 reslen:224 locks:{} protocol:op_msg 0ms
+2019-12-22T22:45:16.428+0800 I COMMAND  [conn5] command admin.$cmd command: isMaster { ismaster: true, $db: "admin" } numYields:0 reslen:224 locks:{} protocol:op_msg 0ms
+2019-12-22T22:45:26.443+0800 I COMMAND  [conn6] command admin.$cmd command: isMaster { ismaster: true, $db: "admin" } numYields:0 reslen:224 locks:{} protocol:op_msg 0ms
+2019-12-22T22:45:36.461+0800 I COMMAND  [conn5] command admin.$cmd command: isMaster { ismaster: true, $db: "admin" } numYields:0 reslen:224 locks:{} protocol:op_msg 0ms
+2019-12-22T22:45:39.561+0800 I COMMAND  [LogicalSessionCacheRefresh] command config.system.sessions command: listIndexes { listIndexes: "system.sessions", cursor: {}, $db: "config" } numYields:0 reslen:324 locks:{ Global: { acquireCount: { r: 1 } }, Database: { acquireCount: { r: 1 } }, Collection: { acquireCount: { r: 1 } } } protocol:op_msg 0ms
+2019-12-22T22:45:39.739+0800 D INDEX    [TTLMonitor] ns: config.system.sessions key: { lastUse: 1 } name: lsidTTLIndex
+2019-12-22T22:45:39.740+0800 D INDEX    [TTLMonitor] deleted: 0
+2019-12-22T22:45:46.468+0800 I COMMAND  [conn6] command admin.$cmd command: isMaster { ismaster: true, $db: "admin" } numYields:0 reslen:224 locks:{} protocol:op_msg 0ms
+2019-12-22T22:45:56.506+0800 I COMMAND  [conn5] command admin.$cmd command: isMaster { ismaster: true, $db: "admin" } numYields:0 reslen:224 locks:{} protocol:op_msg 0ms
+2019-12-22T22:46:06.517+0800 I COMMAND  [conn6] command admin.$cmd command: isMaster { ismaster: true, $db: "admin" } numYields:0 reslen:224 locks:{} protocol:op_msg 0ms
+2019-12-22T22:46:16.526+0800 I COMMAND  [conn5] command admin.$cmd command: isMaster { ismaster: true, $db: "admin" } numYields:0 reslen:224 locks:{} protocol:op_msg 0ms
+2019-12-22T22:46:26.537+0800 I COMMAND  [conn6] command admin.$cmd command: isMaster { ismaster: true, $db: "admin" } numYields:0 reslen:224 locks:{} protocol:op_msg 0ms
+2019-12-22T22:46:36.545+0800 I COMMAND  [conn5] command admin.$cmd command: isMaster { ismaster: true, $db: "admin" } numYields:0 reslen:224 locks:{} protocol:op_msg 0ms
+2019-12-22T22:46:39.741+0800 D INDEX    [TTLMonitor] ns: config.system.sessions key: { lastUse: 1 } name: lsidTTLIndex
+2019-12-22T22:46:39.742+0800 D INDEX    [TTLMonitor] deleted: 0
+2019-12-22T22:46:46.551+0800 I COMMAND  [conn6] command admin.$cmd command: isMaster { ismaster: true, $db: "admin" } numYields:0 reslen:224 locks:{} protocol:op_msg 0ms
+2019-12-22T22:46:56.565+0800 I COMMAND  [conn5] command admin.$cmd command: isMaster { ismaster: true, $db: "admin" } numYields:0 reslen:224 locks:{} protocol:op_msg 0ms
+2019-12-22T22:47:06.575+0800 I COMMAND  [conn6] command admin.$cmd command: isMaster { ismaster: true, $db: "admin" } numYields:0 reslen:224 locks:{} protocol:op_msg 0ms
+2019-12-22T22:47:16.579+0800 I COMMAND  [conn5] command admin.$cmd command: isMaster { ismaster: true, $db: "admin" } numYields:0 reslen:224 locks:{} protocol:op_msg 0ms
+2019-12-22T22:47:26.603+0800 I COMMAND  [conn6] command admin.$cmd command: isMaster { ismaster: true, $db: "admin" } numYields:0 reslen:224 locks:{} protocol:op_msg 0ms
+2019-12-22T22:47:36.622+0800 I COMMAND  [conn5] command admin.$cmd command: isMaster { ismaster: true, $db: "admin" } numYields:0 reslen:224 locks:{} protocol:op_msg 0ms
+2019-12-22T22:47:39.743+0800 D INDEX    [TTLMonitor] ns: config.system.sessions key: { lastUse: 1 } name: lsidTTLIndex
+2019-12-22T22:47:39.743+0800 D INDEX    [TTLMonitor] deleted: 0
+2019-12-22T22:47:46.631+0800 I COMMAND  [conn6] command admin.$cmd command: isMaster { ismaster: true, $db: "admin" } numYields:0 reslen:224 locks:{} protocol:op_msg 0ms
+2019-12-22T22:47:56.641+0800 I COMMAND  [conn5] command admin.$cmd command: isMaster { ismaster: true, $db: "admin" } numYields:0 reslen:224 locks:{} protocol:op_msg 0ms
+2019-12-22T22:48:06.648+0800 I COMMAND  [conn6] command admin.$cmd command: isMaster { ismaster: true, $db: "admin" } numYields:0 reslen:224 locks:{} protocol:op_msg 0ms
+2019-12-22T22:48:16.663+0800 I COMMAND  [conn5] command admin.$cmd command: isMaster { ismaster: true, $db: "admin" } numYields:0 reslen:224 locks:{} protocol:op_msg 0ms
+2019-12-22T22:48:26.679+0800 I COMMAND  [conn6] command admin.$cmd command: isMaster { ismaster: true, $db: "admin" } numYields:0 reslen:224 locks:{} protocol:op_msg 0ms
+2019-12-22T22:48:36.685+0800 I COMMAND  [conn5] command admin.$cmd command: isMaster { ismaster: true, $db: "admin" } numYields:0 reslen:224 locks:{} protocol:op_msg 0ms
+2019-12-22T22:48:39.754+0800 D INDEX    [TTLMonitor] ns: config.system.sessions key: { lastUse: 1 } name: lsidTTLIndex
+2019-12-22T22:48:39.754+0800 D INDEX    [TTLMonitor] deleted: 0
+2019-12-22T22:48:46.689+0800 I COMMAND  [conn6] command admin.$cmd command: isMaster { ismaster: true, $db: "admin" } numYields:0 reslen:224 locks:{} protocol:op_msg 0ms
+2019-12-22T22:48:56.704+0800 I COMMAND  [conn5] command admin.$cmd command: isMaster { ismaster: true, $db: "admin" } numYields:0 reslen:224 locks:{} protocol:op_msg 0ms
+2019-12-22T22:49:06.714+0800 I COMMAND  [conn6] command admin.$cmd command: isMaster { ismaster: true, $db: "admin" } numYields:0 reslen:224 locks:{} protocol:op_msg 0ms
+2019-12-22T22:49:16.718+0800 I COMMAND  [conn5] command admin.$cmd command: isMaster { ismaster: true, $db: "admin" } numYields:0 reslen:224 locks:{} protocol:op_msg 0ms
+2019-12-22T22:49:26.731+0800 I COMMAND  [conn6] command admin.$cmd command: isMaster { ismaster: true, $db: "admin" } numYields:0 reslen:224 locks:{} protocol:op_msg 0ms
+2019-12-22T22:49:36.737+0800 I COMMAND  [conn5] command admin.$cmd command: isMaster { ismaster: true, $db: "admin" } numYields:0 reslen:224 locks:{} protocol:op_msg 0ms
+2019-12-22T22:49:39.760+0800 D INDEX    [TTLMonitor] ns: config.system.sessions key: { lastUse: 1 } name: lsidTTLIndex
+2019-12-22T22:49:39.761+0800 D INDEX    [TTLMonitor] deleted: 0
+2019-12-22T22:49:46.740+0800 I COMMAND  [conn6] command admin.$cmd command: isMaster { ismaster: true, $db: "admin" } numYields:0 reslen:224 locks:{} protocol:op_msg 0ms
+2019-12-22T22:49:56.756+0800 I COMMAND  [conn5] command admin.$cmd command: isMaster { ismaster: true, $db: "admin" } numYields:0 reslen:224 locks:{} protocol:op_msg 0ms
+2019-12-22T22:50:06.773+0800 I COMMAND  [conn6] command admin.$cmd command: isMaster { ismaster: true, $db: "admin" } numYields:0 reslen:224 locks:{} protocol:op_msg 0ms
+2019-12-22T22:50:11.477+0800 I NETWORK  [conn5] end connection 172.20.1.3:35274 (1 connection now open)
+2019-12-22T22:50:11.477+0800 I NETWORK  [conn6] end connection 172.20.1.3:35308 (0 connections now open)
+2019-12-22T22:50:26.032+0800 I CONTROL  [main] ***** SERVER RESTARTED *****
+2019-12-22T22:50:26.036+0800 I CONTROL  [main] Automatically disabling TLS 1.0, to force-enable TLS 1.0 specify --sslDisabledProtocols 'none'
+2019-12-22T22:50:26.245+0800 D NETWORK  [main] fd limit hard:1048576 soft:1048576 max conn: 838860
+2019-12-22T22:50:26.259+0800 I CONTROL  [initandlisten] MongoDB starting : pid=9 port=27017 dbpath=/data/db/mongo 64-bit host=62a276a345dd
+2019-12-22T22:50:26.268+0800 I CONTROL  [initandlisten] db version v4.0.5
+2019-12-22T22:50:26.268+0800 I CONTROL  [initandlisten] git version: 3739429dd92b92d1b0ab120911a23d50bf03c412
+2019-12-22T22:50:26.268+0800 I CONTROL  [initandlisten] OpenSSL version: OpenSSL 1.1.1b  26 Feb 2019
+2019-12-22T22:50:26.269+0800 I CONTROL  [initandlisten] allocator: system
+2019-12-22T22:50:26.269+0800 I CONTROL  [initandlisten] modules: none
+2019-12-22T22:50:26.269+0800 I CONTROL  [initandlisten] build environment:
+2019-12-22T22:50:26.269+0800 I CONTROL  [initandlisten]     distarch: x86_64
+2019-12-22T22:50:26.270+0800 I CONTROL  [initandlisten]     target_arch: x86_64
+2019-12-22T22:50:26.270+0800 I CONTROL  [initandlisten] options: { net: { bindIp: "0.0.0.0", port: 27017 }, storage: { dbPath: "/data/db/mongo" }, systemLog: { destination: "file", logAppend: true, path: "/data/log/mongod.log", verbosity: 1 } }
+2019-12-22T22:50:26.270+0800 D NETWORK  [initandlisten] fd limit hard:1048576 soft:1048576 max conn: 838860
+2019-12-22T22:50:26.271+0800 W STORAGE  [initandlisten] Detected unclean shutdown - /data/db/mongo/mongod.lock is not empty.
+2019-12-22T22:50:26.272+0800 I STORAGE  [initandlisten] Detected data files in /data/db/mongo created by the 'wiredTiger' storage engine, so setting the active storage engine to 'wiredTiger'.
+2019-12-22T22:50:26.272+0800 W STORAGE  [initandlisten] Recovering data from the last clean checkpoint.
+2019-12-22T22:50:26.274+0800 I STORAGE  [initandlisten] wiredtiger_open config: create,cache_size=1463M,session_max=20000,eviction=(threads_min=4,threads_max=4),config_base=false,statistics=(fast),log=(enabled=true,archive=true,path=journal,compressor=snappy),file_manager=(close_idle_time=100000),statistics_log=(wait=0),verbose=(recovery_progress),
+2019-12-22T22:50:36.696+0800 I STORAGE  [initandlisten] WiredTiger message [1577026236:696528][9:0x7f0f5accbca8], txn-recover: Main recovery loop: starting at 33/50944 to 34/256
+2019-12-22T22:50:36.700+0800 I STORAGE  [initandlisten] WiredTiger message [1577026236:700425][9:0x7f0f5accbca8], txn-recover: Recovering log 33 through 34
+2019-12-22T22:50:39.709+0800 I STORAGE  [initandlisten] WiredTiger message [1577026239:709339][9:0x7f0f5accbca8], txn-recover: Recovering log 34 through 34
+2019-12-22T22:50:42.006+0800 I STORAGE  [initandlisten] WiredTiger message [1577026242:5975][9:0x7f0f5accbca8], txn-recover: Set global recovery timestamp: 0
+2019-12-22T22:50:42.036+0800 I RECOVERY [initandlisten] WiredTiger recoveryTimestamp. Ts: Timestamp(0, 0)
+2019-12-22T22:50:42.037+0800 D COMMAND  [WTCheckpointThread] BackgroundJob starting: WTCheckpointThread
+2019-12-22T22:50:42.037+0800 D STORAGE  [WTCheckpointThread] starting WTCheckpointThread thread
+2019-12-22T22:50:42.041+0800 D COMMAND  [WTJournalFlusher] BackgroundJob starting: WTJournalFlusher
+2019-12-22T22:50:42.041+0800 D STORAGE  [WTJournalFlusher] starting WTJournalFlusher thread
+2019-12-22T22:50:42.284+0800 D STORAGE  [initandlisten] Slow WT transaction. Lifetime of SnapshotId 1 was 243ms
+2019-12-22T22:50:42.286+0800 D STORAGE  [initandlisten] flushing directory /data/db/mongo
+2019-12-22T22:50:42.286+0800 I CONTROL  [initandlisten] 
+2019-12-22T22:50:42.287+0800 I CONTROL  [initandlisten] ** WARNING: Access control is not enabled for the database.
+2019-12-22T22:50:42.287+0800 I CONTROL  [initandlisten] **          Read and write access to data and configuration is unrestricted.
+2019-12-22T22:50:42.287+0800 I CONTROL  [initandlisten] ** WARNING: You are running this process as the root user, which is not recommended.
+2019-12-22T22:50:42.287+0800 I CONTROL  [initandlisten] 
+2019-12-22T22:50:42.288+0800 I CONTROL  [initandlisten] 
+2019-12-22T22:50:42.288+0800 I CONTROL  [initandlisten] ** WARNING: /sys/kernel/mm/transparent_hugepage/enabled is 'always'.
+2019-12-22T22:50:42.289+0800 I CONTROL  [initandlisten] **        We suggest setting it to 'never'
+2019-12-22T22:50:42.289+0800 I CONTROL  [initandlisten] 
+2019-12-22T22:50:42.289+0800 I CONTROL  [initandlisten] ** WARNING: /sys/kernel/mm/transparent_hugepage/defrag is 'always'.
+2019-12-22T22:50:42.290+0800 I CONTROL  [initandlisten] **        We suggest setting it to 'never'
+2019-12-22T22:50:42.290+0800 I CONTROL  [initandlisten] 
+2019-12-22T22:50:42.462+0800 D STORAGE  [initandlisten] admin.system.users: clearing plan cache - collection info cache reset
+2019-12-22T22:50:42.470+0800 D STORAGE  [initandlisten] admin.system.version: clearing plan cache - collection info cache reset
+2019-12-22T22:50:42.471+0800 D -        [initandlisten] reloading view catalog for database admin
+2019-12-22T22:50:42.487+0800 D STORAGE  [initandlisten] config.system.sessions: clearing plan cache - collection info cache reset
+2019-12-22T22:50:42.487+0800 D -        [initandlisten] reloading view catalog for database config
+2019-12-22T22:50:42.497+0800 D STORAGE  [initandlisten] local.startup_log: clearing plan cache - collection info cache reset
+2019-12-22T22:50:42.498+0800 D -        [initandlisten] reloading view catalog for database local
+2019-12-22T22:50:42.506+0800 D STORAGE  [initandlisten] ymc_blog.admins: clearing plan cache - collection info cache reset
+2019-12-22T22:50:42.515+0800 D STORAGE  [initandlisten] ymc_blog.categories: clearing plan cache - collection info cache reset
+2019-12-22T22:50:42.523+0800 D STORAGE  [initandlisten] ymc_blog.users: clearing plan cache - collection info cache reset
+2019-12-22T22:50:42.523+0800 D -        [initandlisten] reloading view catalog for database ymc_blog
+2019-12-22T22:50:42.524+0800 D STORAGE  [initandlisten]     Recovering database: admin
+2019-12-22T22:50:42.528+0800 D STORAGE  [initandlisten]     Recovering database: config
+2019-12-22T22:50:42.528+0800 D STORAGE  [initandlisten]     Recovering database: local
+2019-12-22T22:50:42.529+0800 D STORAGE  [initandlisten]     Recovering database: ymc_blog
+2019-12-22T22:50:42.529+0800 D STORAGE  [initandlisten] done repairDatabases
+2019-12-22T22:50:42.529+0800 D STORAGE  [initandlisten] Slow WT transaction. Lifetime of SnapshotId 3 was 238ms
+2019-12-22T22:50:42.530+0800 I COMMAND  [initandlisten] command admin.system.roles command: find { find: "system.roles", $db: "admin" } planSummary: EOF keysExamined:0 docsExamined:0 cursorExhausted:1 numYields:0 nreturned:0 reslen:107 locks:{ Global: { acquireCount: { r: 1 } }, Database: { acquireCount: { r: 1 } }, Collection: { acquireCount: { r: 1 } } } protocol:op_msg 0ms
+2019-12-22T22:50:42.534+0800 I FTDC     [initandlisten] Initializing full-time diagnostic data capture with directory '/data/db/mongo/diagnostic.data'
+2019-12-22T22:50:42.535+0800 D EXECUTOR [freemon-0] starting thread in pool freemon
+2019-12-22T22:50:42.540+0800 D INDEX    [initandlisten] checking complete
+2019-12-22T22:50:42.542+0800 I NETWORK  [initandlisten] waiting for connections on port 27017
+2019-12-22T22:50:42.542+0800 D COMMAND  [TTLMonitor] BackgroundJob starting: TTLMonitor
+2019-12-22T22:50:42.542+0800 D COMMAND  [ClientCursorMonitor] BackgroundJob starting: ClientCursorMonitor
+2019-12-22T22:50:42.543+0800 D COMMAND  [PeriodicTaskRunner] BackgroundJob starting: PeriodicTaskRunner
+2019-12-22T22:50:42.544+0800 I COMMAND  [LogicalSessionCacheRefresh] command config.system.sessions command: listIndexes { listIndexes: "system.sessions", cursor: {}, $db: "config" } numYields:0 reslen:324 locks:{ Global: { acquireCount: { r: 1 } }, Database: { acquireCount: { r: 1 } }, Collection: { acquireCount: { r: 1 } } } protocol:op_msg 0ms
+2019-12-22T22:50:42.737+0800 I NETWORK  [listener] connection accepted from 172.20.1.3:35918 #1 (1 connection now open)
+2019-12-22T22:50:42.768+0800 I NETWORK  [conn1] received client metadata from 172.20.1.3:35918 conn1: { driver: { name: "nodejs|Mongoose", version: "3.3.5|5.8.2" }, os: { type: "Linux", name: "linux", architecture: "x64", version: "3.10.0-1062.el7.x86_64" }, platform: "'Node.js v8.17.0, LE (unified)" }
+2019-12-22T22:50:42.769+0800 I COMMAND  [conn1] command admin.$cmd command: isMaster { ismaster: true, client: { driver: { name: "nodejs|Mongoose", version: "3.3.5|5.8.2" }, os: { type: "Linux", name: "linux", architecture: "x64", version: "3.10.0-1062.el7.x86_64" }, platform: "'Node.js v8.17.0, LE (unified)" }, compression: [], $db: "admin" } numYields:0 reslen:239 locks:{} protocol:op_query 0ms
+2019-12-22T22:50:43.735+0800 I FTDC     [ftdc] Unclean full-time diagnostic data capture shutdown detected, found interim file, some metrics may have been lost. OK
+2019-12-22T22:50:51.652+0800 I COMMAND  [conn1] command ymc_blog.articles command: count { count: "articles", query: { is_delete: 0 }, lsid: { id: UUID("93255c16-2f91-4f29-a667-6d80dfe13e36") }, $db: "ymc_blog" } planSummary: EOF keysExamined:0 docsExamined:0 numYields:0 reslen:45 locks:{ Global: { acquireCount: { r: 1 } }, Database: { acquireCount: { r: 1 } }, Collection: { acquireCount: { r: 1 } } } protocol:op_msg 0ms
+2019-12-22T22:50:51.653+0800 I NETWORK  [listener] connection accepted from 172.20.1.3:35930 #2 (2 connections now open)
+2019-12-22T22:50:51.749+0800 I NETWORK  [conn2] received client metadata from 172.20.1.3:35930 conn2: { driver: { name: "nodejs|Mongoose", version: "3.3.5|5.8.2" }, os: { type: "Linux", name: "linux", architecture: "x64", version: "3.10.0-1062.el7.x86_64" }, platform: "'Node.js v8.17.0, LE (unified)" }
+2019-12-22T22:50:51.749+0800 I COMMAND  [conn2] command admin.$cmd command: isMaster { ismaster: true, client: { driver: { name: "nodejs|Mongoose", version: "3.3.5|5.8.2" }, os: { type: "Linux", name: "linux", architecture: "x64", version: "3.10.0-1062.el7.x86_64" }, platform: "'Node.js v8.17.0, LE (unified)" }, compression: [], $db: "admin" } numYields:0 reslen:239 locks:{} protocol:op_query 0ms
+2019-12-22T22:50:51.906+0800 I COMMAND  [conn1] command ymc_blog.articles command: find { find: "articles", filter: { is_delete: 0 }, sort: { update_date: -1 }, projection: {}, limit: 10, returnKey: false, showRecordId: false, lsid: { id: UUID("3d8295b6-cb7c-48b2-ab6b-bb4f06539163") }, $db: "ymc_blog" } planSummary: EOF keysExamined:0 docsExamined:0 cursorExhausted:1 numYields:0 nreturned:0 reslen:106 locks:{ Global: { acquireCount: { r: 1 } }, Database: { acquireCount: { r: 1 } }, Collection: { acquireCount: { r: 1 } } } protocol:op_msg 0ms
+2019-12-22T22:50:52.840+0800 I COMMAND  [conn1] command admin.$cmd command: isMaster { ismaster: true, $db: "admin" } numYields:0 reslen:224 locks:{} protocol:op_msg 0ms
+2019-12-22T22:51:02.833+0800 I COMMAND  [conn2] command admin.$cmd command: isMaster { ismaster: true, $db: "admin" } numYields:0 reslen:224 locks:{} protocol:op_msg 0ms
+2019-12-22T22:51:12.842+0800 I COMMAND  [conn1] command admin.$cmd command: isMaster { ismaster: true, $db: "admin" } numYields:0 reslen:224 locks:{} protocol:op_msg 0ms
+2019-12-22T22:51:22.847+0800 I COMMAND  [conn2] command admin.$cmd command: isMaster { ismaster: true, $db: "admin" } numYields:0 reslen:224 locks:{} protocol:op_msg 0ms
+2019-12-22T22:51:32.853+0800 I COMMAND  [conn1] command admin.$cmd command: isMaster { ismaster: true, $db: "admin" } numYields:0 reslen:224 locks:{} protocol:op_msg 0ms
+2019-12-22T22:51:42.544+0800 D INDEX    [TTLMonitor] ns: config.system.sessions key: { lastUse: 1 } name: lsidTTLIndex
+2019-12-22T22:51:42.557+0800 D INDEX    [TTLMonitor] deleted: 0
+2019-12-22T22:51:42.859+0800 I COMMAND  [conn2] command admin.$cmd command: isMaster { ismaster: true, $db: "admin" } numYields:0 reslen:224 locks:{} protocol:op_msg 0ms
+2019-12-22T22:51:52.865+0800 I COMMAND  [conn1] command admin.$cmd command: isMaster { ismaster: true, $db: "admin" } numYields:0 reslen:224 locks:{} protocol:op_msg 0ms
+2019-12-22T22:52:02.876+0800 I COMMAND  [conn2] command admin.$cmd command: isMaster { ismaster: true, $db: "admin" } numYields:0 reslen:224 locks:{} protocol:op_msg 0ms
+2019-12-22T22:52:12.888+0800 I COMMAND  [conn1] command admin.$cmd command: isMaster { ismaster: true, $db: "admin" } numYields:0 reslen:224 locks:{} protocol:op_msg 0ms
+2019-12-22T22:52:22.900+0800 I COMMAND  [conn2] command admin.$cmd command: isMaster { ismaster: true, $db: "admin" } numYields:0 reslen:224 locks:{} protocol:op_msg 0ms
+2019-12-22T22:52:32.908+0800 I COMMAND  [conn1] command admin.$cmd command: isMaster { ismaster: true, $db: "admin" } numYields:0 reslen:224 locks:{} protocol:op_msg 0ms
+2019-12-22T22:52:42.560+0800 D INDEX    [TTLMonitor] ns: config.system.sessions key: { lastUse: 1 } name: lsidTTLIndex
+2019-12-22T22:52:42.561+0800 D INDEX    [TTLMonitor] deleted: 0
+2019-12-22T22:52:42.915+0800 I COMMAND  [conn2] command admin.$cmd command: isMaster { ismaster: true, $db: "admin" } numYields:0 reslen:224 locks:{} protocol:op_msg 0ms
+2019-12-22T22:52:52.922+0800 I COMMAND  [conn1] command admin.$cmd command: isMaster { ismaster: true, $db: "admin" } numYields:0 reslen:224 locks:{} protocol:op_msg 0ms
+2019-12-22T22:53:02.934+0800 I COMMAND  [conn2] command admin.$cmd command: isMaster { ismaster: true, $db: "admin" } numYields:0 reslen:224 locks:{} protocol:op_msg 0ms
+2019-12-22T22:53:12.955+0800 I COMMAND  [conn1] command admin.$cmd command: isMaster { ismaster: true, $db: "admin" } numYields:0 reslen:224 locks:{} protocol:op_msg 0ms
+2019-12-22T22:53:22.961+0800 I COMMAND  [conn2] command admin.$cmd command: isMaster { ismaster: true, $db: "admin" } numYields:0 reslen:224 locks:{} protocol:op_msg 0ms
+2019-12-22T22:53:32.879+0800 I NETWORK  [conn1] end connection 172.20.1.3:35918 (1 connection now open)
+2019-12-22T22:53:32.880+0800 I NETWORK  [conn2] end connection 172.20.1.3:35930 (0 connections now open)
+2019-12-22T22:53:42.563+0800 D INDEX    [TTLMonitor] ns: config.system.sessions key: { lastUse: 1 } name: lsidTTLIndex
+2019-12-22T22:53:42.564+0800 D INDEX    [TTLMonitor] deleted: 0
